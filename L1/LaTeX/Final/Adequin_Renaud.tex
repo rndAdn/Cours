@@ -1,0 +1,353 @@
+\documentclass[a4paper]{report}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{ascii}
+\usepackage[T1]{fontenc}
+\usepackage{pstricks, pst-text, pst-plot, pstricks-add, pst-solarsystem}
+\usepackage{pst-qtree}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{lineno}
+\usepackage{makeidx}
+\usepackage{mdframed}
+
+
+
+
+
+%
+% COMPILATION :
+%
+%latex Adequin_Renaud.tex && makeindex -s classic.ist Adequin_Renaud.idx && bibtex Adequin_Renaud.aux && latex Adequin_Renaud.tex && latex Adequin_Renaud.tex && dvips Adequin_Renaud.dvi && ps2pdf Adequin_Renaud.ps 
+%
+%COMPILATION :
+%
+
+\makeindex
+
+\newcommand\Index[1]{#1\index{#1}}
+\definecolor{bbleu}{HTML}{0099CC}
+\definecolor{vviol}{HTML}{CC0099}
+\definecolor{vvert}{HTML}{009933}
+\definecolor{mmar}{HTML}{996600}
+\definecolor{jjau}{HTML}{660033}
+
+\definecolor{nnoir}{HTML}{000000}
+
+
+\addto\captionsfrench{\def\contentsname{Sommaire}}
+\addto\captionsfrench{\def\chaptername{}}
+
+
+\newenvironment{code}
+{
+	\vspace*{0.5cm}
+		\begin{mdframed}[backgroundcolor=lightgray]
+    	\begin{minipage}[b]{\textwidth}\parindent=\oldparindent
+
+      		\linenumbers
+      		\asciifamily 	
+}
+{
+	
+	\end{minipage}
+	\normalfont
+	\end{mdframed}
+	\vspace*{0.5cm}
+}
+
+
+
+\newenvironment{code2}
+{
+	\vspace*{0.5cm}
+		\begin{mdframed}[backgroundcolor=pink]
+    	\begin{minipage}[b]{\textwidth}\parindent=\oldparindent
+
+      		\linenumbers
+      		\asciifamily 	
+}
+{
+	
+	\end{minipage}
+	\normalfont
+	\end{mdframed}
+	\vspace*{0.5cm}
+}
+
+
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+\renewcommand{\emph}{\textbf}
+
+\newcommand{\bleu}[1]{\textbf {\color{bbleu}\asciifamily{#1}}}
+\newcommand{\rouge}[1]{\textbf {\color{vviol}\asciifamily{#1}}}
+\newcommand{\vertt}[1]{\textbf {\color{vvert}\asciifamily{#1}}}
+\newcommand{\marr}[1]{\textbf {\color{mmar}\asciifamily{#1}}}
+\newcommand{\jauu}[1]{\textbf {\color{jjau}\asciifamily{#1}}}
+
+\newcommand{\noirr}[1]{\textbf {\color{nnoir}\asciifamily{#1}}}
+\newcommand{\iin}{\indent}
+\newcommand{\ii}{\indent\indent}
+\newcommand{\iii}{\indent\indent\indent}
+
+
+
+\author{Adequin. Renaud}
+\title{Programmer en langage C~\cite{kr}}
+
+\begin{document}
+\maketitle
+
+\newdimen\oldparindent\oldparindent=\parindent
+\tableofcontents
+
+
+
+
+\chapter{Les tableaux, les \Index{pointeurs}~\cite{delannoy}}
+
+	\section{Les tableaux à un indice}
+		\subsection{Exemple d'utilisation d'un tableau en C}
+			Supposons que nous souhaitons déterminer, à partir de vingt notes d'élèves (fournies en données), combien d'entre elles sont supérieures à la moyenne de la classe. S'il ne s'agissait que de calculer simplement la moyenne de ces notes, il nous suffirait d'en calculer la somme, en les cumulant dans une variable, au fur et à mesure de leurs lecture. mais ici, il nous faut à nouveau pouvoir consulter les notes pour déterminer combien d'entres elles sont superieur à la moyenne ainsi obttenue. il est donc nécessaire de pouvoir mémoriser ces vingt notes.\par
+			Pour ce faire, il paraît peu raisonnable de prévoir vingt variables scalaire differentes.
+			Le \emph{\Index{tableau}} va nous offrir une solution convenable à ce problème, comme le montre le programme suivant~\cite{c20}.\\
+			\begin{code}
+			
+			\noindent\marr{\#include} <stdio.h>\\
+  			\vertt{main}() \{\\
+  				   \iin\bleu{int} i, som, nbm;\\
+  				   \iin\bleu{float} moyenne;\\
+  				   \iin\bleu{int} t[20];\\
+  				   \iin\rouge{for} (i = 0; i<20; i++)\{\\
+  				       \ii\vertt{printf}(\jauu{"donner la note numero \%d : "}, i+1);\\
+  				       \ii\vertt{scanf}(\jauu{"\%d"}, \&t[i]);\\
+  				       \ii\vertt{printf}(\jauu{"$\backslash$n"}, i+1);\\
+  				   \iin\}\\
+  			
+  				\iin\rouge{for}(i = 0, som=0; i<20; i++)\{\\
+  				\ii som += t[i];\\
+  				\iin\}\\
+
+  				\iin moyenne = som/20;\\
+  				\iin\vertt{printf}(\jauu{"$\backslash$n n moyenne de la classe : \%f $\backslash$n "}, moyenne);\\
+  				\iin\rouge{for} (i = 0, nbm = 0; i<20; i++)\{\\
+  					\ii if(t[i] > moyenne) nbm++;\\
+  				\iin\}\\
+  				\iin\vertt{printf}(\jauu{"\%d eleve ont plus de cette moyenne "}, nbm);\\
+  			\}
+  			\end{code}
+
+			
+
+			La \Index{déclaration}:\\
+			\iin{\bleu{int} t[20]}
+			\par réserve l'emplacement de 20 elements de type {\bleu{int}}. Chaque élément est repéré par sa position dans le tableau, nommée indice. Conventionnelement, en \index{langage C}, la premiere position porte le numéro  {\noirr{0}}. Ici, donc, nos indicesvont de  {\noirr{0}} à  {\noirr{19}}. Le premier élément du tableau sera désigné par {\noirr{t[0]}} et le dernier par  {\noirr{t[19]}}.\\
+			\par
+			Plus généralement, une notation telle que  {\noirr{t[i]}} désigne un élément dont la position dans le tableau est fournis par la valeur  {\noirr{i}}. Elle joue le même rôle qu'ue variable scalaire de type  {\bleu{int}}.\\
+			La notation  {\noirr{\&t[i]}} désigne l'\Index{adresse} de cet élément  {\noirr{t[i]}} de même que  {\noirr{\&n}} designe l'\Index{adresse} de  {\noirr{n}}.
+
+		\subsection{Quelques règles}
+			\subsubsection{Les éléments de tableau}
+				\par Un élément de tableau est une \noirr{lvalue}. Il peut donc apparaître à gauche d'un opérateur d'affectation comme dans : 
+
+				\par  {\noirr{t[2] = 5}}\\
+				\par Il peut aussi apparaître comme opérande d'un opérateur d'incrementation, comme dans 
+				 	
+				\begin{code}
+					\begin{tabular}{ l c r }
+  						 t[3]++& \ii--t[i]\\
+					\end{tabular}
+				\end{code}
+				\par 
+				En revanche, il n'est pas possible, si  {\noirr{t1}} et  {\noirr{t2}} sont des tableaux d'entiers, d'écrire  {\noirr{t1 = t2;}}	en faite, le langage C n'offre aucune possibilité d'affectation globale de tableaux, comme c'était le cas, par exemple, en Pascal.
+
+			\subsubsection{Les indices}
+
+				\par Un indice peut prendre la forme de n'inporte quelle expression arithmétique de type entier (ou caractère, compte tenu des règles de conversion systématique). Par exemple, si \verb+n, p, k+ et \verb+j+ sont de type \verb+int+, ces notation sont correctes :
+				\\
+				\noirr{t[n-3] \\
+				t[3*p-2*k+j\%1]}
+				\par  il en va de même, si \noirr{c1} et \noirr{c2} sont de type \noirr{char}, de :
+				\\
+				\noirr{t[c1+3]}\\
+				\noirr{t[c1-c2]}
+
+			\subsubsection{La dimension d'un tableau}
+				\begin{code}
+					\noindent\marr{\#define N 50}\\
+					\ii........\\
+					\ii\bleu{int} t[N];\\
+					\ii\bleu{float} h[2*N-1];				
+				\end{code}
+				est correcte. en revanche, elle ne le srait pas (en C) si \noirr{N} était une constante symbolique définie par \noirr{const} \bleu{int} \noirr{N=50}, les expressions \noirr{N}  et \noirr{2*N-1} n'étant alors plus calculables par le compilateur (elle sera cependant acceptée en \noirr{C++})
+		
+			\subsubsection{\Index{Débordement} d'indice}
+				Aucun contrôle de débordement  d'indice n'est mis en place par la plupart des compilateurs. De sorte qu'il est (si l'on peut dire !) de désigner et, donc de modifier, un emplacement situé avant ou après le tableau.
+
+		\section{Les tableaux à plusieurs indices}
+			\subsection{Leur déclaration}
+				Comme tous les langages, \noirr{C} autorise les tableaux à plusieurs indice (on dit aussi à plusieurs dimension). Par exemple, la déclaration :
+				\par\begin{code}
+					\noindent\bleu{int}\noirr{ t[5][3]};
+				\end{code}
+				\noindent réserve un tableau de \noirr{15 (5 x 3)} éléments. Un élément quelconque de ce tableau se trouve alors repéré par deux indices comme dans ces notation :\\
+				\noirr{t[2][3]\iin t[i][j] \iin t[i-3][i*j]}\\
+				Notez bien que, là encore, la notation désignant un element d'un tel tableau est une \verb+lvalue+. il n'en ira pas toutefois pas de même notation telle que \noirr{t[3]} ou \noirr{t[j]} bien que, nous le verrons un peu plus tard, de telles notations aient un sense en \noirr{C++}\\
+				Aucune limitation ne pèse sur le nombre d'indice que peut comporter un tableau. Seules les limitation de taille mémoire liées à un environnement donné risque de se faire sentir.
+
+
+		\section{Notion de pointeur - les opérateurs \noirr{*} et \noirr{\&}}
+			\subsection{Introduction}
+				Nous avons déjà été amené à utiliser l'opérateur \noirr{\&} pour désigner l'\Index{adresse} d'une \noirr{lvalue}. D'une manière dénérale, le langage \noirr{C} permet de manipuler des \Index{adresses} par l'intermédiaired de variable nommées pointeurs.\\
+				En guise d'introduction à cette nouvelle notion, considerons les instructions : 
+
+				\begin{code}
+					\bleu{int} * ad;\\
+					\bleu{int} n;\\
+					n = 20;\\
+					ad = \&n;\\
+					*ad = 30;\\
+				\end{code}
+				La première réserve une \Index{variable} nomée \noirr{ad} comme étant un pointeur sur des entiers. Nouverrons que \noirr{*} est un opérateur qui designe le contenu de l'\Index{adresse} qui le suit. Ainsi, à titre mnémonique, on peut dire que cette déclaration signifie que \noirr{*ad}, c'est-à-dire l'\Index{objet} d'\Index{adresse} \noirr{ad}, est de type \noirr{int}; ce qui signifie bien que \noirr{ad} est l'\Index{adresse} d'un entier.\\
+				L'instruction :\\
+				\begin{minipage}[b]{\textwidth}
+					\noirr{ad = \&n;}\\
+					Affecte à la variable \noirr{ad} la valeur de l'expression \noirr{\&n}. L'opérateur \noirr{\&} (que nous avons déjà utilisé avec \noirr{scanf}) est un opérateur unaire qui fournit comme résultat l'\Index{adresse} de son opérande. Ainsi cette instruction place dans la variable \noirr{n}. Après son exécution, on peut schématiser ainsi la situation : 
+
+				\begin{pspicture}(5,5)
+
+					\psline[linewidth=1pt, linestyle=dashed](0,4)(0,2)(4,2)(4,4)
+					\rput[tr](2,1.5){ad}
+					\psline[linewidth=0.5pt, linestyle=dashed]{->}(4.5,3)(7.5,3)
+					\psline[linewidth=1pt, linestyle=dashed](8,4)(8,2)(12,2)(12,4)
+					\rput(10,3){20}
+					\rput[tr](10,1.5){n}
+
+				\end{pspicture}
+				\end{minipage}
+
+				L'instruction suivante :\\
+				\noirr{*ad = 30;}\\ 
+				signifie : affecter à la \noirr{lvalue *ad} la valeur \noirr{30}. Or \noirr{*ad} représente l’entier ayant pour \Index{adresse} \noirr{ad} (notez bien que nous disons l’entier et pas simplement la valeur car, ne l’oubliez pas, ad est un pointeur sur des entiers). Après exécution de cette instruction, la situation est la suivante :
+
+				\begin{pspicture}(5,5)
+
+					\psline[linewidth=1pt, linestyle=dashed](0,4)(0,2)(4,2)(4,4)
+					\rput[tr](2,1.5){ad}
+					\psline[linewidth=0.5pt, linestyle=dashed]{->}(4.5,3)(7.5,3)
+					\psline[linewidth=1pt, linestyle=dashed](8,4)(8,2)(12,2)(12,4)
+					\rput(10,3){30}
+					\rput[tr](10,1.5){n}
+
+				\end{pspicture}
+
+				Bien entendu, ici, nous aurions obtenu le même résultat avec : \\
+				\noirr{n = 30;}\\
+
+		\section{Comment simuler une \Index{transition} par \Index{adresse} avec des pointeurs}
+			Nous avons vu que le mode de transmission par valeur semblait interdire à une fonction de modifier la valeur de ses arguments effectifs et nous avions mentionné que les pointeurs fourniraient une solution à ce problème. Nous sommes maintenant en mesure d’écrire une fonction effectuant la  ermutation des valeurs de deux variables. Voici un programme qui réalise cette opération avec des valeurs entières :
+
+			{
+				\begin{code}
+					\iin\marr{\#include <sdtio.h>}\\
+
+					\iin\bleu{void} \vertt{echange} (\bleu{int} * ad1, \bleu{int} * ad2);\\
+
+					\iin\bleu{int} \vertt{main} ()\{\\
+						
+						\ii  \bleu{int} a = 10; b = 20;\\
+						\ii \vertt{printf}(\jauu{"avant appel \%d \%d"} , a,b);\\
+						\ii \vertt{echange}(\&a,\&b);\\
+						\ii \vertt{printf}(\jauu{"apres appel \%d \%d"} , a,b);\\
+					\iin\}
+
+					\iin\bleu{void} \vertt{echange}(\bleu{int} * ad1, \bleu{int} * ad2)\{ \\
+						\ii int x ;\\
+					\ii	x = * ad1;\\
+					\ii	* ad1 = * ad2;\\
+					\ii	* ad2 = x;\\
+					\iin\}\\
+
+
+				\end{code}
+			}
+
+			{
+				\begin{code2}
+					\iin avant appel 10 20\\
+					\iin apres appel 20 10
+
+
+				\end{code2}
+			}
+
+			Les arguments effectifs de l’appel de \noirr{echange} sont, cette fois, les adresses des variables \noirr{n} et \noirr{p} (et non plus leurs valeurs). Notez bien que la transmission se fait toujours par valeur, à savoir que l’on transmet à la fonction \noirr{echange} les valeurs des expressions \noirr{\&n} et \noirr{\&p}.
+
+			Voyez comme, dans \noirr{echange}, nous avons indiqué, comme arguments muets, deux variables pointeurs destinées à recevoir ces \Index{adresses}. D’autre part, remarquez bien qu’il n’aurait pas fallu se contenter d’échanger simplement les valeurs de ces arguments en écrivant (par analogie avec la fonction \noirr{echange} du chapitre précédent) :
+
+			\begin{code}
+				\bleu{int} *x;\\
+				x = ad1;\\
+				ad1 = ad2;\\
+				ad2 = x;\\
+			\end{code}
+			Cela n'aurait conduit qu'à échanger (localement) les valeurs de ces deux \Index{adresse} alors qu'il a fallu échanger les valeurs situées à ces \Index{adresse}.
+
+		\section{Un nom de tableau est un pointeur constant}
+
+			En langage \noirr{C}, l’identificateur d’un tableau, lorsqu’il est employé seul (sans indices à sa suite), est considéré comme un pointeur (constant) sur le début du tableau. Nous allons en examiner les conséquences en commençant par le cas des tableaux à un indice ; nous verrons en effet que, pour les tableaux à plusieurs indices, il faudra tenir compte du type exact du pointeur en question.
+
+			\subsection{Cas des tableaux à un indice}
+				Supposons, par exemple, que l’on effectue la déclaration suivante :\\ 
+				\bleu{int} \noirr{t[10]}\\
+				La notation  \noirr{t} est alors totalement équivalente à \noirr{\&t[0]}.
+				L'identificateur \noirr{t} est considéré comme étant de type pointeur sur le type correpondant aux éléments du tableau, c'est-à-dire, ici, \bleu{int} \bleu{*}. Ainsi, voici quelques exemples de notations équivalentes : 
+				
+
+				%TABLEAU%
+				\begin{code}
+					\begin{tabular}{ l c r }
+  						 t+1 & \ii\&t[1]\\
+  						 t+i & \ii\&t[i]\\
+						 t[i]& \ii* (t+i)\\
+					\end{tabular}
+				\end{code}
+				Pour illuster ces nouvelles possibilités de notation, voici plusieurs façon de placer la valeur \verb+1+ dans chacun des 10 éléments de notre tableau \noirr{t} : 
+				\par\begin{code}
+					\iin\bleu{int} i ; \\
+					\iin\vertt{for} (i=0 ; i<10 ; i++)\{\\
+						\ii* (t+i) = 1 ;\\
+					\iin\}
+
+				\end{code}
+
+				\begin{code}
+					\iin\bleu{int} i ;\\
+					\iin\bleu{int} * p ;\\
+					\iin \vertt{for} (p=t, i=0 ; i<10 ; i++, p++)\{\\
+						\ii* p = 1 ;\\
+					\iin\}
+
+				\end{code}
+				Dans la seconde façon, nous avons dû recopier la valeur représentée par \noirr{t} dans un pointeur nommé \noirr{p}. En effet, il ne faut pas perdre de vue que le symbole \noirr{t} représente une \Index{adresse}
+				constante (t est une constante de type pointeur sur des entiers). Autrement dit, une expression telle que \noirr{t++} aurait été invalide, au même titre que, par exemple, \noirr{3++}. \textbf{Un nom de tableau est un pointeur constant ; ce n’est pas une \noirr{lvalue}.}
+
+			\subsection{Cas des tableaux à plusieurs indices }
+				Comme pour les tableaux à un indice, l’identificateur d’un tableau, employé seul, représente toujours son \Index{adresse} de début. Toutefois, si l’on s’intéresse à son type exact, il ne s’agit plus d’un pointeur sur des éléments du tableau. En pratique, ce point n’a d’importance que lorsque l’on effectue des calculs arithmétiques avec ce pointeur (ce qui est assez rare) ou lorsque l’on doit transmettre ce pointeur en argument d’une fonction ; dans ce dernier cas, cependant, nous verrons que le problème est automatiquement résolu par la mise en place de conversions, de sorte qu’on peut ne pas s’en préoccuper.
+
+				\textbf{À simple titre indicatif,} nous vous présentons ici les règles employées par \noirr{C}, en nous limitant au cas des tableaux à deux indices.\\
+				Lorsque le compilateur rencontre une déclaration telle que : \\
+				\bleu{int} \noirr{t[3][4];}\\
+
+		\printindex
+
+		\bibliographystyle{plain}
+		\bibliography{ref}
+\end{document}
