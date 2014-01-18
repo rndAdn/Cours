@@ -1,4 +1,5 @@
 ﻿doc/*
+*.html
 ###C###
 # Object files
 *.o
