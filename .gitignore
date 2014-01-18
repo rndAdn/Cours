@@ -25,6 +25,7 @@
 *.jar
 *.war
 *.ear
+.idea/*
 
 
 ###LATeX###
