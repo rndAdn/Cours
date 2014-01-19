@@ -1,5 +1,4 @@
 package gui;
+public class Fenetre{
 
-
-public class Fenetre {
 }

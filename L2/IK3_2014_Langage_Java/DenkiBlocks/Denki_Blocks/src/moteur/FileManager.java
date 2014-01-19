@@ -143,23 +143,20 @@ public class FileManager {
 		int lvl = 1;
 		Map map = new Map(path);
 
-		for(int i =0;i<map.getHeight(); i++){
+		/*for(int i =0;i<map.getHeight(); i++){
 			for(int j =0;j<map.getWidth(); j++){
 				System.out.print(map.getCases()[i][j]+" ");
 			}
 			System.out.println();
 
-		}
+		}*/
 		Fenetre jFrame = new Fenetre();
 		jFrame.setVisible(true);
 		Pan p;
 		p = new Pan(map);
 		jFrame.add(p);
 		Scanner sc = new Scanner(System.in);
-		while (sc.nextInt() != 0){
-			map.moveUp();
-			p.repaint();
-		}
+
 
 	}
 

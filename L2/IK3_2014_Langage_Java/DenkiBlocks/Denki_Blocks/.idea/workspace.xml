@@ -64,24 +64,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileManager.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/moteur/FileManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="24" selection-start="3937" selection-end="3937" vertical-scroll-proportion="0.0" vertical-offset="2267" max-vertical-offset="3852">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Profile.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/moteur/Profile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -91,15 +73,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Map.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Map.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/moteur/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="0" selection-start="3235" selection-end="3235" vertical-scroll-proportion="4.6190476" vertical-offset="0" max-vertical-offset="1890">
+            <state line="158" column="8" selection-start="4769" selection-end="4769" vertical-scroll-proportion="0.0" vertical-offset="2646" max-vertical-offset="3708">
               <folding>
-                <element signature="method#loadImages#0;class#Map#0" expanded="false" />
-                <element signature="e#2813#2814#0" expanded="true" />
-                <element signature="e#2832#2833#0" expanded="true" />
+                <element signature="e#4827#4828#0" expanded="true" />
+                <element signature="e#4846#4847#0" expanded="true" />
+                <element signature="e#4872#4873#0" expanded="true" />
+                <element signature="e#4891#4892#0" expanded="true" />
+                <element signature="e#4918#4919#0" expanded="true" />
+                <element signature="e#4938#4939#0" expanded="true" />
+                <element signature="e#4966#4967#0" expanded="true" />
+                <element signature="e#4984#4985#0" expanded="true" />
+                <element signature="e#5035#5036#0" expanded="true" />
+                <element signature="e#5060#5061#0" expanded="true" />
+                <element signature="e#5096#5097#0" expanded="true" />
+                <element signature="e#5121#5122#0" expanded="true" />
+                <element signature="e#5159#5160#0" expanded="true" />
+                <element signature="e#5186#5187#0" expanded="true" />
+                <element signature="e#5223#5224#0" expanded="true" />
+                <element signature="e#5246#5247#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileManager.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/moteur/FileManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="10" selection-start="3571" selection-end="3571" vertical-scroll-proportion="0.30958903" vertical-offset="2407" max-vertical-offset="3798">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fenetre.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/Fenetre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="4" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="180">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +120,7 @@
       <file leaf-file-name="Case.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/moteur/Case.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="23" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1278">
+            <state line="5" column="6" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1116">
               <folding />
             </state>
           </provider>
@@ -116,7 +129,7 @@
       <file leaf-file-name="Obstacle.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/moteur/Obstacle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="36" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="1314">
+            <state line="63" column="36" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="1314">
               <folding />
             </state>
           </provider>
@@ -125,19 +138,17 @@
       <file leaf-file-name="Block.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/moteur/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="990">
+            <state line="57" column="45" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1314">
               <folding>
-                <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#574#575#0" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#716#717#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#970#971#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cdc.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/level/cdc.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -145,16 +156,7 @@
       <file leaf-file-name="1.lvl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/level/1.lvl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="15" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="558">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="renaud.pfl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/profile/renaud.pfl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="6" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="216">
+            <state line="14" column="21" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="558">
               <folding />
             </state>
           </provider>
@@ -172,7 +174,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/moteur/file.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
-        <option value="$PROJECT_DIR$/src/gui/Fenetre.java" />
         <option value="$PROJECT_DIR$/src/moteur/File.java" />
         <option value="$PROJECT_DIR$/data/map/cdc.txt" />
         <option value="$PROJECT_DIR$/src/moteur/Plateau.java" />
@@ -181,12 +182,13 @@
         <option value="$PROJECT_DIR$/src/moteur/Profile.java" />
         <option value="$PROJECT_DIR$/data/profile/renaud" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/moteur/Block.java" />
-        <option value="$PROJECT_DIR$/src/moteur/Case.java" />
         <option value="$PROJECT_DIR$/src/moteur/Obstacle.java" />
-        <option value="$PROJECT_DIR$/src/moteur/FileManager.java" />
+        <option value="$PROJECT_DIR$/src/gui/Fenetre.java" />
         <option value="$PROJECT_DIR$/data/level/1.lvl" />
+        <option value="$PROJECT_DIR$/src/moteur/Block.java" />
         <option value="$PROJECT_DIR$/src/moteur/Map.java" />
+        <option value="$PROJECT_DIR$/src/moteur/Case.java" />
+        <option value="$PROJECT_DIR$/src/moteur/FileManager.java" />
       </list>
     </option>
   </component>
@@ -223,6 +225,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,6 +233,10 @@
               <option name="myItemId" value="Denki_Blocks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -238,6 +245,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -251,18 +272,53 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="doc" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="moteur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Denki_Blocks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
@@ -277,6 +333,10 @@
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../Programmation/Java/lwjgl-2.9.1/lwjgl-2.9.1/native/linux" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -304,6 +364,28 @@
       <module name="Denki_Blocks" />
       <envs />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Fenetre" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Fenetre" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=lib/native" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Denki_Blocks" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -341,19 +423,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -379,6 +448,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -434,12 +516,14 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.FileManager" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Fenetre" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.FileManager" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Fenetre" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -503,7 +587,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39966834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -513,13 +597,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1344411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1978852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -537,13 +621,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3283582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -567,16 +651,23 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/moteur/FileManager.java">
+    <entry file="file://$PROJECT_DIR$/data/level/cdc.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="24" selection-start="3937" selection-end="3937" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3942">
+        <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/moteur/Profile.java">
+    <entry file="file://$PROJECT_DIR$/data/level/1.lvl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
+        <state line="17" column="15" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/profile/renaud.pfl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="216">
           <folding />
         </state>
       </provider>
@@ -590,11 +681,125 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/moteur/Map.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="85" selection-start="2904" selection-end="2915" vertical-scroll-proportion="0.0" vertical-offset="1818" max-vertical-offset="3168">
+          <folding>
+            <element signature="e#4827#4828#0" expanded="true" />
+            <element signature="e#4846#4847#0" expanded="true" />
+            <element signature="e#4872#4873#0" expanded="true" />
+            <element signature="e#4891#4892#0" expanded="true" />
+            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#4984#4985#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5096#5097#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#5159#5160#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5223#5224#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="23" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Obstacle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="36" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.0" vertical-offset="1134" max-vertical-offset="1314">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1314">
+          <folding>
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/level/cdc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/level/1.lvl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="15" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/profile/renaud.pfl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/FileManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="24" selection-start="3937" selection-end="3937" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3942">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="219" column="100" selection-start="5658" selection-end="5658" vertical-scroll-proportion="0.0" vertical-offset="3816" max-vertical-offset="3852">
           <folding>
-            <element signature="method#loadImages#0;class#Map#0" expanded="false" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2832#2833#0" expanded="true" />
+            <element signature="e#4827#4828#0" expanded="true" />
+            <element signature="e#4846#4847#0" expanded="true" />
+            <element signature="e#4872#4873#0" expanded="true" />
+            <element signature="e#4891#4892#0" expanded="true" />
+            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#4984#4985#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5096#5097#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#5159#5160#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5223#5224#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,7 +822,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="5" selection-start="0" selection-end="1030" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1314">
           <folding>
-            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -652,9 +864,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/moteur/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
@@ -668,9 +878,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="58" selection-start="779" selection-end="790" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1620">
           <folding>
-            <element signature="method#loadImages#0;class#Map#0" expanded="false" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2832#2833#0" expanded="true" />
+            <element signature="e#4827#4828#0" expanded="true" />
+            <element signature="e#4846#4847#0" expanded="true" />
+            <element signature="e#4872#4873#0" expanded="true" />
+            <element signature="e#4891#4892#0" expanded="true" />
+            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#4984#4985#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5096#5097#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#5159#5160#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5223#5224#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -686,7 +909,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="576">
           <folding>
-            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -735,9 +965,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="180">
           <folding>
-            <element signature="method#loadImages#0;class#Map#0" expanded="false" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2832#2833#0" expanded="true" />
+            <element signature="e#4827#4828#0" expanded="true" />
+            <element signature="e#4846#4847#0" expanded="true" />
+            <element signature="e#4872#4873#0" expanded="true" />
+            <element signature="e#4891#4892#0" expanded="true" />
+            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#4984#4985#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5096#5097#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#5159#5160#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5223#5224#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -753,7 +996,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="68" selection-start="336" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="612">
           <folding>
-            <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -763,11 +1013,6 @@
         <state line="10" column="28" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="594">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="198" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/profile/renaud.pfl">
@@ -784,21 +1029,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/moteur/Profile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/level/cdc.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/moteur/Case.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="23" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1098">
           <folding />
         </state>
       </provider>
@@ -817,37 +1053,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/moteur/Block.java">
+    <entry file="jar:///usr/lib/jvm/java-7-openjdk/jre/lib/rt.jar!/java/lang/ClassLoader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="0" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="990">
-          <folding>
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
+        <state line="201" column="0" selection-start="10561" selection-end="10561" vertical-scroll-proportion="0.6851312" vertical-offset="3365" max-vertical-offset="3708" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="4" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/level/1.lvl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="15" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="558">
+        <state line="14" column="21" selection-start="414" selection-end="414" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="45" selection-start="891" selection-end="891" vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1314">
+          <folding>
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="8" selection-start="4769" selection-end="4769" vertical-scroll-proportion="0.0" vertical-offset="2646" max-vertical-offset="3708">
+          <folding>
+            <element signature="e#4827#4828#0" expanded="true" />
+            <element signature="e#4846#4847#0" expanded="true" />
+            <element signature="e#4872#4873#0" expanded="true" />
+            <element signature="e#4891#4892#0" expanded="true" />
+            <element signature="e#4918#4919#0" expanded="true" />
+            <element signature="e#4938#4939#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#4984#4985#0" expanded="true" />
+            <element signature="e#5035#5036#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5096#5097#0" expanded="true" />
+            <element signature="e#5121#5122#0" expanded="true" />
+            <element signature="e#5159#5160#0" expanded="true" />
+            <element signature="e#5186#5187#0" expanded="true" />
+            <element signature="e#5223#5224#0" expanded="true" />
+            <element signature="e#5246#5247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moteur/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="6" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1116">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/moteur/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="24" selection-start="3937" selection-end="3937" vertical-scroll-proportion="0.0" vertical-offset="2357" max-vertical-offset="3942">
+        <state line="145" column="10" selection-start="3571" selection-end="3571" vertical-scroll-proportion="0.30958903" vertical-offset="2407" max-vertical-offset="3798">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/moteur/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="0" selection-start="3235" selection-end="3235" vertical-scroll-proportion="4.6190476" vertical-offset="0" max-vertical-offset="1890">
-          <folding>
-            <element signature="method#loadImages#0;class#Map#0" expanded="false" />
-            <element signature="e#2813#2814#0" expanded="true" />
-            <element signature="e#2832#2833#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -928,6 +1203,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>lwjgl-2.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

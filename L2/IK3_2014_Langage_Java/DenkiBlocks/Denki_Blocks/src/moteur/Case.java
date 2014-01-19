@@ -36,6 +36,8 @@ public class Case {
 			case 2 :
 				this.image_bg = null;
 				this.block = new Block();
+				this.block.setID(Block.getNombre_Blocks());
+				Block.setNombre_blockspIncr();
 				break;
 		}
 	}

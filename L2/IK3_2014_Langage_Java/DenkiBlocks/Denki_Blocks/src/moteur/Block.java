@@ -3,7 +3,8 @@ package moteur;
 import java.awt.*;
 
 public class Block {
-
+	private static int nombre_blocks;
+	private int ID;
 	private Image image = null;
 	private Block b_Doite;
 	private Block b_Haut;
@@ -24,6 +25,15 @@ public class Block {
 	}
 
 	/*GET*/
+
+	public static int getNombre_Blocks() {
+		return nombre_blocks;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
 	public Image getImage() {
 		return image;
 	}
@@ -44,6 +54,14 @@ public class Block {
 	}
 
 	/*SET*/
+
+	public static void setNombre_blockspIncr() {
+		Block.nombre_blocks++;
+	}
+
+	public void setID(int ID) {
+		this.ID = ID;
+	}
 
 	public void setImage(Image image) {
 		this.image = image;
