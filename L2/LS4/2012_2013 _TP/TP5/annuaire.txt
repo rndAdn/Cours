@@ -1,5 +1,0 @@
-Haddock,Archibald,Capitaine,Chateau de Moulinsart,421
-Derkozy,Niclas,Marin,Champs-Elaises,234
-Odema,Darak,Matelot,Maison Grise,555
-Pays-Bas,Francine,Amiral,Tulle,333
-Merkle,Angelina,Matelot,Berlin,111
