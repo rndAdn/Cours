@@ -9,12 +9,14 @@ Problème
 
 
 <dot>
+digraph a {
     graph [rankdir=LR]
     e [label="Entrée"]
     s [label="Sortie"]
 
 
-e -> s  
+    e -> s  
+}
 </dot>
 
 
