@@ -1,6 +1,6 @@
 Cours 1 Sophie Laplante 15/09/14
 
-#Algo
+# Algo
 
 Problème
 : Spécification qui associe aux données d'entrée le comportement de sortie.
@@ -20,7 +20,8 @@ digraph a {
 </dot>
 
 
-Structure de données : Une stratégie structurée pour ranger et accéder aux informations.
+Structure de données
+: Une stratégie structurée pour ranger et accéder aux informations.
 
 Algo
 : Résoud un problèmesouvent lié à une structure de données.
@@ -35,10 +36,6 @@ Graph
 : Ensemble de points *Sommets* *Ex : des pixels, stations de metro* avec une notion d'adjacence
 
 Union Fsind
-: _Entrée_ : un ensemble de points. une relation d'équivalence deux opérations:
-
-**FIND**
-: Étant donnés *u*, *v* dire s'il sont équivalents
-
-**UNION**
-: Étant donnés 2 points les mettre en relation.
+: _Entrée_ : un ensemble de points. une relation d'équivalence deux opérations:<br>
+**FIND** :Étant donnés *u*, *v* dire s'il sont équivalents<br>
+**UNION** : Étant donnés 2 points les mettre en relation.
