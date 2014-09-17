@@ -91,6 +91,7 @@ Segment Texte -> Les instruction du programme </br>
 Data Segment -> Les variables initialisés de niveau 0 ou plus static ou non.</br>
 BSS segment -> Les variables de niveau 0 non initialisés </br>
 1. <Strong>Pile</Strong> </br>
+Memoire temporaire.
 
 Graph
 
