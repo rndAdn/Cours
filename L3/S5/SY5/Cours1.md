@@ -39,6 +39,29 @@ double td[] = {-3,14,-0.1,-7,12,-8.0,2.43};
 Table
 -3  | 6 | 8 | 12 | -7 | 2  
 
+```
+int *a;
+a = &tab[2];
+printf(*(a+2)); // -7
+printf(*(a-1)); // 6
+int l = -1
+printf(*(a+2*l)); // -3
+printf(*(a+2)+1); // -6
+*(a+15) = 12;
+//Sorti d'espace adressable (Seg Fault ou corruption de donneés)
+b = &tab[5]
+printf(a-b); // entier postive de 3*size(int)
+```
+## Parcours de tableau avec pointeur
+```
+a = &tab;
+b = a+6;
+int s = 0;
+while(a<b){
+  s += *a;
+  a++;
+}
+```
 
 Graph
 
