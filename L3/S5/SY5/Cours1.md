@@ -62,6 +62,29 @@ while(a<b){
   a++;
 }
 ```
+Utilisation de sizeof(-type/-expression)
+
+## Petit programme et fonction
+```
+int f(int x, int t[]){
+  int s;
+  t[2] = t[3] + 1
+  //*(pointeur + entier) <=> pointeur[entier] pour le compilateur
+  //sizeof(t) = 4
+  ...
+}
+int main(void){
+  int i;
+  int tab[] = {1,2,5,8};
+  //sizeof(tab) = 4*4
+  int k;
+  i=3;
+  // On doit passer le nombre d'élément du tableau en parametre
+  k = f(i,tab);
+  ...
+}
+```
+
 
 Graph
 
