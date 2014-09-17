@@ -94,7 +94,7 @@ BSS segment -> Les variables de niveau 0 non initialisés </br>
 
 Graph
 
-<dot>
+<dot><
 digraph a {
     graph [rankdir=LR]
     0 -> 1 [label="b"]
