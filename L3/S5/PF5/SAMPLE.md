@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-[PF5] Cours 1
-> michele.pagani@pps.univ-paris-diderot.fr
-
 [TOC]
-=======
-[PF5]
 
 # Titre 1
 Graph
@@ -54,4 +48,3 @@ Apple
 
 Orange
 :   The fruit of an evergreen tree of the genus Citrus.
->>>>>>> 20e6c1e35accb51ceb250b36af872fd880491cc2
