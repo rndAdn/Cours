@@ -1,7 +1,9 @@
 [TOC]
 
 # Titre 1
-Graph
+???Surligné???
+**Gras**
+*italique*
 
 <dot>
 digraph a {
@@ -15,6 +17,7 @@ Math
 $$\sqrt{2} \sin x$$,
 
 Code
+
     public static void main(String[] args){
         System.out.println("Hello");
     }
@@ -36,6 +39,7 @@ Liste
 ## Sous-titre 1
 
 Table
+
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
