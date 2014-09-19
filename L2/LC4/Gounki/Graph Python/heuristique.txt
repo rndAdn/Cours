@@ -1,0 +1,3170 @@
+ArmeA = 4.000000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.000000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 508 || B = 492 
+
+
+
+ArmeA = 5.000000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 4.000000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.500000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 4.000000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 511 || B = 489 
+
+
+
+ArmeA = 3.000000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.500000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.750000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.500000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 524 || B = 476 
+
+
+
+ArmeA = 4.000000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.750000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 505 || B = 495 
+
+
+
+ArmeA = 4.250000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 4.000000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.875000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 4.000000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 527 || B = 473 
+
+
+
+ArmeA = 3.750000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.875000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.937500 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.875000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.843750 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.875000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 483 || B = 517 
+
+
+
+ArmeA = 3.890625 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.875000 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 507 || B = 493 
+
+
+
+ArmeA = 3.906250 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.890625 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.890625 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 507 || B = 493 
+
+
+
+ArmeA = 3.875000 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.886719 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.880859 , PerceA = 1.500000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.882812 , PerceA = 2.500000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.000000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.750000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.375000 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.562500 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.468750 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.515625 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.500000 , DefenceB = 1.500000 
+ A = 519 || B = 481 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.531250 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.515625 , DefenceB = 1.500000 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.507812 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.515625 , DefenceB = 1.500000 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.519531 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.515625 , DefenceB = 1.500000 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.515625 , DefenceB = 1.500000 
+ A = 508 || B = 492 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.511719 , DefenceA = 1.500000 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.500000 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 2.500000 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.500000 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.000000 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.500000 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.750000 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.500000 
+ A = 538 || B = 462 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 2.000000 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.750000 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.625000 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.750000 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.812500 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.750000 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.718750 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.750000 
+ A = 498 || B = 502 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.765625 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.750000 
+ A = 499 || B = 501 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.742188 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.750000 
+ A = 508 || B = 492 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.742188 
+ A = 511 || B = 489 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.726562 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 486 || B = 514 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.738281 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.513672 , DefenceA = 1.732422 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 4.882812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 500 || B = 500 
+
+
+
+ArmeA = 4.882812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 497 || B = 503 
+
+
+
+ArmeA = 3.382812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 495 || B = 505 
+
+
+
+ArmeA = 4.132812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 3.882812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 501 || B = 499 
+
+
+
+ArmeA = 4.382812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.132812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 499 || B = 501 
+
+
+
+ArmeA = 4.007812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.132812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 500 || B = 500 
+
+
+
+ArmeA = 4.007812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.132812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 495 || B = 505 
+
+
+
+ArmeA = 4.195312 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.132812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 504 || B = 496 
+
+
+
+ArmeA = 4.257812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.195312 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 509 || B = 491 
+
+
+
+ArmeA = 4.320312 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.257812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 496 || B = 504 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.257812 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 501 || B = 499 
+
+
+
+ArmeA = 4.195312 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 487 || B = 513 
+
+
+
+ArmeA = 4.242188 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 505 || B = 495 
+
+
+
+ArmeA = 4.257812 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.242188 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 494 || B = 506 
+
+
+
+ArmeA = 4.234375 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.242188 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 536 || B = 464 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.234375 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 505 || B = 495 
+
+
+
+ArmeA = 4.218750 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 4.230469 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 498 || B = 502 
+
+
+
+ArmeA = 4.224609 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 496 || B = 504 
+
+
+
+ArmeA = 4.226562 , PerceA = 2.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 502 || B = 498 
+
+
+
+ArmeA = 4.226562 , PerceA = 3.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 2.513672 , DefenceB = 1.734375 
+ A = 497 || B = 503 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 496 || B = 504 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.013672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.763672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 444 || B = 556 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.388672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 98 || B = 107 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.734375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 497 || B = 503 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.234375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 499 || B = 501 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.984375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 428 || B = 572 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.609375 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.796875 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.703125 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.734375 
+ A = 521 || B = 479 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.671875 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.703125 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.718750 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.703125 
+ A = 486 || B = 514 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.695312 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.703125 
+ A = 498 || B = 502 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.707031 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.703125 
+ A = 492 || B = 508 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.703125 
+ A = 503 || B = 497 
+
+
+
+ArmeA = 4.226562 , PerceA = 1.513672 , DefenceA = 1.699219 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 5.226562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.726562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 4.226562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 502 || B = 498 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.726562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 505 || B = 495 
+
+
+
+ArmeA = 2.726562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.226562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.476562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.226562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 510 || B = 490 
+
+
+
+ArmeA = 3.726562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.476562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 491 || B = 509 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.476562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.539062 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.476562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 507 || B = 493 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.539062 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 507 || B = 493 
+
+
+
+ArmeA = 3.664062 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.601562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.570312 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.601562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.601562 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 509 || B = 491 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.617187 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 508 || B = 492 
+
+
+
+ArmeA = 3.648437 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.625000 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 509 || B = 491 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.625000 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 495 || B = 505 
+
+
+
+ArmeA = 3.628906 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.625000 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 501 || B = 499 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.628906 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 502 || B = 498 
+
+
+
+ArmeA = 3.636718 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 486 || B = 514 
+
+
+
+ArmeA = 3.630859 , PerceA = 1.513672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.632812 , PerceA = 2.513672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.013672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.763672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 497 || B = 503 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.388672 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.576172 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.513672 , DefenceB = 1.701172 
+ A = 516 || B = 484 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.451172 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.498047 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.474609 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.486328 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.480469 , DefenceA = 1.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 2.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 493 || B = 507 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.701172 
+ A = 505 || B = 495 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 0.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 462 || B = 538 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.451172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 497 || B = 503 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.076172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.263672 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.169922 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 491 || B = 509 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.216797 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.193359 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.205078 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.199219 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 4.632812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 441 || B = 559 
+
+
+
+ArmeA = 3.132812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.507812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.695312 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.648437 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 492 || B = 508 
+
+
+
+ArmeA = 3.625000 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 437 || B = 563 
+
+
+
+ArmeA = 3.636718 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 443 || B = 557 
+
+
+
+ArmeA = 3.630859 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 443 || B = 557 
+
+
+
+ArmeA = 3.632812 , PerceA = 2.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.632812 , PerceA = 0.982422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 492 || B = 508 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.732422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.357422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.544922 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 451 || B = 549 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.451172 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 449 || B = 551 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.498047 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 464 || B = 536 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.486328 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.480469 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 2.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 0.701172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.451172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.076172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.263672 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.169922 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.216797 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.193359 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.205078 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.632812 , PerceA = 1.482422 , DefenceA = 1.199219 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 4.632812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.132812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 3.882812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.507812 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 449 || B = 551 
+
+
+
+ArmeA = 3.695312 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.632812 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 507 || B = 493 
+
+
+
+ArmeA = 3.570312 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.593750 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.605468 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.599609 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 438 || B = 562 
+
+
+
+ArmeA = 3.601562 , PerceA = 2.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 431 || B = 569 
+
+
+
+ArmeA = 3.601562 , PerceA = 0.982422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 449 || B = 551 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.732422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 433 || B = 567 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.357422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.544922 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 431 || B = 569 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.451172 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.498047 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.486328 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.480469 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 2.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 0.701172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.451172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.076172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 483 || B = 517 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.263672 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 495 || B = 505 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.169922 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 445 || B = 555 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.216797 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.193359 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.205078 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.199219 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 451 || B = 549 
+
+
+
+ArmeA = 4.601562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.101562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 455 || B = 545 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.476562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.664062 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.570312 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 486 || B = 514 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.593750 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.605468 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 498 || B = 502 
+
+
+
+ArmeA = 3.599609 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.601562 , PerceA = 2.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 436 || B = 564 
+
+
+
+ArmeA = 3.601562 , PerceA = 0.982422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.732422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.357422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 496 || B = 504 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.544922 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.451172 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.498047 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 493 || B = 507 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.486328 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 494 || B = 506 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.480469 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 462 || B = 538 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 2.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 0.701172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.451172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 451 || B = 549 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.076172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.263672 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 455 || B = 545 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.169922 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.216797 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 493 || B = 507 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.193359 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 495 || B = 505 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.205078 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.482422 , DefenceA = 1.199219 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 493 || B = 507 
+
+
+
+ArmeA = 4.601562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 453 || B = 547 
+
+
+
+ArmeA = 3.101562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.476562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.664062 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.570312 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 483 || B = 517 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.593750 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 493 || B = 507 
+
+
+
+ArmeA = 3.605468 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.599609 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.601562 , PerceA = 2.482422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.601562 , PerceA = 0.982422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.732422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.357422 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.544922 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.451172 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.498047 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 487 || B = 513 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.482422 , DefenceB = 1.201172 
+ A = 502 || B = 498 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 494 || B = 506 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 435 || B = 565 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 462 || B = 538 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 452 || B = 548 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 4.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.101562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 494 || B = 506 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.476562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.664062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 424 || B = 576 
+
+
+
+ArmeA = 3.570312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.593750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.605468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.599609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.601562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.601562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 493 || B = 507 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 452 || B = 548 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 494 || B = 506 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 446 || B = 554 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 464 || B = 536 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 4.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.101562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.476562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.664062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.570312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.617187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.593750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.605468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.599609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 484 || B = 516 
+
+
+
+ArmeA = 3.601562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 420 || B = 580 
+
+
+
+ArmeA = 3.601562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 455 || B = 545 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 487 || B = 513 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 490 || B = 510 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 455 || B = 545 
+
+
+
+ArmeA = 4.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 464 || B = 536 
+
+
+
+ArmeA = 3.101562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 452 || B = 548 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.601562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 506 || B = 494 
+
+
+
+ArmeA = 4.101562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 487 || B = 513 
+
+
+
+ArmeA = 3.726562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.914062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 484 || B = 516 
+
+
+
+ArmeA = 3.820312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.867187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.843750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 453 || B = 547 
+
+
+
+ArmeA = 3.855468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 462 || B = 538 
+
+
+
+ArmeA = 3.849609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.851562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.851562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 464 || B = 536 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 453 || B = 547 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 442 || B = 558 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 443 || B = 557 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 443 || B = 557 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.851562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 4.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 442 || B = 558 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.851562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 512 || B = 488 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 446 || B = 554 
+
+
+
+ArmeA = 3.414062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.320312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.367187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.343750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 442 || B = 558 
+
+
+
+ArmeA = 3.355468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.349609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.351562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 441 || B = 559 
+
+
+
+ArmeA = 3.351562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 434 || B = 566 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 443 || B = 557 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 499 || B = 501 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 487 || B = 513 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 442 || B = 558 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 484 || B = 516 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 4.351562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.414062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.320312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.367187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.343750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.355468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.349609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 455 || B = 545 
+
+
+
+ArmeA = 3.351562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.351562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 451 || B = 549 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 445 || B = 555 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 468 || B = 532 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 500 || B = 500 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 442 || B = 558 
+
+
+
+ArmeA = 4.351562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 440 || B = 560 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.414062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.320312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.367187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 464 || B = 536 
+
+
+
+ArmeA = 3.343750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 451 || B = 549 
+
+
+
+ArmeA = 3.355468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.349609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.351562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.351562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 483 || B = 517 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 449 || B = 551 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 487 || B = 513 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.478516 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.472656 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 441 || B = 559 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 2.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 451 || B = 549 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 0.701172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.451172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.076172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.263672 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.169922 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.216797 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.193359 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.474609 , DefenceA = 1.199219 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 4.351562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.414062 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 452 || B = 548 
+
+
+
+ArmeA = 3.320312 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.367187 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 432 || B = 568 
+
+
+
+ArmeA = 3.343750 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.355468 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.349609 , PerceA = 1.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.351562 , PerceA = 2.474609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 3.351562 , PerceA = 0.974609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 480 || B = 520 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.724609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.349609 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.537109 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.443359 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.490234 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 443 || B = 557 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.474609 , DefenceB = 1.201172 
+ A = 502 || B = 498 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.458984 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.470703 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 472 || B = 528 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.464844 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 2.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 0.701172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.451172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.076172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 471 || B = 529 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.263672 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 462 || B = 538 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.169922 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 445 || B = 555 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.216797 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.193359 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.199219 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 4.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 450 || B = 550 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 463 || B = 537 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 491 || B = 509 
+
+
+
+ArmeA = 3.414062 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.320312 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.367187 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.343750 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.355468 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.349609 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 484 || B = 516 
+
+
+
+ArmeA = 3.351562 , PerceA = 2.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.351562 , PerceA = 0.966797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 484 || B = 516 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.716797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.341797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.529297 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.435547 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 457 || B = 543 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.458984 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.470703 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.464844 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 2.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 0.701172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.451172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.076172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.263672 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 448 || B = 552 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.169922 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 456 || B = 544 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.216797 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.193359 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 486 || B = 514 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 477 || B = 523 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.199219 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 488 || B = 512 
+
+
+
+ArmeA = 4.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 447 || B = 553 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 444 || B = 556 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.414062 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 454 || B = 546 
+
+
+
+ArmeA = 3.320312 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 475 || B = 525 
+
+
+
+ArmeA = 3.367187 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 489 || B = 511 
+
+
+
+ArmeA = 3.343750 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 460 || B = 540 
+
+
+
+ArmeA = 3.355468 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.349609 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 476 || B = 524 
+
+
+
+ArmeA = 3.351562 , PerceA = 2.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 439 || B = 561 
+
+
+
+ArmeA = 3.351562 , PerceA = 0.966797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.716797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 434 || B = 566 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.341797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 469 || B = 531 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.529297 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.435547 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.482422 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.458984 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 458 || B = 542 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.470703 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 453 || B = 547 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.464844 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 2.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 452 || B = 548 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 0.701172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 461 || B = 539 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.451172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 485 || B = 515 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.076172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.263672 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 467 || B = 533 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.169922 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 464 || B = 536 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.216797 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 478 || B = 522 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.193359 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 481 || B = 519 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.205078 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 465 || B = 535 
+
+
+
+ArmeA = 3.351562 , PerceA = 1.466797 , DefenceA = 1.199219 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 4.351562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 2.851562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 462 || B = 538 
+
+
+
+ArmeA = 3.601562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 459 || B = 541 
+
+
+
+ArmeA = 3.226562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.351562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 501 || B = 499 
+
+
+
+ArmeA = 3.101562 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 479 || B = 521 
+
+
+
+ArmeA = 3.289062 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 482 || B = 518 
+
+
+
+ArmeA = 3.195312 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 474 || B = 526 
+
+
+
+ArmeA = 3.242187 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 473 || B = 527 
+
+
+
+ArmeA = 3.218750 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 466 || B = 534 
+
+
+
+ArmeA = 3.230468 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 470 || B = 530 
+
+
+
+ArmeA = 3.224609 , PerceA = 1.466797 , DefenceA = 1.201172 
+ArmeeB = 3.226562 PerceeB = 1.466797 , DefenceB = 1.201172 
+ A = 490 || B = 510 
+
+
+
+
+
