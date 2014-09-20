@@ -8,8 +8,15 @@
 <dot>
 digraph a {
     graph [rankdir=LR]
-    0 -> 1 [label="b"]
+    0 -> 1 -> 4 -> 3 -> 2 -> 0 [label="b"]
+    0 -> 2 [style=bold,label="a"]
+    1 -> 2 [label="c"]
+    2 -> 3 [label="d"]
+    3 -> 0 [label="e"]
+    4 -> 4
+
     0 [color=blue]
+    4 [color=red]
 }
 </dot>
 

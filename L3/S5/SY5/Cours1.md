@@ -21,7 +21,7 @@ On utilisera le language C dans la norme POSIX et des commandes UNIX
 # Rappel de C
 ## Pointeur
 
-
+```
     int *p-int; //Pointeur
     double *p-d;
     int x = 5; // Variable
@@ -32,12 +32,13 @@ On utilisera le language C dans la norme POSIX et des commandes UNIX
     k = *p-int + 5;
     *p-int = k + 3;
 
+```
 ## Tableau et arithmétique de pointeurs
 
-
+```
     int tab[] = {-3,6,8,12,-7,2};
     double td[] = {-3,14,-0.1,-7,12,-8.0,2.43};
-
+```
 
 Table
 
@@ -45,7 +46,7 @@ Table
 ----|---|---|----|----|--
 |||||
 
-
+```
 
     int *a;
     a = &tab[2];
@@ -59,8 +60,11 @@ Table
     b = &tab[5]
     printf(a-b); // entier postive de 3*size(int)
 
+```
+
 ## Parcours de tableau avec pointeur
 
+```
     a = &tab;
     b = a+6;
     int s = 0;
@@ -68,11 +72,13 @@ Table
         s += *a;
         a++;
     }
+```
 
 Utilisation de ```sizeof(-type/-expression)```
 
 ## Petit programme et fonction
 
+```
     int f(int x, int t[]){
         int s;
         t[2] = t[3] + 1
@@ -90,7 +96,7 @@ Utilisation de ```sizeof(-type/-expression)```
         k = f(i,tab);
         ...
     }
-
+```
 
 ## Fichier Compilé
 1. **Fichiers ".o"** </br>
