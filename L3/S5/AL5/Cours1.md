@@ -30,7 +30,7 @@ Programme
 : Implémentation de l'algo et des structure de données.
 
 Compléxité
-: Mesure théorique de la performance en fonction de la taille des données.
+: Mesure théorique de la performance en fonction de la self.nombreFiles des données.
 
 Graph
 : Ensemble de points *Sommets* *Ex : des pixels, stations de metro* avec une notion d'adjacence
