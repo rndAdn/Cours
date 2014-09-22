@@ -14,9 +14,8 @@ class UnionFind():
         if(element == self.pere[element]):
             return element
         else:
-            rootElement = self.root(self.pere[element])
-            self.pere[element] = rootElement
-            return rootElement
+            self.pere[element] = self.root(self.pere[element])
+            return self.pere[element]
 
     def union(self, u, v):
         rootU = self.root(u)
