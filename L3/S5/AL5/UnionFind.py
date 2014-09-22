@@ -19,9 +19,9 @@ class UnionFind():
             return rootElement
 
     def union(self, u, v):
-        if self.find(u, v) == False:
-            rootU = self.root(u)
-            rootV = self.root(v)
+        rootU = self.root(u)
+        rootV = self.root(v)
+        if not(rootU == rootV):
             if self.nombreFils[rootU] > self.nombreFils[rootV]:
                 self.pere[rootV] = rootU
                 self.nombreFils[rootU] += self.nombreFils[rootV]
