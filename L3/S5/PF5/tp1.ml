@@ -13,5 +13,11 @@ let max_quadruple w x y z = let m1 = max w x and m2 = max y z in max m1 m2;;
 let rec sum n = if n < 1 then 0 else n+sum(n-1);;
 let rec fibo n = if n < 1 then 0 else if n == 1 then 1 else fibo(n-1)+fibo(n-2);;
 let rec ack m n  = if m = 0 then n+1 else if n = 0 then ack (m-1) 1 else let v = ack m (n-1) in ack (m-1) v;;
-let rec empA n = if n < 1 then 0 else empA(n-1) +1;;
-let rec empB n = if n < 1 then 0 else if n mod 2 == 0 then empB(n-2)+1 else empB(n-1)+1;;
+
+let vider n = let rec empA n = if n < 1 then 0 else empB(n-1) +1 and empB n = if n < 1 then 0 else if n mod 2 = 0 then empA(n-2)+1 else empA(n-1)+1 in empA(n);;
+
+
+
+
+
+
