@@ -1,0 +1,14 @@
+EX 1:
+
+1.
+ls -l Protegee/A
+
+2.
+ls Protegee/A
+# Permission non accordée
+
+3.
+cat Protegee/A/toutou
+pas le droit en ecriture
+chmod u+rwx Protegee/A
+     
