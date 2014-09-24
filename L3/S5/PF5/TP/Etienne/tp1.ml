@@ -16,6 +16,10 @@ let rec ack m n  = if m = 0 then n+1 else if n = 0 then ack (m-1) 1 else let v =
 
 let vider n = let rec empA n = if n < 1 then 0 else empB(n-1) +1 and empB n = if n < 1 then 0 else if n mod 2 = 0 then empA(n-2)+1 else empA(n-1)+1 in empA(n);;
 
+let x = 2;;
+let x = 3
+in lety=x+1 in x + y;;
+let x = 3 and y = x + 1 in x+y;;
 
 
 
