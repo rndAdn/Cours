@@ -1,6 +1,5 @@
 #! /usr/local/bin/python3.4
 
-
 class UnionFind():
 
     def __init__(self, tableau):
