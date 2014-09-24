@@ -1,3 +1,0 @@
-1 :Warning n'empeche pas la compilation, erreur le fait.
-2 :-Wall
-3 : voir TP2.c erreur d'écriture au mauvais endroit.
