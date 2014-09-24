@@ -31,3 +31,9 @@ max_quadruple 1 2 3 1;;
 
 let rec sum n = if n <= 0 then 0 else n + sum(n-1);;
 sum 10;;
+
+let rec fibo n = if n <= 1 then 1 else fibo(n-1) + fibo(n-2);;
+fibo 10;;
+
+let rec ack m n = if m = 0 then n + 1 else if n = 0 then ack(m-1) 1 else let tmp = ack m (n-1) in ack(m -1) tmp;;
+ack 5 5;;
