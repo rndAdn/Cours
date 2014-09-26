@@ -35,8 +35,8 @@ sum 10;;
 let rec fibo n = if n <= 1 then 1 else fibo(n-1) + fibo(n-2);;
 fibo 10;;
 
-let rec ack m n = if m = 0 then n + 1 else if n = 0 then ack(m-1) 1 else let tmp = ack m (n-1) in ack(m -1) tmp;;
-ack 2 2;;
+(*let rec ack m n = if m = 0 then n + 1 else if n = 0 then ack(m-1) 1 else let tmp = ack m (n-1) in ack(m -1) tmp;;
+ack 2 2;;*)
 
 let rec ack m n = if m = 0 then n + 1 else if n = 0 then ack(m-1) 1 else ack (m-1) (ack m (n-1));; (* Pablo*)
-ack 4 3;;
+ack 2 2;;

@@ -86,7 +86,7 @@ cat rep1/ls_fic2 # Aucun fichier ou dossier de ce type
 ln -s rep1/rep3/ ls_rep3
 ```
 ```
-lrwxrwxrwx 1 renaud users   10 25 sept. 06:12 ls_rep3 -> rep1/rep3//
+lrwxrwxrwx 1 renaud users    9 26 sept. 16:31 ls_rep3 -> rep1/rep3/
 ```
 
 ##
@@ -94,7 +94,7 @@ lrwxrwxrwx 1 renaud users   10 25 sept. 06:12 ls_rep3 -> rep1/rep3//
 ln -s ls_rep3 rep2/ls_ls_rep3
 ```
 ```
-lrwxrwxrwx 1 renaud users 7 25 sept. 06:13 ls_ls_rep3 -> ls_rep3
+lrwxrwxrwx 1 renaud users 7 26 sept. 16:33 ls_ls_rep3 -> ls_rep3
 ```
 
 ##
@@ -105,6 +105,7 @@ pwd                                                                             
 /home/renaud/SY5/tp1/ls_rep3
 pwd -P                                                                                                           6:16 25/09
 /home/renaud/SY5/tp1/rep1/rep3
+
 
 
 

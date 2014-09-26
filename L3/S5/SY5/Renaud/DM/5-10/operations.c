@@ -2,6 +2,9 @@
 #include <stdio.h>
 
 int myStrcmp(char* a, char* b){
+    /*
+    coucou & coucouB
+    */
     int i = 0;
     while(a[i] != '\0' && b[i] != '\0'){
         if(a[i] != b[i]) return 1;
