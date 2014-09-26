@@ -26,18 +26,18 @@ def photo_to_list(path):
     print(ens)
     width, height = im.size
     im = list(im.getdata())
-    # tab = [[im[y*width+x] for x in range(width)] for y in range(height)]
+    tab = [[im[y*width+x] for x in range(width)] for y in range(height)]
 
-    tab = [im[y * width:(y + 1) * width] for y in range(height)]
+    #tab = [im[y * width:(y + 1) * width] for y in range(height)]
     return tab
 
 
 def create_Pix_Ens(png):
 
     ens = []
-    for x in range(len(png)):
-        for y in range(len(png[x])):
-            if png[x][y] < 230:
+    for y in range(len(png)):
+        for x in range(len(png[y])):
+            if png[y][x] == 0:
                 ens += [Pix(x, y)]
     print(len(ens))
     return ens
@@ -60,28 +60,33 @@ def union(p1, p2):
         if rootP1.taille > rootP2.taille:
             rootP2.pere = rootP1
             rootP1.taille += rootP2.taille
-            rootP2.taille = 1
+            # rootP2.taille = 1
         else:
             rootP1.pere = rootP2
             rootP2.taille += rootP1.taille
-            rootP1.taille = 1
+            # rootP1.taille = 1
 
 
 def r_Voisins(p1, p2):
-    return (p1.coor[0]-p2.coor[0])**2 + (p1.coor[1]-p2.coor[1])**2 <= int(sys.argv[2])
+    if ((p1.coor[1]-p2.coor[1])**2 > int(sys.argv[2])**2):
+        return 2
+    elif ((p1.coor[0]-p2.coor[0])**2 + (p1.coor[1]-p2.coor[1])**2) <= int(sys.argv[2])**2:
+        return 1
+    return 0
 
 
 def algo(ens_Pix):
     for p1 in range(len(ens_Pix)):
         for p2 in ens_Pix[p1:]:
-            if r_Voisins(ens_Pix[p1], p2):
+            tmp = r_Voisins(ens_Pix[p1], p2)
+            if tmp == 2:
+                break
+            elif tmp == 1:
                 union(ens_Pix[p1], p2)
     i = 0
     for e in ens_Pix:
-        # print(e)
-        # print("------>"+str(e.pere))
         if e.taille > int(sys.argv[3]):
-            print(e)
+            #print(e)
             if e.pere == e:
                 i += 1
     return i
