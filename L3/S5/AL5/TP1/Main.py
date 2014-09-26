@@ -26,9 +26,9 @@ def photo_to_list(path):
     print(ens)
     width, height = im.size
     im = list(im.getdata())
-    tab = [[im[y*width+x] for x in range(width)] for y in range(height)]
+    #tab = [[im[y*width+x] for x in range(width)] for y in range(height)]
 
-    #tab = [im[y * width:(y + 1) * width] for y in range(height)]
+    tab = [im[y * width:(y + 1) * width] for y in range(height)]
     return tab
 
 
