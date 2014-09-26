@@ -52,16 +52,32 @@ int myAtoi(char* s){
             break;
         }
         res += (tmp*u);
-        u *=10;
+        u *= 10;
         i--;
     }
     return signe*res;
 }
 
+int nAtoi(const char * arg){
+    int resultat = 0;
+    int j = 0;
+    while(arg[j] != 0){
+        if (arg[j] < 48 || arg[j] > 57){
+            printf("usage : programme <liste d'entiers>");
+            exit(1);
+        }else {
+            resultat *= 10;
+            resultat += arg[j] - '0';
+
+        }
+        j ++;
+    }
+    return resultat;
+}
 
 int arg_to_int(char* s, char* nom){
 
-    if (isInt(s) == 1) return myAtoi(s);
+    if (isInt(s) == 1) return nAtoi(s);
     printf("usage : %s <liste d'entiers>\n", nom);
     exit(0);
     //return 1;

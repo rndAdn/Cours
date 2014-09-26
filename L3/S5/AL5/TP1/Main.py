@@ -56,29 +56,33 @@ def union(p1, p2):
         if rootP1.taille > rootP2.taille:
             rootP2.pere = rootP1
             rootP1.taille += rootP2.taille
-            rootP2.taille = 1
+            # rootP2.taille = 1
         else:
             rootP1.pere = rootP2
             rootP2.taille += rootP1.taille
-            rootP1.taille = 1
+            # rootP1.taille = 1
 
 
 def r_Voisins(p1, p2):
-    return (p1.coor[0]-p2.coor[0])**2 + (p1.coor[1]-p2.coor[1])**2 <=\
-        int(sys.argv[2])**2
+    if ((p1.coor[1]-p2.coor[1])**2 > int(sys.argv[2])**2):
+        return 2
+    elif ((p1.coor[0]-p2.coor[0])**2 + (p1.coor[1]-p2.coor[1])**2):
+        return 1
+    return 0
 
 
 def algo(ens_Pix):
     for p1 in range(len(ens_Pix)):
         for p2 in ens_Pix[p1:]:
-            if r_Voisins(ens_Pix[p1], p2):
+            tmp = r_Voisins(ens_Pix[p1], p2)
+            if tmp == 2:
+                break
+            elif tmp == 1:
                 union(ens_Pix[p1], p2)
     i = 0
     for e in ens_Pix:
-        # print(e)
-        # print("------>"+str(e.pere))
         if e.taille > int(sys.argv[3]):
-            print(e)
+            #print(e)
             if e.pere == e:
                 i += 1
     return i
