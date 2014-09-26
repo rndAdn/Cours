@@ -10,7 +10,20 @@ int myStrcmp(char* a, char* b){
     return 0;
 }
 
+int isInt(char* s){
+    int i = 0;
+    char c = s[i];
+    if (c == '-') i++;
+    c = s[i];
+    while (c != '\0' && c != 0){
 
+        int tmp = c - '0';
+        if (tmp < 0 || tmp > 9) return 0;
+        i++;
+        c = s[i];
+    }
+    return 1;
+}
 int myAtoi(char* s){
 
 
@@ -45,12 +58,12 @@ int myAtoi(char* s){
 
 
 int arg_to_int(char* s, char* nom){
-    int a = myAtoi(s);
-    if (!a){
-        printf("usage : %s <liste d'entiers>\n", nom);
-        exit(0);
-    }
-    return a;
+
+    if (isInt(s) == 1) return myAtoi(s);
+    printf("usage : %s <liste d'entiers>\n", nom);
+    exit(0);
+    //return 1;
+
 }
 
 int addition(int* tab, int taille){
@@ -83,7 +96,6 @@ int main(int argc, char *argv[]){
         tab[i] = arg_to_int(argv[i+1], argv[0]);
     }
 
-    int op = 0;
     if(myStrcmp("./addition", argv[0]) == 0){
         res = addition(tab, (argc-1));
     }
