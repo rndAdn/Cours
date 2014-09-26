@@ -44,7 +44,6 @@ int myAtoi(char* s){
     int u = 1;
     while(i>= 0){
         int tmp = s[i] - '0';
-        if ((tmp < 0 || tmp > 9) && tmp != -3) printf("connard: \"%c\"\n",s[i]);
         if (i == 0 && s[i] == '-'){
             signe = -1;
             break;

@@ -21,13 +21,9 @@ def photo_to_list(path):
         Ouvre l'image et renvoi la liste des pixels
     """
     im = Image.open(path)
-    im = im.convert("L")
-    ens = {a for a in list(im.getdata())}
-    print(ens)
+    im = im.convert("1")
     width, height = im.size
     im = list(im.getdata())
-    # tab = [[im[y*width+x] for x in range(width)] for y in range(height)]
-
     tab = [im[y * width:(y + 1) * width] for y in range(height)]
     return tab
 
@@ -37,9 +33,9 @@ def create_Pix_Ens(png):
     ens = []
     for x in range(len(png)):
         for y in range(len(png[x])):
-            if png[x][y] < 230:
+            if png[x][y] == 0:
                 ens += [Pix(x, y)]
-    print(len(ens))
+    print(len(ens), end='\t')
     return ens
 
 
@@ -68,7 +64,8 @@ def union(p1, p2):
 
 
 def r_Voisins(p1, p2):
-    return (p1.coor[0]-p2.coor[0])**2 + (p1.coor[1]-p2.coor[1])**2 <= int(sys.argv[2])
+    return (p1.coor[0]-p2.coor[0])**2 + (p1.coor[1]-p2.coor[1])**2 <=\
+        int(sys.argv[2])**2
 
 
 def algo(ens_Pix):
