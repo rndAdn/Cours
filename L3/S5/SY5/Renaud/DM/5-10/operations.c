@@ -13,15 +13,16 @@ int myStrcmp(char* a, char* b){
 
 int myAtoi(char* s){
 
-    /* fix :
-            .4 == -16 convert le .
-            -2 == -28 convert le -
-    */
 
+    /*
+        TODO:
+                Ne faire q'une boucle while
+    */
 
     int i = 0;
     int res = 0;
     char c = s[i];
+    int signe = 1;
     while (c != '\0'){
         i++;
         c = s[i];
@@ -30,16 +31,16 @@ int myAtoi(char* s){
     int u = 1;
     while(i>= 0){
         int tmp = s[i] - '0';
-        if (i+1 == 0){
-            res += tmp;
+        if ((tmp < 0 || tmp > 9) && tmp != -3) printf("connard: \"%c\"\n",s[i]);
+        if (i == 0 && s[i] == '-'){
+            signe = -1;
+            break;
         }
-        else {
-            res += (tmp*u);
-        }
+        res += (tmp*u);
         u *=10;
         i--;
     }
-    return res;
+    return signe*res;
 }
 
 
