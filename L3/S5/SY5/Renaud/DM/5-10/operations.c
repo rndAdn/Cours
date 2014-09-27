@@ -6,7 +6,9 @@ int myStrcmp(char* a, char* b){
     coucou & coucouB
     */
     int i = 0;
-    while(a[i] != '\0' && b[i] != '\0'){
+    while(a[i] != '\0' || b[i] != '\0'){
+        if (a[i] == '\0' && b[i] != '\0') return 1;
+        if (a[i] != '\0' && b[i] == '\0') return 1;
         if(a[i] != b[i]) return 1;
         i++;
     }
@@ -58,26 +60,9 @@ int myAtoi(char* s){
     return signe*res;
 }
 
-int nAtoi(const char * arg){
-    int resultat = 0;
-    int j = 0;
-    while(arg[j] != 0){
-        if (arg[j] < 48 || arg[j] > 57){
-            printf("usage : programme <liste d'entiers>");
-            exit(1);
-        }else {
-            resultat *= 10;
-            resultat += arg[j] - '0';
-
-        }
-        j ++;
-    }
-    return resultat;
-}
-
 int arg_to_int(char* s, char* nom){
 
-    if (isInt(s) == 1) return nAtoi(s);
+    if (isInt(s) == 1) return myAtoi(s);
     printf("usage : %s <liste d'entiers>\n", nom);
     exit(0);
     //return 1;
@@ -102,6 +87,11 @@ int multiplication(int* tab, int taille) {
 }
 
 int main(int argc, char *argv[]){
+    /*
+    printf("%d\n",myStrcmp("aaaa", "a") == 0);
+    printf("%d\n",myStrcmp("aa", "aaaaaaaaa") == 0);
+    printf("%d\n",myStrcmp("a", "a") == 0);
+    */
     int* tab;
     int i;
     int res = 0;

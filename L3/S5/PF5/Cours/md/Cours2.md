@@ -96,3 +96,10 @@ Error: This expression has type char but an expression wass expected of type str
 * ```String.make```: ```int -> char -> string``` donne un string conenant n char c
 * ```String.sub```: ```string -> int -> int -> string```
 **Voir le module ```Char``` pour une liste plus complète.**
+
+## Exemple
+
+```
+# "\097 est a";;
+- : 
+```
