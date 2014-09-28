@@ -61,7 +61,11 @@
 </li>
 </ol>
 </li>
-<li><a href="#pattern-matching">Pattern matching</a></li>
+<li><a href="#pattern-matching">Pattern matching</a><ol>
+<li><a href="#pattern">Pattern</a></li>
+<li><a href="#exemple_1">Exemple</a></li>
+</ol>
+</li>
 </ol>
 </div>
 <h1 id="char">Char</h1>
@@ -95,7 +99,7 @@
 - : char = 'a'
 
 # '\97';;
-    ^^
+   ^^
 Error: Illegal backslash escape in string or character (\9)
 
 # Char.uppercase 'a';;
@@ -414,4 +418,187 @@ val map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list = &lt;fun&gt;
     0 -&gt; 1
     | n -&gt; n * fact (n-1);;
 val fact : int -&gt; int = &lt;fun&gt;
+
+# let est_vide list = match list with
+    [] -&gt; true
+    | t::q -&gt; false;;
+val est_vide : 'a list -&gt; bool = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Pas nécessaire la décomposition <code>t::q</code></li>
+</ul>
+<pre><code class="lineNumbers" ># let est_vide list = match list with
+    [] -&gt; true
+    | x -&gt; false;;
+val est_vide : 'a list -&gt; bool = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Utilisation variable générique <code>_</code>:</li>
+</ul>
+<pre><code class="lineNumbers" ># let est_vide list = match list with
+    [] -&gt; true
+    | _ -&gt; false;;
+val est_vide : 'a list -&gt; bool = &lt;fun&gt;
+</code></pre>
+
+<pre><code class="lineNumbers" >(*quel est le type de  ces deux fonctions*)
+
+let  hd l = match l with
+|   [] -&gt; failwith &quot;Liste vide dans hd&quot;
+|   a :: _ -&gt; a;;
+(*Réponse val hd : 'a list -&gt; 'a = &lt;fun&gt;*)
+
+let tl l = match l with
+|   [] -&gt; failwith &quot;Liste vide dans tl&quot;
+|   _ :: finliste -&gt; finliste;;
+(*Réponse val tl : 'a list -&gt; 'a list = &lt;fun&gt;*)
+
+(*Quel est l'erreur ?*)
+let length l = match l with
+| [] -&gt; 0;
+| t::q -&gt; 1 + (length q);;
+(*Réponse Error: Unbound value length*)
+</code></pre>
+
+<h2 id="pattern">Pattern</h2>
+<pre><code class="lineNumbers" >let rec map f list = match list with
+|   [] -&gt; []
+|   t::q -&gt; (f q) :: (map f q);;
+val map  : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Un <strong>pattern</strong> (fr. <strong>motif</strong>) est contruit seulment d'identificateurs et de constructeurs</li>
+<li>Si un motif s'aplique, <strong>tous</strong> les identificateurs dans le motif sont liés. Leur portée :
+l'éxpréssion a droite du motifs</li>
+<li>On peut dans un motif utiliser une variable générique <code>_</code>, <strong>dans ce cas il n'y a pas de liaison</strong></li>
+<li>Les motifs doivnt être <strong>linéaires</strong> <em>(pas de répétition d'identificateur dans le même motif)</em></li>
+</ul>
+<pre><code class="lineNumbers" >let rec map f list = match list with
+|   [] -&gt; []
+|   t::q -&gt; (f q) :: (map f q);;
+val map  : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Les motifs sont essayés dans l'ordre donné</li>
+<li><code>OCaml</code> vérifie qu'aucun cas n'a été oublié: l'ensemble des motifs doit être <strong>exhaustifs</strong></li>
+<li>La <strong>non-exhaustivité</strong> donne lieu a un <mark><strong>warning</strong></mark></li>
+<li>Il est fortement conseillé de faire des distinctions de cas exhaustifs</li>
+</ul>
+<h2 id="exemple_1">Exemple</h2>
+<p>Les motifs doivnt être <strong>linéaires</strong></p>
+<pre><code class="lineNumbers" >let rec enven_length l = match l with
+|   []  -&gt; true
+|   [_] -&gt; false
+|   t::t:: reste -&gt; even_length reste;;
+       ^^
+Error : Variable t is bound serval times in this matching
+
+let rec enven_length l = match l with
+|   []  -&gt; true
+|   [_] -&gt; false
+|   _::_:: reste -&gt; even_length reste;;
+val enven_length = 'a list -&gt; bool = &lt;fun&gt;
+
+even_length [1;2;3];;
+- : bool = false
+-
+even_length [1;2;3;4];;
+- : bool = true
+</code></pre>
+
+<p>Un motif est contruit seulment d'identificateurs et de constructeurs:</p>
+<pre><code class="lineNumbers" >let rec fact n = match n with
+|   0 -&gt; 1
+|   n+1 -&gt; (n+1)*(fact n);;
+    ^^^
+Error :  Syntax  error
+
+let rec length list = match list with
+|   [] -&gt; 0
+|   [t] @ q -&gt; 1+length  q;;
+       ^^^
+Error :  Syntax  error
+</code></pre>
+
+<p>Les motifs sont essayés dans l'ordre donné</p>
+<pre><code class="lineNumbers" >let rec fact n = match n with
+|   n -&gt; n fact (n-1)
+|   0 -&gt; 1;;
+Warning 11: this match case is unused.
+val fact : int -&gt; int = &lt;fun&gt;
+
+fact 2;;
+Stack overflow during evaluation (looping recursion ?)
+</code></pre>
+
+<p>L'ensemble des motifs doit être exhaustif</p>
+<pre><code class="lineNumbers" >let hd list = match list with
+|   [t]:: q -&gt; t;;
+Warning 8: this pattern-matching is not exhaustive .
+Here is an example of a value that is not matched :
+[]
+val hd :'a list -&gt; 'a = &lt;fun&gt;
+
+hd [];;
+Exception : Match_failure (&quot;//toplevel//&quot; , 113,-6).
+</code></pre>
+
+<pre><code class="lineNumbers" >(*quel est l’erreur ?)
+let rec trouve a list = match list with
+|   [] -&gt; false
+|   a::_ -&gt; true
+|   b::q -&gt; trouve a q;;
+val trouve : ’a -&gt; ’b list -&gt; bool = &lt;fun&gt;
+
+trouve 1 [1; 2; 3];;
+- : bool = true
+
+trouve 42 [1; 2; 3];;
+- : bool = true
+</code></pre>
+
+<p>Tous les identificateurs dans les motifs sont liés</p>
+<pre><code class="lineNumbers" >(*la fonction trouve corrige)
+let rec trouve a list = match list with
+|   [] -&gt; false
+|   b::q -&gt; if b = a then true else trouve a q;;
+val trouve : 'a -&gt; 'a list -&gt; bool = &lt;fun&gt;
+
+trouve 1 [1; 2; 3];;
+- : bool = true
+
+trouve 42 [1; 2; 3];;
+- : bool = false
+</code></pre>
+
+<ul>
+<li>Pattern avec les alternatives</li>
+</ul>
+<pre><code class="lineNumbers" >let rec fib n = match n with
+0 | 1 -&gt; n
+| n -&gt; fib (n-1) + fib (n-2);;
+val fib : int -&gt; int = &lt;fun&gt;
+
+fib 10;;
+- : int = 55
+</code></pre>
+
+<ul>
+<li>Pattern avec les conditions</li>
+</ul>
+<pre><code class="lineNumbers" >let rec trouve a list = match list with
+|   [] -&gt; false
+|   b::q when b = a -&gt; true
+|   _::q -&gt; trouve a q;;
+val trouve : 'a -&gt; 'a list -&gt; bool = &lt;fun&gt;
+
+trouve 1 [1; 2; 3];;
+- : bool = true
+
+trouve 42 [1; 2; 3];;
+- : bool = false
 </code></pre></body>

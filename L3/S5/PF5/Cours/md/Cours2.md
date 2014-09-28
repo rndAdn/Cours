@@ -38,7 +38,7 @@ Caractères ASCII ```'a', 'z', ' ', 'W'```
 - : char = 'a'
 
 # '\97';;
-    ^^
+   ^^
 Error: Illegal backslash escape in string or character (\9)
 
 # Char.uppercase 'a';;
@@ -357,7 +357,187 @@ val fact : int -> int = <fun>
     | t::q -> false;;
 val est_vide : 'a list -> bool = <fun>
 ```
-* pas nécessaire la décomposition ```t::q```
+* Pas nécessaire la décomposition ```t::q```
 
 ```
+# let est_vide list = match list with
+    [] -> true
+    | x -> false;;
+val est_vide : 'a list -> bool = <fun>
+```
+
+* Utilisation variable générique ```_```:
+
+```
+# let est_vide list = match list with
+    [] -> true
+    | _ -> false;;
+val est_vide : 'a list -> bool = <fun>
+```
+~~~
+(*quel est le type de  ces deux fonctions*)
+
+let  hd l = match l with
+|   [] -> failwith "Liste vide dans hd"
+|   a :: _ -> a;;
+(*Réponse val hd : 'a list -> 'a = <fun>*)
+
+let tl l = match l with
+|   [] -> failwith "Liste vide dans tl"
+|   _ :: finliste -> finliste;;
+(*Réponse val tl : 'a list -> 'a list = <fun>*)
+
+(*Quel est l'erreur ?*)
+let length l = match l with
+| [] -> 0;
+| t::q -> 1 + (length q);;
+(*Réponse Error: Unbound value length*)
+~~~
+
+## Pattern
+```
+let rec map f list = match list with
+|   [] -> []
+|   t::q -> (f q) :: (map f q);;
+val map  : ('a -> 'b) -> 'a list -> 'b list = <fun>
+```
+
+* Un **pattern** (fr. **motif**) est contruit seulment d'identificateurs et de constructeurs
+* Si un motif s'aplique, **tous** les identificateurs dans le motif sont liés. Leur portée :
+l'éxpréssion a droite du motifs
+* On peut dans un motif utiliser une variable générique ```_```, **dans ce cas il n'y a pas de liaison**
+* Les motifs doivnt être **linéaires** *(pas de répétition d'identificateur dans le même motif)*
+
+
+```
+let rec map f list = match list with
+|   [] -> []
+|   t::q -> (f q) :: (map f q);;
+val map  : ('a -> 'b) -> 'a list -> 'b list = <fun>
+```
+
+* Les motifs sont essayés dans l'ordre donné
+* ```OCaml``` vérifie qu'aucun cas n'a été oublié: l'ensemble des motifs doit être **exhaustifs**
+* La **non-exhaustivité** donne lieu a un ???**warning**???
+* Il est fortement conseillé de faire des distinctions de cas exhaustifs
+
+## Exemple
+Les motifs doivnt être **linéaires**
+
+```
+let rec enven_length l = match l with
+|   []  -> true
+|   [_] -> false
+|   t::t:: reste -> even_length reste;;
+       ^^
+Error : Variable t is bound serval times in this matching
+
+let rec enven_length l = match l with
+|   []  -> true
+|   [_] -> false
+|   _::_:: reste -> even_length reste;;
+val enven_length = 'a list -> bool = <fun>
+
+even_length [1;2;3];;
+- : bool = false
+-
+even_length [1;2;3;4];;
+- : bool = true
+```
+
+Un motif est contruit seulment d'identificateurs et de constructeurs:
+```
+let rec fact n = match n with
+|   0 -> 1
+|   n+1 -> (n+1)*(fact n);;
+    ^^^
+Error :  Syntax  error
+
+let rec length list = match list with
+|   [] -> 0
+|   [t] @ q -> 1+length  q;;
+       ^^^
+Error :  Syntax  error
+```
+
+Les motifs sont essayés dans l'ordre donné
+```
+let rec fact n = match n with
+|   n -> n fact (n-1)
+|   0 -> 1;;
+Warning 11: this match case is unused.
+val fact : int -> int = <fun>
+
+fact 2;;
+Stack overflow during evaluation (looping recursion ?)
+```
+
+L'ensemble des motifs doit être exhaustif
+
+```
+let hd list = match list with
+|   [t]:: q -> t;;
+Warning 8: this pattern-matching is not exhaustive .
+Here is an example of a value that is not matched :
+[]
+val hd :'a list -> 'a = <fun>
+
+hd [];;
+Exception : Match_failure ("//toplevel//" , 113,-6).
+```
+
+```
+(*quel est l’erreur ?)
+let rec trouve a list = match list with
+|   [] -> false
+|   a::_ -> true
+|   b::q -> trouve a q;;
+val trouve : ’a -> ’b list -> bool = <fun>
+
+trouve 1 [1; 2; 3];;
+- : bool = true
+
+trouve 42 [1; 2; 3];;
+- : bool = true
+```
+
+Tous les identificateurs dans les motifs sont liés
+
+```
+(*la fonction trouve corrige)
+let rec trouve a list = match list with
+|   [] -> false
+|   b::q -> if b = a then true else trouve a q;;
+val trouve : 'a -> 'a list -> bool = <fun>
+
+trouve 1 [1; 2; 3];;
+- : bool = true
+
+trouve 42 [1; 2; 3];;
+- : bool = false
+```
+
+* Pattern avec les alternatives
+```
+let rec fib n = match n with
+0 | 1 -> n
+| n -> fib (n-1) + fib (n-2);;
+val fib : int -> int = <fun>
+
+fib 10;;
+- : int = 55
+```
+* Pattern avec les conditions
+```
+let rec trouve a list = match list with
+|   [] -> false
+|   b::q when b = a -> true
+|   _::q -> trouve a q;;
+val trouve : 'a -> 'a list -> bool = <fun>
+
+trouve 1 [1; 2; 3];;
+- : bool = true
+
+trouve 42 [1; 2; 3];;
+- : bool = false
 ```
