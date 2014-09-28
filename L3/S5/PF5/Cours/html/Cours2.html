@@ -1,0 +1,417 @@
+
+    <head>
+        <meta charset='UTF-8'>
+        <!--<base href="/home/renaud/.data/CSS/"  target="_blank">-->
+
+        <!--
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/prettify/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/home/renaud/.data/CSS/prettify/src/prettify.js"></script>
+        -->
+
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/highlight2/src/styles/monokai.css" type="text/css"
+
+        <!--
+        <link rel='stylesheet' href="markdown.css"/>
+        <!-- <link rel="stylesheet" href="highlight2/src/styles/monokai.css">
+        -->
+
+        <script src="/home/renaud/.data/CSS/highlight2/build/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body >
+        <p>[PF5] Cours 1 22/9/14</p>
+<blockquote>
+<p>michele.pagani@pps.univ-paris-diderot.fr</p>
+</blockquote>
+<div class="toc">
+<ol>
+<li><a href="#char">Char</a><ol>
+<li><a href="#valeurs">Valeurs</a></li>
+<li><a href="#echapement">Échapement</a></li>
+<li><a href="#fonction-de-conversion">Fonction de conversion</a><ol>
+<li><a href="#exemples">Exemples</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#module-intro">Module (Intro)</a></li>
+<li><a href="#string">String</a><ol>
+<li><a href="#valeurs_1">valeurs</a></li>
+<li><a href="#string-char">String <img class='latex-inline math-true' id='_1' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhLS0gVGhpcyBmaWxlIHdhcyBnZW5lcmF0ZWQgYnkgZHZpc3ZnbSAxLjYgLS0+CjxzdmcgaGVpZ2h0PSc4LjgyMjU4cHQnIHZlcnNpb249JzEuMScgdmlld0JveD0nNzYuNzEyMyA1NS44NzIgNy43MTk4IDguODIyNTgnIHdpZHRoPSc3LjcxOThwdCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CjxkZWZzPgo8cGF0aCBkPSdNNi4yNzY0NiAtNi43NDQ3MUM2LjM1NjE2IC02Ljg4NDE4IDYuMzU2MTYgLTYuOTA0MTEgNi4zNTYxNiAtNi45MzRDNi4zNTYxNiAtNy4wMDM3NCA2LjI5NjM5IC03LjEzMzI1IDYuMTU2OTEgLTcuMTMzMjVDNi4wMzczNiAtNy4xMzMyNSA2LjAwNzQ3IC03LjA3MzQ3IDUuOTM3NzMgLTYuOTM0TDEuNDY0NTEgMS43NjMzOUMxLjM4NDgxIDEuOTAyODYgMS4zODQ4MSAxLjkyMjc5IDEuMzg0ODEgMS45NTI2OEMxLjM4NDgxIDIuMDMyMzggMS40NTQ1NSAyLjE1MTkzIDEuNTg0MDYgMi4xNTE5M0MxLjcwMzYxIDIuMTUxOTMgMS43MzM1IDIuMDkyMTUgMS44MDMyNCAxLjk1MjY4TDYuMjc2NDYgLTYuNzQ0NzFaJyBpZD0nZzAtNTQnLz4KPHBhdGggZD0nTTYuODQ0MzMgLTMuMjU3NzhDNi45OTM3NyAtMy4yNTc3OCA3LjE4MzA2IC0zLjI1Nzc4IDcuMTgzMDYgLTMuNDU3MDRTNi45OTM3NyAtMy42NTYyOSA2Ljg1NDMgLTMuNjU2MjlIMC44ODY2NzVDMC43NDcxOTggLTMuNjU2MjkgMC41NTc5MDggLTMuNjU2MjkgMC41NTc5MDggLTMuNDU3MDRTMC43NDcxOTggLTMuMjU3NzggMC44OTY2MzggLTMuMjU3NzhINi44NDQzM1pNNi44NTQzIC0xLjMyNTAzQzYuOTkzNzcgLTEuMzI1MDMgNy4xODMwNiAtMS4zMjUwMyA3LjE4MzA2IC0xLjUyNDI4UzYuOTkzNzcgLTEuNzIzNTQgNi44NDQzMyAtMS43MjM1NEgwLjg5NjYzOEMwLjc0NzE5OCAtMS43MjM1NCAwLjU1NzkwOCAtMS43MjM1NCAwLjU1NzkwOCAtMS41MjQyOFMwLjc0NzE5OCAtMS4zMjUwMyAwLjg4NjY3NSAtMS4zMjUwM0g2Ljg1NDNaJyBpZD0nZzEtNjEnLz4KPC9kZWZzPgo8ZyBpZD0ncGFnZTEnPgo8dXNlIHg9Jzc2LjcxMjMnIHhsaW5rOmhyZWY9JyNnMC01NCcgeT0nNjIuNzY0NicvPgo8dXNlIHg9Jzc2LjcxMjMnIHhsaW5rOmhyZWY9JyNnMS02MScgeT0nNjIuNzY0NicvPgo8L2c+Cjwvc3ZnPgo='> char</a></li>
+<li><a href="#concatenation">Concatenation</a></li>
+<li><a href="#fonctions">Fonctions</a></li>
+<li><a href="#exemple">Exemple</a></li>
+</ol>
+</li>
+<li><a href="#liste">Liste</a><ol>
+<li><a href="#constructeur">Constructeur</a></li>
+<li><a href="#destructuration">Destructuration</a></li>
+<li><a href="#exemples_1">Exemples</a></li>
+<li><a href="#quelques-fonctions">Quelques fonctions</a><ol>
+<li><a href="#fonction-map">Fonction map</a></li>
+<li><a href="#list-iterateurs">List Itérateurs</a><ol>
+<li><a href="#listfold_right">List.fold_right</a></li>
+<li><a href="#listfold_left">List.fold_left</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#pattern-matching">Pattern matching</a></li>
+</ol>
+</div>
+<h1 id="char">Char</h1>
+<h2 id="valeurs">Valeurs</h2>
+<p>Caractères ASCII <code>'a', 'z', ' ', 'W'</code></p>
+<h2 id="echapement">Échapement</h2>
+<ul>
+<li><code>\</code>: antislash ()</li>
+<li><code>\n</code>: Saut de ligne</li>
+<li><code>\r</code>: retour chariot</li>
+<li><code>\t</code>: tabulation</li>
+<li><code>\ddd</code>: char avec le code ASCII <code>ddd</code> en décimal</li>
+<li><code>\'</code>: apostrophe</li>
+</ul>
+<h2 id="fonction-de-conversion">Fonction de conversion</h2>
+<ul>
+<li><code>Char.code</code>: <code>char -&gt; int</code></li>
+<li><code>Char.chr</code>: <code>int -&gt; char</code></li>
+<li><code>Char.lowercase</code>: <code>char -&gt; char</code></li>
+<li><code>Char.uppercase</code>: <code>char -&gt; char</code></li>
+</ul>
+<p><strong>Voir le module <code>Char</code> pour une liste plus complète.</strong></p>
+<h3 id="exemples">Exemples</h3>
+<pre><code class="lineNumbers" ># 'a';;
+- : char = 'a'
+
+# Char.code 'a';;
+- : int = 97
+
+# '\097';;
+- : char = 'a'
+
+# '\97';;
+    ^^
+Error: Illegal backslash escape in string or character (\9)
+
+# Char.uppercase 'a';;
+- : char = 'A'
+
+# Char.uppercase '[';;
+- : char = '['
+</code></pre>
+
+<h1 id="module-intro">Module (Intro)</h1>
+<ul>
+<li><code>Char.code</code> appelle la fonction code du module <strong>Char</strong></li>
+<li>La bibliothèque standard de <code>OCaml</code> contient pusieurs modules qu'on utilisera par la suite: <code>Char, String, List, Array, ...</code></li>
+<li>Pour appeler une fonction d'un module :<ul>
+<li>Soit on ecrit le nom du module suivi du nom de la fonction:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lineNumbers" ># Char.code;;
+- : char -&gt; int = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Soit ont ouvre le module avec <code>open nom_Module</code> puis on appelle les fonctions librement</li>
+</ul>
+<pre><code class="lineNumbers" ># code;;
+  ^^^
+Error: Unbound value Code
+</code></pre>
+
+<pre><code class="lineNumbers" ># open Char;;
+# code;;
+- : char -&gt; int = &lt;fun&gt;
+</code></pre>
+
+<h1 id="string">String</h1>
+<h2 id="valeurs_1">valeurs</h2>
+<p>Chaîne de caractères( entre guillemets ") <code>"Hello", "a", " ", "\097 est a"</code></p>
+<h2 id="string-char">String <img class='latex-inline math-true' id='_1' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhLS0gVGhpcyBmaWxlIHdhcyBnZW5lcmF0ZWQgYnkgZHZpc3ZnbSAxLjYgLS0+CjxzdmcgaGVpZ2h0PSc4LjgyMjU4cHQnIHZlcnNpb249JzEuMScgdmlld0JveD0nNzYuNzEyMyA1NS44NzIgNy43MTk4IDguODIyNTgnIHdpZHRoPSc3LjcxOThwdCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CjxkZWZzPgo8cGF0aCBkPSdNNi4yNzY0NiAtNi43NDQ3MUM2LjM1NjE2IC02Ljg4NDE4IDYuMzU2MTYgLTYuOTA0MTEgNi4zNTYxNiAtNi45MzRDNi4zNTYxNiAtNy4wMDM3NCA2LjI5NjM5IC03LjEzMzI1IDYuMTU2OTEgLTcuMTMzMjVDNi4wMzczNiAtNy4xMzMyNSA2LjAwNzQ3IC03LjA3MzQ3IDUuOTM3NzMgLTYuOTM0TDEuNDY0NTEgMS43NjMzOUMxLjM4NDgxIDEuOTAyODYgMS4zODQ4MSAxLjkyMjc5IDEuMzg0ODEgMS45NTI2OEMxLjM4NDgxIDIuMDMyMzggMS40NTQ1NSAyLjE1MTkzIDEuNTg0MDYgMi4xNTE5M0MxLjcwMzYxIDIuMTUxOTMgMS43MzM1IDIuMDkyMTUgMS44MDMyNCAxLjk1MjY4TDYuMjc2NDYgLTYuNzQ0NzFaJyBpZD0nZzAtNTQnLz4KPHBhdGggZD0nTTYuODQ0MzMgLTMuMjU3NzhDNi45OTM3NyAtMy4yNTc3OCA3LjE4MzA2IC0zLjI1Nzc4IDcuMTgzMDYgLTMuNDU3MDRTNi45OTM3NyAtMy42NTYyOSA2Ljg1NDMgLTMuNjU2MjlIMC44ODY2NzVDMC43NDcxOTggLTMuNjU2MjkgMC41NTc5MDggLTMuNjU2MjkgMC41NTc5MDggLTMuNDU3MDRTMC43NDcxOTggLTMuMjU3NzggMC44OTY2MzggLTMuMjU3NzhINi44NDQzM1pNNi44NTQzIC0xLjMyNTAzQzYuOTkzNzcgLTEuMzI1MDMgNy4xODMwNiAtMS4zMjUwMyA3LjE4MzA2IC0xLjUyNDI4UzYuOTkzNzcgLTEuNzIzNTQgNi44NDQzMyAtMS43MjM1NEgwLjg5NjYzOEMwLjc0NzE5OCAtMS43MjM1NCAwLjU1NzkwOCAtMS43MjM1NCAwLjU1NzkwOCAtMS41MjQyOFMwLjc0NzE5OCAtMS4zMjUwMyAwLjg4NjY3NSAtMS4zMjUwM0g2Ljg1NDNaJyBpZD0nZzEtNjEnLz4KPC9kZWZzPgo8ZyBpZD0ncGFnZTEnPgo8dXNlIHg9Jzc2LjcxMjMnIHhsaW5rOmhyZWY9JyNnMC01NCcgeT0nNjIuNzY0NicvPgo8dXNlIHg9Jzc2LjcxMjMnIHhsaW5rOmhyZWY9JyNnMS02MScgeT0nNjIuNzY0NicvPgo8L2c+Cjwvc3ZnPgo='> char</h2>
+<pre><code class="lineNumbers" ># &quot;Hello&quot;.[1];;
+- : char = 'e'
+
+# &quot;Hell&quot;^'o';;
+         ^^^
+Error: This expression has type char but an expression
+was expected of type string
+</code></pre>
+
+<h2 id="concatenation">Concatenation</h2>
+<pre><code class="lineNumbers" ># &quot;Hello &quot;^&quot;World&quot;;;
+- : String = &quot;Hello World&quot;
+</code></pre>
+
+<h2 id="fonctions">Fonctions</h2>
+<ul>
+<li><code>String.length</code>: <code>string -&gt; int</code> Donne la taille de la chaîne</li>
+<li><code>String.get</code>: <code>string -&gt; int -&gt; char</code> donne le char la à la i-ème position</li>
+<li><code>String.make</code>: <code>int -&gt; char -&gt; string</code> donne un string conenant n char c</li>
+<li><code>String.sub</code>: <code>string -&gt; int -&gt; int -&gt; string</code>
+<strong>Voir le module <code>Char</code> pour une liste plus complète.</strong></li>
+</ul>
+<h2 id="exemple">Exemple</h2>
+<pre><code class="lineNumbers" ># &quot;\097 est a&quot;;;
+- : string = &quot;a est a&quot;
+
+# &quot;\097&quot;&quot;.[1];;
+- : char '&quot;'
+
+# let rec alphabet x =
+        let x_str = String.make 1 x in
+        let x_nxt = Char.chr (Char.code x+1) in
+                    if x = 'z' then x_str
+                    else x_str^(alphabet x_nxt);;
+
+val  alphabet : char -&gt; string = &lt;fun&gt;
+
+# alphabet 'a';;
+- : string = &quot;abcdefghijklmnopqrstuvwxyz&quot;
+
+# alphabet ’\000’;;
+- : string = &quot;\000\001\002\003\004\005\006\007\b\t\n\011\012\r\014\015\016\017\018\019\020\021
+\022\023\024\025\026\027\028\029\030\031 !\&quot;#$%&amp;’()+,./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUV
+WXYZ[\\]^_‘abcdefghijklmnopqrstuvwxyz&quot;
+</code></pre>
+
+<h1 id="liste">Liste</h1>
+<ul>
+<li>Des valeurs de <strong>même type</strong> peuvent être regroupées en listes:</li>
+</ul>
+<pre><code class="lineNumbers" ># [1;2;3];;
+- : int list = [1; 2; 3]
+
+# ['a'; 'b'; 'c'];;
+- : char list = ['a'; 'b'; 'c']
+
+# [(fun x -&gt; x+1);(fun x -&gt; x*x)];;
+- : (int -&gt; int) liste = [&lt;fun&gt;; &lt;fun&gt;]
+
+# [[1;2]; [3]];;
+- : int list list = [[1; 2]; [3]]
+</code></pre>
+
+<ul>
+<li><mark><strong>Attention:</strong></mark> tout les éléments de la même liste doivent être du même type</li>
+</ul>
+<pre><code class="lineNumbers" ># [1; &quot;deux&quot;; 3];;
+       ^^^
+Error: This expression has type string but an expression
+was expected of type int
+</code></pre>
+
+<h2 id="constructeur">Constructeur</h2>
+<p>Une liste est soit <strong>vide</strong>, soit a une <strong>tête</strong> et une <strong>queue</strong>
+liste vide <code>[]</code> a un type <strong>polymorphe</strong> <em>voir plus tard</em></p>
+<pre><code class="lineNumbers" ># [];;
+- : 'a list = []
+</code></pre>
+
+<ul>
+<li>Pour tout type <code>a</code>, il y a une liste vide <code>[]</code></li>
+<li><code>'a</code> est une variable de type.</li>
+</ul>
+<p>Constructeur <code>::</code> ajoute une tête a une queue</p>
+<pre><code class="lineNumbers" ># 1::[2;3];;
+- : int list = [1; 2; 3]
+
+# 1::2::3::[];;         (*associe a droite*)
+- : int list = [1; 2; 3]
+
+# 1::2::3;;
+        ^^
+Error: This expression has type int but an expression
+was expected of type int list
+</code></pre>
+
+<h2 id="destructuration">Destructuration</h2>
+<p>La "destructuration" des listes (extraction des éléments) se fait par <strong>patter-matching</strong></p>
+<pre><code class="lineNumbers" ># let f = function
+    [] -&gt; &quot;vide&quot;
+    | t::q -&gt; &quot;pas vide&quot;;;
+val f : 'a list -&gt; string = &lt;fun&gt;
+
+# let f x = match x with
+    [] -&gt; &quot;vide&quot;
+    | t::q -&gt; &quot;pas vide&quot;;;
+val f : 'a list -&gt; string = &lt;fun&gt;
+
+# f [];;
+- : string = &quot;vide&quot;
+
+# f [1; 2];;
+- : string = &quot;pas vide&quot;
+
+# f [&quot;toto&quot;];;          (* remarque polymorphisme*)
+- : string = &quot;pas vide&quot;
+</code></pre>
+
+<h2 id="exemples_1">Exemples</h2>
+<ul>
+<li>On peut avoir plus de cas que les deux constructeur:</li>
+</ul>
+<pre><code class="lineNumbers" ># let f = function
+    [] -&gt; &quot;vide&quot;
+    | t::[] -&gt; &quot;singleton&quot;
+    | t::(tt::q) -&gt; &quot;au moins deux éléments&quot;;;
+val f : 'a list -&gt; string = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Pour des exemples moins naïfs, il faut la récursion:</li>
+</ul>
+<pre><code class="lineNumbers" ># let rec length l = match l with
+    [] -&gt; 0
+    | t::q -&gt; 1 + length q;;
+val f : 'a list -&gt; int = &lt;fun&gt;
+
+# length [1;2;3];;
+- : int = 3
+
+# length [&quot;toto&quot;;&quot;tata&quot;;&quot;tutu&quot;];;
+- : int = 3
+</code></pre>
+
+<h2 id="quelques-fonctions">Quelques fonctions</h2>
+<ul>
+<li><code>@</code>: Concaténation de deux <strong>liste</strong> (<em>infixe</em>)</li>
+</ul>
+<pre><code class="lineNumbers" ># [1] @ [2;3];
+- : int list = [1; 2; 3]
+
+# 1 @ [2;3];
+  ^^
+Error: This expression has type int but an expression
+was expected of type a' list
+</code></pre>
+
+<ul>
+<li>D'autres fonctions dans le module <strong>Liste</strong><ul>
+<li><code>List.hd</code>: <code>'a list -&gt; 'a</code> (<em>retourne la tête de la liste</em>)</li>
+<li><code>List.tl</code>: <code>'a list -&gt; 'a list</code> (<em>retourne la queue de la liste</em>)</li>
+<li><code>List.length</code>: <code>'a list -&gt; int</code> (<em>retourne la taille de la liste</em>)</li>
+</ul>
+</li>
+<li>Les fonction sur les listes polymorphe sont de type polymorphe</li>
+</ul>
+<pre><code class="lineNumbers" ># List.hd [1;2;3];;
+- : int 1
+
+# List.tl [1;2;3];;
+- : int list [2; 3]
+
+# List.tl 1;;
+         ^^
+Error: This expression has type int but an expression
+was expected of type int list
+
+# List.hd [];;
+Exception: Failure &quot;hd&quot;          (*exception, pas erreur*)
+
+# List.tl [];;
+Exception: Failure &quot;tl&quot;          (*exception, pas erreur*)
+</code></pre>
+
+<ul>
+<li>Une implémentation possible de <code>hd</code> dans le module <code>List</code>:</li>
+</ul>
+<pre><code class="lineNumbers" ># let hd = function
+    [] -&gt; failwith &quot;hd&quot;
+    | t::q -&gt; t;;
+val hd : 'a list -&gt; 'a = &lt;fun&gt;
+
+# hd [1;2;3];;
+- : int 1
+
+# hd [];;
+Exception: Failure &quot;hd&quot;
+</code></pre>
+
+<ul>
+<li>Le mécanisme d'<strong>exception</strong> permet de traiter les cas limites    (<em>voir plus tard</em>)</li>
+</ul>
+<h3 id="fonction-map">Fonction <code>map</code></h3>
+<pre><code class="lineNumbers" >List.map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list
+</code></pre>
+
+<ol>
+<li>Elle prend une fonction : <code>f 'a -&gt; 'b</code></li>
+<li>Une liste : <code>[e1; ...; en] : 'a list</code></li>
+<li>Et renvoie la liste  : <code>[f(e1); ...; f(en)] : 'b list</code></li>
+</ol>
+<pre><code class="lineNumbers" >List.map (function x -&gt; x+1) [3;2;6];;
+- : int list = [4; 3; 7]
+
+# List.map (function x -&gt; (x mod 2) = 0) [1;4;6;3;8];;
+- : bool list = [false; true; true; false; true]
+</code></pre>
+
+<h3 id="list-iterateurs">List Itérateurs</h3>
+<h4 id="listfold_right">List.fold_right</h4>
+<pre><code class="lineNumbers" >List.fold_right : ('a -&gt; 'b -&gt; 'b) -&gt; 'a list -&gt; 'b -&gt; 'b
+</code></pre>
+
+<ol>
+<li>Elle prend une fonction <code>f: 'a -&gt; 'b -&gt; 'b</code></li>
+<li>Une liste : <code>[e1; ...; en] : 'a list</code></li>
+<li>Un élément de <code>'b</code>: <code>x : 'b</code></li>
+<li>Et renvoie un élément de <code>'b</code>: <code>f e1 (f e2 ... (f en b)) : 'b</code></li>
+</ol>
+<pre><code class="lineNumbers" ># List.fold_right (fun x y -&gt; x+y) [2;5;6] 1;;
+- : int = 11
+
+# List.fold_right (fun x y -&gt; x+y) [] 1;;
+- : int = 1
+</code></pre>
+
+<h4 id="listfold_left">List.fold_left</h4>
+<pre><code class="lineNumbers" >List.fold_left : ('a -&gt; 'b -&gt; 'a) -&gt; 'a -&gt; 'b list -&gt; 'a
+</code></pre>
+
+<ol>
+<li>Elle prend une fonction <code>f: 'a -&gt; 'b -&gt; 'a</code></li>
+<li>Un élément de <code>'a</code>: <code>x : 'a</code></li>
+<li>
+<ol>
+<li>Une liste : <code>[e1; ...; en] : 'b list</code></li>
+</ol>
+</li>
+<li>Et renvoie un élément de <code>'a</code>: <code>f (... (f (f x e1) e2) ...) : 'a</code></li>
+</ol>
+<pre><code class="lineNumbers" ># List.fold_right (fun x y -&gt; x^y) [&quot;Hello&quot;; &quot; &quot;; &quot;world&quot;] &quot;!&quot;;;
+- : string = &quot;Hello world !&quot;
+
+# List.fold_left (fun x y -&gt; x^y) &quot;!&quot; [&quot;Hello&quot;; &quot; &quot;; &quot;world&quot;];;
+- : string = &quot;! Hello world&quot;
+</code></pre>
+
+<h1 id="pattern-matching">Pattern matching</h1>
+<ul>
+<li>fr.: <strong>filtrage par motif</strong></li>
+<li>Très utile sur les types structurés, combinaison de<ul>
+<li>distinction des cas</li>
+<li>un moyen facile de déconstruire une donnée</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lineNumbers" ># let rec map f list = match list with
+    [] -&gt; []
+    | t::q -&gt; (f t) :: (map f q);;
+val map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Principe générale, pas seulement pour les listes: s'applique aussi à n'importe quel type <strong>(sauf fonction et objet)</strong></li>
+</ul>
+<pre><code class="lineNumbers" ># let rec fact n = match n with
+    0 -&gt; 1
+    | n -&gt; n * fact (n-1);;
+val fact : int -&gt; int = &lt;fun&gt;
+</code></pre></body>

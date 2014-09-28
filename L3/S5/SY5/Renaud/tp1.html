@@ -1,0 +1,80 @@
+
+    <head>
+        <meta charset='UTF-8'>
+        <base href="/home/renaud/.data/CSS/"  target="_blank">
+
+        <!--
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/prettify/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/home/renaud/.data/CSS/prettify/src/prettify.js"></script>
+        -->
+
+        <link rel='stylesheet' href="markdown.css"/>
+        <link rel="stylesheet" href="highlight2/src/styles/monokai.css">
+        <script src="highlight2/build/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body >
+        <h1 id="ex6">EX6</h1>
+<h2></h2>
+<pre><code class="lineNumbers" >mkdir tp1
+cd tp1
+mkdir rep1 rep2
+cd rep1
+mkdir rep3
+touch fic1
+cd rep3
+touch fic2
+</code></pre>
+
+<h2></h2>
+<pre><code class="lineNumbers" >ln rep1/rep3/fic2 lp_fic2
+ln -s rep1/rep3/fic2 ls_fic2
+</code></pre>
+
+<pre><code class="lineNumbers" >805431 -rwxrwxrwx 2 renaud users 0 24 sept. 13:33 rep1/rep3/fic2*
+
+805431 -rwxrwxrwx 2 renaud users    0 24 sept. 13:33 lp_fic2*
+805436 lrwxrwxrwx 1 renaud users   14 24 sept. 13:36 ls_fic2 -&gt; rep1/rep3/fic2*
+</code></pre>
+
+<h2></h2>
+<pre><code class="lineNumbers" >chmod 700 ls_fic2                                                                                                              13:42 24/09
+</code></pre>
+
+<pre><code class="lineNumbers" >805431 -rwx------ 2 renaud users    0 24 sept. 13:33 lp_fic2*
+805436 lrwxrwxrwx 1 renaud users   14 24 sept. 13:36 ls_fic2 -&gt; rep1/rep3/fic2*
+
+805431 -rwx------ 2 renaud users 0 24 sept. 13:33 rep1/rep3/fic2*
+</code></pre>
+
+<h2></h2>
+<pre><code class="lineNumbers" >chmod 000 rep1/rep3
+</code></pre>
+
+<pre><code class="lineNumbers" >d--------- 2 renaud users 4096 24 sept. 13:33 rep3/
+</code></pre>
+
+<pre><code class="lineNumbers" >cat  lp_fic2 # OK
+cat  ls_fic2 # Permission non accordée
+
+chmod 755 rep1/rep3
+</code></pre>
+
+<h2></h2>
+<pre><code class="lineNumbers" >mv rep1/rep3/fic2 rep1
+
+cat  lp_fic2 # OK
+cat  ls_fic2 # Aucun fichier ou dossier de ce type
+
+</code></pre>
+
+<h2></h2>
+<pre><code class="lineNumbers" >echo -e &quot;Tel un phenix, je renais de mes cendres.&quot; &gt; rep1/rep3/fic2
+cat lp_fic2 # affiche rep1/fic2
+cat ls_fic2 # affiche rep1/rep3/fic2
+    Tel un phenix, je renais de mes cendres.
+</code></pre>
+
+<h2></h2></body>

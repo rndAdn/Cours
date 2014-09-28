@@ -1,0 +1,416 @@
+
+    <head>
+        <meta charset='UTF-8'>
+        <base href="/home/renaud/.data/CSS/"  target="_blank">
+
+        <!--
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/prettify/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/home/renaud/.data/CSS/prettify/src/prettify.js"></script>
+        -->
+
+        <link rel='stylesheet' href="markdown.css"/>
+        <link rel="stylesheet" href="highlight2/src/styles/monokai.css">
+        <script src="highlight2/build/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body >
+        <p>[PF5] Cours 1</p>
+<blockquote>
+<p>michele.pagani@pps.univ-paris-diderot.fr</p>
+<p>Notation :<br>
+  Session 1: <img class='latex-inline math-true' id='_1' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhLS0gVGhpcyBmaWxlIHdhcyBnZW5lcmF0ZWQgYnkgZHZpc3ZnbSAxLjYgLS0+CjxzdmcgaGVpZ2h0PScxMS44MzU2cHQnIHZlcnNpb249JzEuMScgdmlld0JveD0nNzcuOTA3OCA1NC4zNjQ2IDMuOTcxMjQgMTEuODM1Nicgd2lkdGg9JzMuOTcxMjRwdCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CjxkZWZzPgo8cGF0aCBkPSdNMi4zMzYyNCAtNC40MzUzN0MyLjMzNjI0IC00LjYyMzY2IDIuMzIyMjkgLTQuNjMwNjQgMi4xMjcwMiAtNC42MzA2NEMxLjY4MDcgLTQuMTkxMjggMS4wNDYwOCAtNC4xODQzMSAwLjc2MDE0OSAtNC4xODQzMVYtMy45MzMyNUMwLjkyNzUyMiAtMy45MzMyNSAxLjM4NzggLTMuOTMzMjUgMS43NzEzNiAtNC4xMjg1MlYtMC41NzE4NTZDMS43NzEzNiAtMC4zNDE3MTkgMS43NzEzNiAtMC4yNTEwNTkgMS4wNzM5NyAtMC4yNTEwNTlIMC44MDg5NjZWMEMwLjkzNDQ5NiAtMC4wMDY5NzM4NSAxLjc5MjI4IC0wLjAyNzg5NTQgMi4wNTAzMSAtMC4wMjc4OTU0QzIuMjY2NSAtMC4wMjc4OTU0IDMuMTQ1MjEgLTAuMDA2OTczODUgMy4yOTg2MyAwVi0wLjI1MTA1OUgzLjAzMzYyQzIuMzM2MjQgLTAuMjUxMDU5IDIuMzM2MjQgLTAuMzQxNzE5IDIuMzM2MjQgLTAuNTcxODU2Vi00LjQzNTM3WicgaWQ9J2cwLTQ5Jy8+CjxwYXRoIGQ9J00zLjUyMTc5IC0xLjI2OTI0SDMuMjg0NjhDMy4yNjM3NiAtMS4xMTU4MiAzLjE5NDAyIC0wLjcwNDM1OSAzLjEwMzM2IC0wLjYzNDYyQzMuMDQ3NTcgLTAuNTkyNzc3IDIuNTEwNTkgLTAuNTkyNzc3IDIuNDEyOTUgLTAuNTkyNzc3SDEuMTI5NzZDMS44NjIwMiAtMS4yNDEzNCAyLjEwNjEgLTEuNDM2NjEgMi41MjQ1MyAtMS43NjQzOEMzLjA0MDYgLTIuMTc1ODQgMy41MjE3OSAtMi42MDgyMiAzLjUyMTc5IC0zLjI3MDczQzMuNTIxNzkgLTQuMTE0NTcgMi43ODI1NyAtNC42MzA2NCAxLjg4OTkxIC00LjYzMDY0QzEuMDI1MTYgLTQuNjMwNjQgMC40MzkzNTIgLTQuMDIzOTEgMC40MzkzNTIgLTMuMzgyMzJDMC40MzkzNTIgLTMuMDI2NjUgMC43MzkyMjggLTIuOTkxNzggMC44MDg5NjYgLTIuOTkxNzhDMC45NzYzMzkgLTIuOTkxNzggMS4xNzg1OCAtMy4xMTAzNCAxLjE3ODU4IC0zLjM2MTM5QzEuMTc4NTggLTMuNDg2OTIgMS4xMjk3NiAtMy43MzEwMSAwLjc2NzEyMyAtMy43MzEwMUMwLjk4MzMxMyAtNC4yMjYxNSAxLjQ1NzUzIC00LjM3OTU4IDEuNzg1MzEgLTQuMzc5NThDMi40ODI2OSAtNC4zNzk1OCAyLjg0NTMzIC0zLjgzNTYyIDIuODQ1MzMgLTMuMjcwNzNDMi44NDUzMyAtMi42NjQwMSAyLjQxMjk1IC0yLjE4MjgxIDIuMTg5NzkgLTEuOTMxNzZMMC41MDkwOTEgLTAuMjcxOThDMC40MzkzNTIgLTAuMjA5MjE1IDAuNDM5MzUyIC0wLjE5NTI2OCAwLjQzOTM1MiAwSDMuMzEyNThMMy41MjE3OSAtMS4yNjkyNFonIGlkPSdnMC01MCcvPgo8L2RlZnM+CjxnIGlkPSdwYWdlMSc+Cjx1c2UgeD0nNzcuOTA3OCcgeGxpbms6aHJlZj0nI2cwLTQ5JyB5PSc1OC44NDInLz4KPHJlY3QgaGVpZ2h0PScwLjM5ODQ4NCcgd2lkdGg9JzMuOTcxMjQnIHg9Jzc3LjkwNzgnIHk9JzYwLjA3NDcnLz4KPHVzZSB4PSc3Ny45MDc4JyB4bGluazpocmVmPScjZzAtNTAnIHk9JzY2LjIwMDEnLz4KPC9nPgo8L3N2Zz4K'> projet + <img class='latex-inline math-true' id='_2' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhLS0gVGhpcyBmaWxlIHdhcyBnZW5lcmF0ZWQgYnkgZHZpc3ZnbSAxLjYgLS0+CjxzdmcgaGVpZ2h0PScxMS44MzU2cHQnIHZlcnNpb249JzEuMScgdmlld0JveD0nNzcuOTA3OCA1NC4zNjQ2IDMuOTcxMjQgMTEuODM1Nicgd2lkdGg9JzMuOTcxMjRwdCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CjxkZWZzPgo8cGF0aCBkPSdNMi4zMzYyNCAtNC40MzUzN0MyLjMzNjI0IC00LjYyMzY2IDIuMzIyMjkgLTQuNjMwNjQgMi4xMjcwMiAtNC42MzA2NEMxLjY4MDcgLTQuMTkxMjggMS4wNDYwOCAtNC4xODQzMSAwLjc2MDE0OSAtNC4xODQzMVYtMy45MzMyNUMwLjkyNzUyMiAtMy45MzMyNSAxLjM4NzggLTMuOTMzMjUgMS43NzEzNiAtNC4xMjg1MlYtMC41NzE4NTZDMS43NzEzNiAtMC4zNDE3MTkgMS43NzEzNiAtMC4yNTEwNTkgMS4wNzM5NyAtMC4yNTEwNTlIMC44MDg5NjZWMEMwLjkzNDQ5NiAtMC4wMDY5NzM4NSAxLjc5MjI4IC0wLjAyNzg5NTQgMi4wNTAzMSAtMC4wMjc4OTU0QzIuMjY2NSAtMC4wMjc4OTU0IDMuMTQ1MjEgLTAuMDA2OTczODUgMy4yOTg2MyAwVi0wLjI1MTA1OUgzLjAzMzYyQzIuMzM2MjQgLTAuMjUxMDU5IDIuMzM2MjQgLTAuMzQxNzE5IDIuMzM2MjQgLTAuNTcxODU2Vi00LjQzNTM3WicgaWQ9J2cwLTQ5Jy8+CjxwYXRoIGQ9J00zLjUyMTc5IC0xLjI2OTI0SDMuMjg0NjhDMy4yNjM3NiAtMS4xMTU4MiAzLjE5NDAyIC0wLjcwNDM1OSAzLjEwMzM2IC0wLjYzNDYyQzMuMDQ3NTcgLTAuNTkyNzc3IDIuNTEwNTkgLTAuNTkyNzc3IDIuNDEyOTUgLTAuNTkyNzc3SDEuMTI5NzZDMS44NjIwMiAtMS4yNDEzNCAyLjEwNjEgLTEuNDM2NjEgMi41MjQ1MyAtMS43NjQzOEMzLjA0MDYgLTIuMTc1ODQgMy41MjE3OSAtMi42MDgyMiAzLjUyMTc5IC0zLjI3MDczQzMuNTIxNzkgLTQuMTE0NTcgMi43ODI1NyAtNC42MzA2NCAxLjg4OTkxIC00LjYzMDY0QzEuMDI1MTYgLTQuNjMwNjQgMC40MzkzNTIgLTQuMDIzOTEgMC40MzkzNTIgLTMuMzgyMzJDMC40MzkzNTIgLTMuMDI2NjUgMC43MzkyMjggLTIuOTkxNzggMC44MDg5NjYgLTIuOTkxNzhDMC45NzYzMzkgLTIuOTkxNzggMS4xNzg1OCAtMy4xMTAzNCAxLjE3ODU4IC0zLjM2MTM5QzEuMTc4NTggLTMuNDg2OTIgMS4xMjk3NiAtMy43MzEwMSAwLjc2NzEyMyAtMy43MzEwMUMwLjk4MzMxMyAtNC4yMjYxNSAxLjQ1NzUzIC00LjM3OTU4IDEuNzg1MzEgLTQuMzc5NThDMi40ODI2OSAtNC4zNzk1OCAyLjg0NTMzIC0zLjgzNTYyIDIuODQ1MzMgLTMuMjcwNzNDMi44NDUzMyAtMi42NjQwMSAyLjQxMjk1IC0yLjE4MjgxIDIuMTg5NzkgLTEuOTMxNzZMMC41MDkwOTEgLTAuMjcxOThDMC40MzkzNTIgLTAuMjA5MjE1IDAuNDM5MzUyIC0wLjE5NTI2OCAwLjQzOTM1MiAwSDMuMzEyNThMMy41MjE3OSAtMS4yNjkyNFonIGlkPSdnMC01MCcvPgo8L2RlZnM+CjxnIGlkPSdwYWdlMSc+Cjx1c2UgeD0nNzcuOTA3OCcgeGxpbms6aHJlZj0nI2cwLTQ5JyB5PSc1OC44NDInLz4KPHJlY3QgaGVpZ2h0PScwLjM5ODQ4NCcgd2lkdGg9JzMuOTcxMjQnIHg9Jzc3LjkwNzgnIHk9JzYwLjA3NDcnLz4KPHVzZSB4PSc3Ny45MDc4JyB4bGluazpocmVmPScjZzAtNTAnIHk9JzY2LjIwMDEnLz4KPC9nPgo8L3N2Zz4K'> Exam<br>
+  Session 2: max((<img class='latex-inline math-true' id='_3' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhLS0gVGhpcyBmaWxlIHdhcyBnZW5lcmF0ZWQgYnkgZHZpc3ZnbSAxLjYgLS0+CjxzdmcgaGVpZ2h0PScxMS44MzU2cHQnIHZlcnNpb249JzEuMScgdmlld0JveD0nNzcuOTA3OCA1NC4zNjQ2IDMuOTcxMjQgMTEuODM1Nicgd2lkdGg9JzMuOTcxMjRwdCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CjxkZWZzPgo8cGF0aCBkPSdNMi4zMzYyNCAtNC40MzUzN0MyLjMzNjI0IC00LjYyMzY2IDIuMzIyMjkgLTQuNjMwNjQgMi4xMjcwMiAtNC42MzA2NEMxLjY4MDcgLTQuMTkxMjggMS4wNDYwOCAtNC4xODQzMSAwLjc2MDE0OSAtNC4xODQzMVYtMy45MzMyNUMwLjkyNzUyMiAtMy45MzMyNSAxLjM4NzggLTMuOTMzMjUgMS43NzEzNiAtNC4xMjg1MlYtMC41NzE4NTZDMS43NzEzNiAtMC4zNDE3MTkgMS43NzEzNiAtMC4yNTEwNTkgMS4wNzM5NyAtMC4yNTEwNTlIMC44MDg5NjZWMEMwLjkzNDQ5NiAtMC4wMDY5NzM4NSAxLjc5MjI4IC0wLjAyNzg5NTQgMi4wNTAzMSAtMC4wMjc4OTU0QzIuMjY2NSAtMC4wMjc4OTU0IDMuMTQ1MjEgLTAuMDA2OTczODUgMy4yOTg2MyAwVi0wLjI1MTA1OUgzLjAzMzYyQzIuMzM2MjQgLTAuMjUxMDU5IDIuMzM2MjQgLTAuMzQxNzE5IDIuMzM2MjQgLTAuNTcxODU2Vi00LjQzNTM3WicgaWQ9J2cwLTQ5Jy8+CjxwYXRoIGQ9J00zLjUyMTc5IC0xLjI2OTI0SDMuMjg0NjhDMy4yNjM3NiAtMS4xMTU4MiAzLjE5NDAyIC0wLjcwNDM1OSAzLjEwMzM2IC0wLjYzNDYyQzMuMDQ3NTcgLTAuNTkyNzc3IDIuNTEwNTkgLTAuNTkyNzc3IDIuNDEyOTUgLTAuNTkyNzc3SDEuMTI5NzZDMS44NjIwMiAtMS4yNDEzNCAyLjEwNjEgLTEuNDM2NjEgMi41MjQ1MyAtMS43NjQzOEMzLjA0MDYgLTIuMTc1ODQgMy41MjE3OSAtMi42MDgyMiAzLjUyMTc5IC0zLjI3MDczQzMuNTIxNzkgLTQuMTE0NTcgMi43ODI1NyAtNC42MzA2NCAxLjg4OTkxIC00LjYzMDY0QzEuMDI1MTYgLTQuNjMwNjQgMC40MzkzNTIgLTQuMDIzOTEgMC40MzkzNTIgLTMuMzgyMzJDMC40MzkzNTIgLTMuMDI2NjUgMC43MzkyMjggLTIuOTkxNzggMC44MDg5NjYgLTIuOTkxNzhDMC45NzYzMzkgLTIuOTkxNzggMS4xNzg1OCAtMy4xMTAzNCAxLjE3ODU4IC0zLjM2MTM5QzEuMTc4NTggLTMuNDg2OTIgMS4xMjk3NiAtMy43MzEwMSAwLjc2NzEyMyAtMy43MzEwMUMwLjk4MzMxMyAtNC4yMjYxNSAxLjQ1NzUzIC00LjM3OTU4IDEuNzg1MzEgLTQuMzc5NThDMi40ODI2OSAtNC4zNzk1OCAyLjg0NTMzIC0zLjgzNTYyIDIuODQ1MzMgLTMuMjcwNzNDMi44NDUzMyAtMi42NjQwMSAyLjQxMjk1IC0yLjE4MjgxIDIuMTg5NzkgLTEuOTMxNzZMMC41MDkwOTEgLTAuMjcxOThDMC40MzkzNTIgLTAuMjA5MjE1IDAuNDM5MzUyIC0wLjE5NTI2OCAwLjQzOTM1MiAwSDMuMzEyNThMMy41MjE3OSAtMS4yNjkyNFonIGlkPSdnMC01MCcvPgo8L2RlZnM+CjxnIGlkPSdwYWdlMSc+Cjx1c2UgeD0nNzcuOTA3OCcgeGxpbms6aHJlZj0nI2cwLTQ5JyB5PSc1OC44NDInLz4KPHJlY3QgaGVpZ2h0PScwLjM5ODQ4NCcgd2lkdGg9JzMuOTcxMjQnIHg9Jzc3LjkwNzgnIHk9JzYwLjA3NDcnLz4KPHVzZSB4PSc3Ny45MDc4JyB4bGluazpocmVmPScjZzAtNTAnIHk9JzY2LjIwMDEnLz4KPC9nPgo8L3N2Zz4K'> projet + <img class='latex-inline math-true' id='_4' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJz8+CjwhLS0gVGhpcyBmaWxlIHdhcyBnZW5lcmF0ZWQgYnkgZHZpc3ZnbSAxLjYgLS0+CjxzdmcgaGVpZ2h0PScxMS44MzU2cHQnIHZlcnNpb249JzEuMScgdmlld0JveD0nNzcuOTA3OCA1NC4zNjQ2IDMuOTcxMjQgMTEuODM1Nicgd2lkdGg9JzMuOTcxMjRwdCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+CjxkZWZzPgo8cGF0aCBkPSdNMi4zMzYyNCAtNC40MzUzN0MyLjMzNjI0IC00LjYyMzY2IDIuMzIyMjkgLTQuNjMwNjQgMi4xMjcwMiAtNC42MzA2NEMxLjY4MDcgLTQuMTkxMjggMS4wNDYwOCAtNC4xODQzMSAwLjc2MDE0OSAtNC4xODQzMVYtMy45MzMyNUMwLjkyNzUyMiAtMy45MzMyNSAxLjM4NzggLTMuOTMzMjUgMS43NzEzNiAtNC4xMjg1MlYtMC41NzE4NTZDMS43NzEzNiAtMC4zNDE3MTkgMS43NzEzNiAtMC4yNTEwNTkgMS4wNzM5NyAtMC4yNTEwNTlIMC44MDg5NjZWMEMwLjkzNDQ5NiAtMC4wMDY5NzM4NSAxLjc5MjI4IC0wLjAyNzg5NTQgMi4wNTAzMSAtMC4wMjc4OTU0QzIuMjY2NSAtMC4wMjc4OTU0IDMuMTQ1MjEgLTAuMDA2OTczODUgMy4yOTg2MyAwVi0wLjI1MTA1OUgzLjAzMzYyQzIuMzM2MjQgLTAuMjUxMDU5IDIuMzM2MjQgLTAuMzQxNzE5IDIuMzM2MjQgLTAuNTcxODU2Vi00LjQzNTM3WicgaWQ9J2cwLTQ5Jy8+CjxwYXRoIGQ9J00zLjUyMTc5IC0xLjI2OTI0SDMuMjg0NjhDMy4yNjM3NiAtMS4xMTU4MiAzLjE5NDAyIC0wLjcwNDM1OSAzLjEwMzM2IC0wLjYzNDYyQzMuMDQ3NTcgLTAuNTkyNzc3IDIuNTEwNTkgLTAuNTkyNzc3IDIuNDEyOTUgLTAuNTkyNzc3SDEuMTI5NzZDMS44NjIwMiAtMS4yNDEzNCAyLjEwNjEgLTEuNDM2NjEgMi41MjQ1MyAtMS43NjQzOEMzLjA0MDYgLTIuMTc1ODQgMy41MjE3OSAtMi42MDgyMiAzLjUyMTc5IC0zLjI3MDczQzMuNTIxNzkgLTQuMTE0NTcgMi43ODI1NyAtNC42MzA2NCAxLjg4OTkxIC00LjYzMDY0QzEuMDI1MTYgLTQuNjMwNjQgMC40MzkzNTIgLTQuMDIzOTEgMC40MzkzNTIgLTMuMzgyMzJDMC40MzkzNTIgLTMuMDI2NjUgMC43MzkyMjggLTIuOTkxNzggMC44MDg5NjYgLTIuOTkxNzhDMC45NzYzMzkgLTIuOTkxNzggMS4xNzg1OCAtMy4xMTAzNCAxLjE3ODU4IC0zLjM2MTM5QzEuMTc4NTggLTMuNDg2OTIgMS4xMjk3NiAtMy43MzEwMSAwLjc2NzEyMyAtMy43MzEwMUMwLjk4MzMxMyAtNC4yMjYxNSAxLjQ1NzUzIC00LjM3OTU4IDEuNzg1MzEgLTQuMzc5NThDMi40ODI2OSAtNC4zNzk1OCAyLjg0NTMzIC0zLjgzNTYyIDIuODQ1MzMgLTMuMjcwNzNDMi44NDUzMyAtMi42NjQwMSAyLjQxMjk1IC0yLjE4MjgxIDIuMTg5NzkgLTEuOTMxNzZMMC41MDkwOTEgLTAuMjcxOThDMC40MzkzNTIgLTAuMjA5MjE1IDAuNDM5MzUyIC0wLjE5NTI2OCAwLjQzOTM1MiAwSDMuMzEyNThMMy41MjE3OSAtMS4yNjkyNFonIGlkPSdnMC01MCcvPgo8L2RlZnM+CjxnIGlkPSdwYWdlMSc+Cjx1c2UgeD0nNzcuOTA3OCcgeGxpbms6aHJlZj0nI2cwLTQ5JyB5PSc1OC44NDInLz4KPHJlY3QgaGVpZ2h0PScwLjM5ODQ4NCcgd2lkdGg9JzMuOTcxMjQnIHg9Jzc3LjkwNzgnIHk9JzYwLjA3NDcnLz4KPHVzZSB4PSc3Ny45MDc4JyB4bGluazpocmVmPScjZzAtNTAnIHk9JzY2LjIwMDEnLz4KPC9nPgo8L3N2Zz4K'> Exam2), Exam2)</p>
+</blockquote>
+<div class="toc">
+<ol>
+<li><a href="#syles-de-programmation">Syles de programmation</a><ol>
+<li><a href="#imperatif">Impératif</a></li>
+<li><a href="#fonctionnel">Fonctionnel</a></li>
+</ol>
+</li>
+<li><a href="#compilation">Compilation</a><ol>
+<li><a href="#boucle-dinterpretation">Boucle d'interprétation</a></li>
+<li><a href="#remarque">Remarque</a></li>
+</ol>
+</li>
+<li><a href="#types">Types</a><ol>
+<li><a href="#int">int</a><ol>
+<li><a href="#valeur">Valeur</a></li>
+<li><a href="#operateurs">Opérateurs</a></li>
+<li><a href="#exemple">Exemple</a></li>
+</ol>
+</li>
+<li><a href="#float">float</a><ol>
+<li><a href="#valeur_1">Valeur</a></li>
+<li><a href="#operateurs_1">Opérateurs</a></li>
+<li><a href="#conversion">Conversion</a></li>
+<li><a href="#exemple_1">Exemple</a></li>
+</ol>
+</li>
+<li><a href="#bool">bool</a><ol>
+<li><a href="#valeur_2">Valeur</a></li>
+<li><a href="#operateurs_2">Opérateurs</a></li>
+<li><a href="#exemple_2">Exemple</a></li>
+</ol>
+</li>
+<li><a href="#fonctionnels">fonctionnels</a><ol>
+<li><a href="#exemple_3">Exemple</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#declaration-des-valeurs">Déclaration des valeurs</a><ol>
+<li><a href="#let">let</a></li>
+<li><a href="#let-rec">let rec</a></li>
+<li><a href="#let-in">let in</a></li>
+</ol>
+</li>
+</ol>
+</div>
+<h1 id="syles-de-programmation">Syles de programmation</h1>
+<h2 id="imperatif">Impératif</h2>
+<ul>
+<li>
+<p><strong>Programme</strong>:<br>
+Séquence structuée d'instruction à la machine</p>
+</li>
+<li>
+<p><strong>Variable</strong>:<br>
+Nom pour un emplacement mémoire qui contien une valeur</p>
+</li>
+<li>
+<p><strong>Affectation</strong>:<br>
+<code>x = 2 + 1;</code>
+Change la valeur de la case memoire de x</p>
+</li>
+<li>
+<p><strong>Usage intessif de l'iteration</strong></p>
+</li>
+</ul>
+<h2 id="fonctionnel">Fonctionnel</h2>
+<ul>
+<li>
+<p><strong>Programme</strong>:<br>
+définition d'une fonction à partir de fonction plus élémentaires</p>
+</li>
+<li>
+<p><strong>Variable</strong>:<br>
+Une inconnue sur un ensemble de valeur</p>
+</li>
+<li>
+<p><strong>Application des fonction</strong>:<br>
+<code>(fun x -&gt; x+1)2;;</code>
+Expression représentant la valeur 3</p>
+</li>
+<li>
+<p><strong>Usage intessif de la recursion</strong></p>
+</li>
+</ul>
+<h1 id="compilation">Compilation</h1>
+<p>Deux type de fonctionnement:</p>
+<ol>
+<li><strong>Compilé</strong> (Java, C) :<br>
+Permet d'obtenir des éxécutables autonomes</li>
+</ol>
+<pre><code class="lineNumbers" >ocamlc      // compilateur en ligne de code-octet
+ocamlrun    // interprète de code-octet
+ocamlopt    // compilateur en ligne de code natif
+js_of_ocaml //compilateur vers JavaScrip
+</code></pre>
+
+<ol>
+<li><strong>Interpréter</strong> :<br>
+Permet d'observer les requêtes une par une</li>
+</ol>
+<pre><code class="lineNumbers" >ocaml       // lance une boucle d'interprétation
+</code></pre>
+
+<h2 id="boucle-dinterpretation">Boucle d'interprétation</h2>
+<p>L'utilisateur tape une <strong>requête</strong>, Une expréssion se termine avec deux <code>;;</code></p>
+<ol>
+<li><strong><em>Caml</em></strong> analyse la <strong>syntaxe</strong>, affiche une erreur si la syntaxe est inccorecte.</li>
+<li>Si la syntaxe est correcte, l'interpréteur <strong>calcule</strong> le <strong>type</strong>, affiche une erreur si l'expression est mal typée.</li>
+<li>Si l'expression est bien typée, l'interpréteur <strong>évalue</strong> l'expression, puis <strong>affiche</strong> le <strong>type</strong> et la <strong>valeur</strong> obtenue.</li>
+</ol>
+<p>Ceci est une boucle <mark><strong>Read-Eval-Print</strong></mark></p>
+<h2 id="remarque">Remarque</h2>
+<ul>
+<li>Ce sont les <code>;;</code> qui termine la requête, pas les saut de ligne. Un saut de ligne dans une requête sont des <strong>espaces</strong> comme les autres</li>
+<li>Les <code>;;</code> <strong>ne font pas partie de la syntaxe de <em>Caml</em> mais de l'interpréteur</strong>.</li>
+<li>Les commentaires sont entre <code>(*</code> et <code>*)</code>, et peuvent être sur plusieurs lignes.</li>
+</ul>
+<h1 id="types">Types</h1>
+<ul>
+<li>Typés <strong>automatiquement</strong> par l'interpréteur/compilateur</li>
+<li>
+<p>type de base : <code>int, float, bool, ...</code><br>
+type fonctionnels : <code>int -&gt; float, (int -&gt; int) -&gt; int</code> , ... <br>
+<strong>...</strong><br>
+type structurés <em>(voit plus tard)</em><br>
+Objets et classes <em>(pas dans ce cours)</em></p>
+</li>
+<li>
+<p>Grande fléxibilité dû à la <strong>polymorphie</strong> <em>(voir plus tard)</em><br></p>
+</li>
+</ul>
+<pre><code class="lineNumbers" >val qSort : 'a list -&gt; 'a list = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Aussi petits problèmes dues au typage automatique :<br>
+<strong>Pas de conversion automatique entre types</strong></li>
+</ul>
+<h2 id="int"><code>int</code></h2>
+<h3 id="valeur">Valeur</h3>
+<p><code>...,-2, -1, 0, 1, 2, ...</code></p>
+<h3 id="operateurs">Opérateurs</h3>
+<ul>
+<li><code>+, -, *, /, mod, ...</code> <em>(infix)</em></li>
+</ul>
+<h3 id="exemple">Exemple</h3>
+<pre><code class="lineNumbers" >3 + 4;;
+- : int = 7
+
+(3 + 4) mod 2;;
+- : int = 1
+</code></pre>
+
+<h2 id="float"><code>float</code></h2>
+<h3 id="valeur_1">Valeur</h3>
+<p><code>...,-2.0, 3.14, 5e3, 6e-9, ...</code></p>
+<h3 id="operateurs_1">Opérateurs</h3>
+<ul>
+<li>Arithmetiques: <br>
+<code>+., -., *., /., mod, ...</code><br>
+<strong>Attetion ! </strong> Sur <code>float</code> les opérateur arithmetique s'écrivent avec un <code>.</code></li>
+<li>Réels :<br>
+<code>sin, sqrt, log, floor, ...</code></li>
+</ul>
+<h3 id="conversion">Conversion</h3>
+<p>Il y a des fonctions de conversion de typee entre int et float.</p>
+<pre><code class="lineNumbers" >float_of_int;;
+- : int -&gt; float = &lt;fun&gt;
+
+(float);;
+- : int -&gt; float = &lt;fun&gt;
+
+int_of_float;;
+- : float -&gt; int = &lt;fun&gt;
+</code></pre>
+
+<h3 id="exemple_1">Exemple</h3>
+<pre><code class="lineNumbers" >sin  (2.0 / .3.0);;
+- : float = 0.618369803069737
+
+3.0 +. 2.5;;
+- : float = 5.5
+
+3.0 + 2.5;; (*Pas de point apres l\'opérateur*)
+  ^^^
+Error : This expression has type float but an expression was expected of type int
+
+int_of_float 3.0 + int_of_float 2.5;;
+- :  int = 5
+
+3 +. 2.5;; (*Pas de convertion implicite entre int vers float*)
+  ^
+Error : This expression has type int but an expression was expected of type float
+
+float_of_int  3 +. 2.5;;
+- :  float = 5.5
+</code></pre>
+
+<h2 id="bool"><code>bool</code></h2>
+<h3 id="valeur_2">Valeur</h3>
+<p><code>true, false</code></p>
+<h3 id="operateurs_2">Opérateurs</h3>
+<ul>
+<li>Logiques :<ul>
+<li><strong><code>not</code></strong> : négation</li>
+<li><code>&amp;&amp;, &amp;</code> : et séquentiel (<em>infix</em>)</li>
+<li><code>||, or</code> : ou séquentiel (<em>infix</em>)</li>
+</ul>
+</li>
+<li>Comparaison :<ul>
+<li><code>=</code>: égalité <strong>1 Seul <code>=</code> contrairement au <code>Java ou Python : ==</code></strong></li>
+<li><code>&gt;, &gt;=</code>: plus grand, plus grand ou égal</li>
+<li><code>&lt;, &lt;=</code>: plus petit, plus petit ou égal</li>
+</ul>
+</li>
+<li>conditionnel: <code>if cond then e1 else e2</code>:<ul>
+<li>cond est une expréssion de type <code>bool</code></li>
+<li>e1 et e2 sont deux expressions de <strong>même type</strong>, <mark>qui est aussi le type du conditionnel</mark></li>
+<li>seulement une des deux branche e1, e2 est évaluée.</li>
+</ul>
+</li>
+</ul>
+<h3 id="exemple_2">Exemple</h3>
+<pre><code class="lineNumbers" >not false &amp;&amp; false;;
+- : bool = false
+
+not (false &amp;&amp; false);;
+- : bool = true
+
+true = false;;
+- : bool = false
+
+3 = 3 ;;
+- : bool = true
+
+4 + 5 &gt; 10;;
+- : bool = false
+
+2.0 *. 4.0 &gt; 7.0;;
+- : bool = true
+
+if (3 &lt; 4) then 1 else 0;;
+- : int = 1
+
+if (4 &lt; 0) then 1 else 0;;
+- : int = 0
+</code></pre>
+
+<h2 id="fonctionnels"><code>fonctionnels</code></h2>
+<p>Le type d'une fonction n'est plus un type de base.</p>
+<ul>
+<li>Une façon d'introduire les fonctions est à travers:</li>
+</ul>
+<pre><code class="lineNumbers" >fun var_1 ... var_n -&gt; expr
+</code></pre>
+
+<p>Ou</p>
+<pre><code class="lineNumbers" >function var_1 ... var_n -&gt; expr
+</code></pre>
+
+<ul>
+<li>Pour evaluer une fonction il faut lui donner des arguments</li>
+<li>Le resultat de l'evaluation peut être une autre fonction <em>(évaluation partielle)</em></li>
+<li>L'argument d'une fonction peut être une fonction</li>
+</ul>
+<h3 id="exemple_3">Exemple</h3>
+<pre><code class="lineNumbers" ># fun x -&gt; x * 2;;
+- : int -&gt; int = &lt;fun&gt;
+
+# function x -&gt; x * 2;;
+- : int -&gt; int = &lt;fun&gt;
+
+# fun x y  -&gt; x * y;;
+- : int -&gt; int -&gt; int = &lt;fun&gt;
+
+# (fun x -&gt; x * 2) 3;;
+- : int = 6
+
+# (fun x y  -&gt; x * y) 3;;
+- : int -&gt; int = &lt;fun&gt;
+
+# (fun x y  -&gt; x * y) 3 2;;
+- : int = 6
+
+# fun f  -&gt; (f(f2));;
+- : (int -&gt; int) -&gt; int = &lt;fun&gt;
+
+# (fun f  -&gt; f(f x) (fun x -&gt; x * x);;
+- : int -&gt; int = &lt;fun&gt;
+
+# (fun f  -&gt; f(f x) (fun x -&gt; x * x) 2 ;;
+- : int = 16
+</code></pre>
+
+<h1 id="declaration-des-valeurs">Déclaration des valeurs</h1>
+<h2 id="let">let</h2>
+<pre><code class="lineNumbers" >let nom = expr
+</code></pre>
+
+<ul>
+<li>Associe à <code>nom</code> la valeur de l'expression <code>expr</code> pour la réutiliser après:</li>
+</ul>
+<pre><code class="lineNumbers" ># let x = 2 + 3;;
+val x : int = 5
+
+# x * 3;;
+- : int = 15
+</code></pre>
+
+<ul>
+<li>En particulier, on peut donner un nom aux fonctions:</li>
+</ul>
+<pre><code class="lineNumbers" ># let f = (fun x -&gt; x * 2);;
+val f : int -&gt; int = &lt;fun&gt;
+
+# f 3;;
+- : int = 6
+</code></pre>
+
+<ul>
+<li><code>OCaml</code> fournit une syntaxe simplifiée:</li>
+</ul>
+<p><code>let f x y = expr</code> est équivalent à <code>let f = fun x y -&gt; expr</code></p>
+<pre><code class="lineNumbers" ># let g f x = f (f ( x * 2));;
+val g : (int -&gt; int) -&gt; int -&gt; int = &lt;fun&gt;
+
+# let sq x = x * x;;
+val sq : int -&gt; int = &lt;fun&gt;
+
+# let h = g sq;;
+val h : int -&gt; int = &lt;fun&gt;
+
+# h 1;;
+- : int = 16
+</code></pre>
+
+<h2 id="let-rec">let rec</h2>
+<pre><code class="lineNumbers" >let nom rec = fun arg_1 arg_2 ... -&gt; expr
+</code></pre>
+
+<ul>
+<li><code>let ... rec</code> permet une définition récursive d'une fonction <code>nom</code></li>
+</ul>
+<pre><code class="lineNumbers" ># let rec fact = fun x -&gt; if (x = 0) then 1 else x * fact(x-1)
+val fact : int -&gt; int = &lt;fun&gt;
+</code></pre>
+
+<ul>
+<li>Si on utilise simplement <code>let</code> on obtient une erreur:</li>
+</ul>
+<pre><code class="lineNumbers" ># let fact = fun x -&gt; if (x = 0) then 1 else x * fact(x-1)
+                                                 ^^^
+Error : Unbound value fact
+</code></pre>
+
+<p><code>let</code> définit fact dans tout les expressions qui suivent la déclaration <strong>mais</strong> pas dans l'expression a droite de <code>-&gt;</code></p>
+<ul>
+<li>On peut aussi utiliser la syntaxe simplifiée, comme pour <code>let</code></li>
+</ul>
+<pre><code class="lineNumbers" ># let rec fact = if (x = 0) then 1 else x * fact(x-1)
+val fact : int -&gt; int = &lt;fun&gt;
+</code></pre>
+
+<h2 id="let-in">let in</h2>
+<p><code>let nom = expr_1 in expr_2</code></p>
+<ul>
+<li>permet une déclaration locale de nom dans expr_2:</li>
+</ul>
+<pre><code class="lineNumbers" ># let x = 3 in x + 4;;
+- : int = 7
+# let y = x + 4;;
+         ^^^
+Error : Unbound value x
+</code></pre>
+
+<ul>
+<li>Alors qu'un nom déclaré par <code>let</code> ou <code>let rec</code> est par contre connu par toute les expressions qui suivent la déclaration :</li>
+<li>Une déclaration locale peut redefinir <strong>localement</strong> un nom glbal</li>
+</ul>
+<pre><code class="lineNumbers" ># let x = 3;;
+val x : int = 3
+
+# let x = 3 in x;;
+- : int = 3
+
+# x;;
+- : int = 2
+</code></pre>
+
+<p><strong>A FINIR</strong></p></body>

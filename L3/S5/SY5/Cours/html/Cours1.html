@@ -1,0 +1,148 @@
+
+    <head>
+        <meta charset='UTF-8'>
+        <base href="/home/renaud/.data/CSS/"  target="_blank">
+
+        <!--
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/prettify/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/home/renaud/.data/CSS/prettify/src/prettify.js"></script>
+        -->
+
+        <link rel='stylesheet' href="markdown.css"/>
+        <link rel="stylesheet" href="highlight2/src/styles/monokai.css">
+        <script src="highlight2/build/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body >
+        <p>[SY5]</p>
+<blockquote>
+<p>Wieslas Zielonka<br>
+zielonka@liafa.univ-paris-diderot.fr<br>
+www.liafa.univ-paris-diderot.fr/~zielonka</p>
+</blockquote>
+<div class="toc">
+<ol>
+<li><a href="#introduction">Introduction</a><ol>
+<li><a href="#plan-du-cours">Plan du cours</a></li>
+<li><a href="#language-et-norme">Language et norme</a></li>
+</ol>
+</li>
+<li><a href="#rappel-de-c">Rappel de C</a><ol>
+<li><a href="#pointeur">Pointeur</a></li>
+<li><a href="#tableau-et-arithmetique-de-pointeurs">Tableau et arithmétique de pointeurs</a></li>
+<li><a href="#parcours-de-tableau-avec-pointeur">Parcours de tableau avec pointeur</a></li>
+<li><a href="#petit-programme-et-fonction">Petit programme et fonction</a></li>
+<li><a href="#fichier-compile">Fichier Compilé</a></li>
+</ol>
+</li>
+</ol>
+</div>
+<h1 id="introduction">Introduction</h1>
+<h2 id="plan-du-cours">Plan du cours</h2>
+<ol>
+<li>Interaction avec le système de fichiers</li>
+<li>Processus</li>
+<li>Communication avec les tubes</li>
+</ol>
+<h2 id="language-et-norme">Language et norme</h2>
+<p>On utilisera le language C dans la norme POSIX et des commandes UNIX</p>
+<h1 id="rappel-de-c">Rappel de C</h1>
+<h2 id="pointeur">Pointeur</h2>
+<pre><code class="lineNumbers" >    int *p-int; //Pointeur
+    double *p-d;
+    int x = 5; // Variable
+    double d = -3,14;
+    p-int = &amp;x; //Prise d'adresse.
+    p-d = &amp;d;
+    int k;
+    k = *p-int + 5;
+    *p-int = k + 3;
+
+</code></pre>
+
+<h2 id="tableau-et-arithmetique-de-pointeurs">Tableau et arithmétique de pointeurs</h2>
+<pre><code class="lineNumbers" >    int tab[] = {-3,6,8,12,-7,2};
+    double td[] = {-3,14,-0.1,-7,12,-8.0,2.43};
+</code></pre>
+
+<p>Table</p>
+<table>
+<thead>
+<tr>
+<th>-3</th>
+<th>6</th>
+<th>8</th>
+<th>12</th>
+<th>-7</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lineNumbers" >
+    int *a;
+    a = &amp;tab[2];
+    printf(*(a+2)); // -7
+    printf(*(a-1)); // 6
+    int l = -1
+    printf(*(a+2*l)); // -3
+    printf(*(a+2)+1); // -6
+    *(a+15) = 12;
+    //Sorti d'espace adressable (Seg Fault ou corruption de donneés)
+    b = &amp;tab[5]
+    printf(a-b); // entier postive de 3*size(int)
+
+</code></pre>
+
+<h2 id="parcours-de-tableau-avec-pointeur">Parcours de tableau avec pointeur</h2>
+<pre><code class="lineNumbers" >    a = &amp;tab;
+    b = a+6;
+    int s = 0;
+    while(a&lt;b){
+        s += *a;
+        a++;
+    }
+</code></pre>
+
+<p>Utilisation de <code>sizeof(-type/-expression)</code></p>
+<h2 id="petit-programme-et-fonction">Petit programme et fonction</h2>
+<pre><code class="lineNumbers" >    int f(int x, int t[]){
+        int s;
+        t[2] = t[3] + 1
+        //*(pointeur + entier) &lt;=&gt; pointeur[entier] pour le compilateur
+        //sizeof(t) = 4
+        ...
+    }
+    int main(void){
+        int i;
+        int tab[] = {1,2,5,8};
+        //sizeof(tab) = 4*4
+        int k;
+        i=3;
+        // On doit passer le nombre d'élément du tableau en parametre
+        k = f(i,tab);
+        ...
+    }
+</code></pre>
+
+<h2 id="fichier-compile">Fichier Compilé</h2>
+<ol>
+<li><strong>Fichiers ".o"</strong> </br>
+Segment Texte -&gt; Les instruction du programme </br>
+Data Segment -&gt; Les variables initialisés de niveau 0 ou plus static ou non.</br>
+BSS segment -&gt; Les variables de niveau 0 non initialisés </br></li>
+<li><strong>Memoire reservé</strong> </br>
+Pile -&gt; Memoire temporaire desendante</br>
+Tas -&gt; Memoire temporaire montante.</br></li>
+</ol></body>
