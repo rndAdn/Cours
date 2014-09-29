@@ -20,8 +20,3 @@ let x = 2;;
 let x = 3
 in lety=x+1 in x + y;;
 let x = 3 and y = x + 1 in x+y;;
-
-
-
-
-
