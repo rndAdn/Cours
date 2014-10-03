@@ -1,5 +1,5 @@
 let carree x = x * x;;
-let perimetre r = let pie = 3.14159267 in (2.*r.*pie) ;;
+let perimetre r = let pie = 3.14159267 in (2.0*.r*.pie) ;;
 let bis r = r^r ;;
 let huit_fois r = let p = r^r in let g = p^p in g^g;;
 let huit_fois r = bis(bis(bis(r)));;
@@ -18,10 +18,5 @@ let vider n = let rec empA n = if n < 1 then 0 else empB(n-1) +1 and empB n = if
 
 let x = 2;;
 let x = 3
-in lety=x+1 in x + y;;
+in let y=x+1 in x + y;;
 let x = 3 and y = x + 1 in x+y;;
-
-
-
-
-
