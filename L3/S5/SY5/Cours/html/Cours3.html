@@ -1,0 +1,505 @@
+
+    <head>
+        <meta charset='UTF-8'>
+        <!--<base href="/home/renaud/.data/CSS/"  target="_blank">-->
+
+        <!--
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/prettify/src/prettify.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="/home/renaud/.data/CSS/prettify/src/prettify.js"></script>
+        -->
+
+        <link rel='stylesheet' href="/home/renaud/.data/CSS/markdown.css"/>
+        <link href="/home/renaud/.data/CSS/highlight2/src/styles/monokai.css" type="text/css"
+
+        <!--
+        <link rel='stylesheet' href="markdown.css"/>
+        <!-- <link rel="stylesheet" href="highlight2/src/styles/monokai.css">
+        -->
+
+        <script src="/home/renaud/.data/CSS/highlight2/build/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+    </head>
+    <body >
+        <p>[SY5]</p>
+<blockquote>
+<p>Wiesław Zielonka<br>
+zielonka@liafa.univ-paris-diderot.fr<br>
+www.liafa.univ-paris-diderot.fr/~zielonka</p>
+</blockquote>
+<div class="toc">
+<ol>
+<li><a href="#fichiers">Fichiers</a><ol>
+<li><a href="#systemes-de-fichiers">Systèmes de fichiers</a></li>
+<li><a href="#types-de-fichiers">Types de fichiers</a></li>
+<li><a href="#chemin-absolu">Chemin absolu</a></li>
+<li><a href="#chemin-relatif">Chemin relatif</a></li>
+<li><a href="#le-repertoire-courant-dun-processus">Le répertoire courant d’un processus</a></li>
+<li><a href="#changer-le-repertoire-courant-dans-un-programme-c">Changer le répertoire courant dans un programme C</a></li>
+<li><a href="#les-repertoires">Les répertoires</a></li>
+<li><a href="#les-repertoires_1">Les répertoires</a></li>
+<li><a href="#caracteristiques-de-fichiers">Caractéristiques de fichiers</a></li>
+<li><a href="#type-de-fichier-programme-c">Type de fichier (programme C)</a></li>
+<li><a href="#les-droits-dacces">Les droits d'accès</a><ol>
+<li><a href="#les-fichiers-ordinaires">Les fichiers ordinaires:</a></li>
+<li><a href="#les-repertoires_2">les répertoires</a></li>
+</ol>
+</li>
+<li><a href="#les-droits-dacces_1">Les droits d'accès</a><ol>
+<li><a href="#macro-constantes">Macro-constantes:</a></li>
+</ol>
+</li>
+<li><a href="#identite-de-fichier">Identité de fichier</a></li>
+<li><a href="#parcours-de-repertoire">Parcours de répertoire</a></li>
+<li><a href="#creation-et-suppression-dun-repertoire">Création et suppression d'un répertoire</a></li>
+<li><a href="#liens-durs">Liens durs</a></li>
+<li><a href="#creation-de-liens-durs-avec-link">Création de liens durs avec link</a></li>
+<li><a href="#exemple-link">Exemple link</a></li>
+<li><a href="#suppression-de-lien-dur">Suppression de lien dur</a><ol>
+<li><a href="#renommage-de-lien-dur">Renommage de lien dur</a></li>
+</ol>
+</li>
+<li><a href="#gestion-derreurs-en-c">Gestion d'erreurs en C</a></li>
+</ol>
+</li>
+</ol>
+</div>
+<h1 id="fichiers">Fichiers</h1>
+<h2 id="systemes-de-fichiers">Systèmes de fichiers</h2>
+<ul>
+<li>linux : ext3fs, ext4fs, ReiserFS</li>
+<li>MSWindows : FAT16, FAT32, NTFS</li>
+<li>CD-ROM : ISO 9660</li>
+<li>Mac OS : HFS+</li>
+</ul>
+<p>Différents systèmes de fichiers peuvent exister sur le même disque
+(par exemple NTFS et ext4fs si windows et linux installés sur le
+même DD). Chaque système de fichiers sur le DD install sur sa
+propre partition (volume).</p>
+<p>D'un point de vue de processus : le système principal installé à la
+racine (/), et d’autres systèmes <strong>“montés”</strong> et visibles comme de
+<strong>sous-répertoires</strong>, commandes ``mount et umount````.</p>
+<h2 id="types-de-fichiers">Types de fichiers</h2>
+<ul>
+<li>fichiers ordinaires - suite d’octets</li>
+<li>les répertoires,</li>
+<li>fichiers spéciaux FIFO (pipe),</li>
+<li>fichiers spéciaux bloc,</li>
+<li>fichiers spéciaux caractères,</li>
+<li>liens symboliques,</li>
+<li>les sockets.</li>
+</ul>
+<h2 id="chemin-absolu">Chemin absolu</h2>
+<p>Le chemin absolu permet de situer un fichier depuis la racine, le
+chemin absolu commence par <code>/</code></p>
+<pre><code class="lineNumbers" >/home/tom/enseignement/Systemes/cours2.pdf
+/home/tom/enseignement/../../mike/./photos/rome.jpeg
+</code></pre>
+
+<ul>
+<li><code>..</code> permet de remonter vers le répertoire père.</li>
+<li><code>.</code> d ́esigne le r ́epertoire courant.</li>
+</ul>
+<blockquote>
+<p>A noter que le père de <code>/</code> est <code>/.</code></p>
+</blockquote>
+<h2 id="chemin-relatif">Chemin relatif</h2>
+<p>c'est le chemin qui ne commence pas par <code>/</code></p>
+<pre><code class="lineNumbers" >enseignement/Systemes/cours1.tex
+enseignement/../../mike/photos/paris.jpeg
+</code></pre>
+
+<p>Mais ce chemin est relatif vis à vis de quoi?
+Relatif par rapport au <strong>répertoire</strong> courant du processus.
+Pour connaître le répertoire courant de shell qui contrôle le
+terminal exécutez la commande UNIX <code>pwd</code>. Pour changer le
+répertoire courant de shell la commande UNIX <code>cd</code>.</p>
+<h2 id="le-repertoire-courant-dun-processus">Le répertoire courant d’un processus</h2>
+<p>Pour récupérer le chemin absolu vers le répertoire courant de
+processus depuis un programme C</p>
+<pre><code class="lineNumbers" >char* getcwd (char* buf, size_t taille_buf)
+</code></pre>
+
+<p>le paramètre buf le pointeur vers le tampon où <code>getcwd</code> place le
+résultat, <code>taille_buf</code> la taille de tampon.
+Si la taille de tampon trop petite alors <code>getcwd</code> retourne <code>NULL</code> et
+<code>errno==ERANGE</code>. dans ce cas il convient de r ́eessayer avec le
+tampon plus grand.</p>
+<pre><code class="lineNumbers" >char *tampon, * path;
+size_t i = 64;
+for ( ; ; ) {
+    tampon = malloc(i) ;
+if(tampon == NULL){/* gerer erreur de malloc() */ }
+    path = getcwd(tampon, i);
+    if(path == NULL &amp;&amp; errno == ERANGE){
+        i *= 2;
+        free(tampon);
+        continue ;
+    }
+    else if(path == NULL){/* d’autres problemes*/
+        free(tampon);
+        break
+    }
+}
+</code></pre>
+
+<h2 id="changer-le-repertoire-courant-dans-un-programme-c">Changer le répertoire courant dans un programme C</h2>
+<pre><code class="lineNumbers" >int chdir(constchar* chemin);
+</code></pre>
+
+<p><code>chemin</code> :<strong>chemin absolu ou relatif</strong> vers le nouveau répertoire
+courant.</p>
+<h2 id="les-repertoires">Les répertoires</h2>
+<p><img  src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8IS0tIEdlbmVyYXRlZCBieSBncmFwaHZpeiB2ZXJzaW9uIDIuMzguMCAoMjAxNDA0MTMuMjA0MSkKIC0tPgo8IS0tIFRpdGxlOiBhIFBhZ2VzOiAxIC0tPgo8c3ZnIHdpZHRoPSIzODNwdCIgaGVpZ2h0PSIyNjBwdCIKIHZpZXdCb3g9IjAuMDAgMC4wMCAzODMuMDAgMjYwLjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KPGcgaWQ9ImdyYXBoMCIgY2xhc3M9ImdyYXBoIiB0cmFuc2Zvcm09InNjYWxlKDEgMSkgcm90YXRlKDApIHRyYW5zbGF0ZSg0IDI1NikiPgo8dGl0bGU+YTwvdGl0bGU+Cjxwb2x5Z29uIGZpbGw9IndoaXRlIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iLTQsNCAtNCwtMjU2IDM3OSwtMjU2IDM3OSw0IC00LDQiLz4KPCEtLSBldGMgLS0+CjxnIGlkPSJub2RlMSIgY2xhc3M9Im5vZGUiPjx0aXRsZT5ldGM8L3RpdGxlPgo8cG9seWdvbiBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBwb2ludHM9IjI0NywtMjUyIDE5MywtMjUyIDE5MywtMjE2IDI0NywtMjE2IDI0NywtMjUyIi8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIyMCIgeT0iLTIzMC4zIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPi4uLjwvdGV4dD4KPC9nPgo8IS0tIEZhY3R1cmUgLS0+CjxnIGlkPSJub2RlMiIgY2xhc3M9Im5vZGUiPjx0aXRsZT5GYWN0dXJlPC90aXRsZT4KPHBvbHlnb24gZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIyNDguNSwtMTgwIDE5MS41LC0xODAgMTkxLjUsLTE0NCAyNDguNSwtMTQ0IDI0OC41LC0xODAiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMjIwIiB5PSItMTU4LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+RmFjdHVyZTwvdGV4dD4KPC9nPgo8IS0tIGV0YyYjNDU7Jmd0O0ZhY3R1cmUgLS0+CjxnIGlkPSJlZGdlMSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5ldGMmIzQ1OyZndDtGYWN0dXJlPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTIyMCwtMjE1LjY5N0MyMjAsLTIwNC44NDYgMjIwLC0xOTAuOTE3IDIyMCwtMTgwLjEwNCIvPgo8L2c+CjwhLS0gQXV0cmVzIC0tPgo8ZyBpZD0ibm9kZTMiIGNsYXNzPSJub2RlIj48dGl0bGU+QXV0cmVzPC90aXRsZT4KPHBvbHlnb24gZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSIxNDMsLTEwOCA4OSwtMTA4IDg5LC03MiAxNDMsLTcyIDE0MywtMTA4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjExNiIgeT0iLTg2LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+QXV0cmVzPC90ZXh0Pgo8L2c+CjwhLS0gRmFjdHVyZSYjNDU7Jmd0O0F1dHJlcyAtLT4KPGcgaWQ9ImVkZ2UyIiBjbGFzcz0iZWRnZSI+PHRpdGxlPkZhY3R1cmUmIzQ1OyZndDtBdXRyZXM8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMTk0LjU1OSwtMTQzLjg3NkMxNzguNDQzLC0xMzMuMDI5IDE1Ny42NzQsLTExOS4wNSAxNDEuNTM5LC0xMDguMTkiLz4KPC9nPgo8IS0tIE1haXNvbiAtLT4KPGcgaWQ9Im5vZGU0IiBjbGFzcz0ibm9kZSI+PHRpdGxlPk1haXNvbjwvdGl0bGU+Cjxwb2x5Z29uIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMjQ5LC0xMDggMTkxLC0xMDggMTkxLC03MiAyNDksLTcyIDI0OSwtMTA4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIyMCIgeT0iLTg2LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+TWFpc29uPC90ZXh0Pgo8L2c+CjwhLS0gRmFjdHVyZSYjNDU7Jmd0O01haXNvbiAtLT4KPGcgaWQ9ImVkZ2UzIiBjbGFzcz0iZWRnZSI+PHRpdGxlPkZhY3R1cmUmIzQ1OyZndDtNYWlzb248L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMjIwLC0xNDMuNjk3QzIyMCwtMTMyLjg0NiAyMjAsLTExOC45MTcgMjIwLC0xMDguMTA0Ii8+CjwvZz4KPCEtLSBMb2lzaXJzIC0tPgo8ZyBpZD0ibm9kZTUiIGNsYXNzPSJub2RlIj48dGl0bGU+TG9pc2lyczwvdGl0bGU+Cjxwb2x5Z29uIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHBvaW50cz0iMzU3LC0xMDggMzAzLC0xMDggMzAzLC03MiAzNTcsLTcyIDM1NywtMTA4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjMzMCIgeT0iLTg2LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+TG9pc2lyczwvdGV4dD4KPC9nPgo8IS0tIEZhY3R1cmUmIzQ1OyZndDtMb2lzaXJzIC0tPgo8ZyBpZD0iZWRnZTQiIGNsYXNzPSJlZGdlIj48dGl0bGU+RmFjdHVyZSYjNDU7Jmd0O0xvaXNpcnM8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMjQ2LjkwOSwtMTQzLjg3NkMyNjMuOTU1LC0xMzMuMDI5IDI4NS45MjIsLTExOS4wNSAzMDIuOTg4LC0xMDguMTkiLz4KPC9nPgo8IS0tIEVuZmFudHMgLS0+CjxnIGlkPSJub2RlNiIgY2xhc3M9Im5vZGUiPjx0aXRsZT5FbmZhbnRzPC90aXRsZT4KPHBvbHlnb24gZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgcG9pbnRzPSI1OCwtMzYgMy41NTI3MWUtMTUsLTM2IDMuNTUyNzFlLTE1LC0wIDU4LC0wIDU4LC0zNiIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIyOSIgeT0iLTE0LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+RW5mYW50czwvdGV4dD4KPC9nPgo8IS0tIEF1dHJlcyYjNDU7Jmd0O0VuZmFudHMgLS0+CjxnIGlkPSJlZGdlNSIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5BdXRyZXMmIzQ1OyZndDtFbmZhbnRzPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTk0LjQ5NDQsLTcxLjY5NjZDODEuMDA5LC02MC44NDYzIDYzLjY5NjUsLTQ2LjkxNjcgNTAuMjU4MiwtMzYuMTA0MyIvPgo8L2c+CjwhLS0gcG9ydGFibGUgLS0+CjxnIGlkPSJub2RlNyIgY2xhc3M9Im5vZGUiPjx0aXRsZT5wb3J0YWJsZTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIxMTYiIGN5PSItMTgiIHJ4PSIzOS43OTM1IiByeT0iMTgiLz4KPHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMTE2IiB5PSItMTQuMyIgZm9udC1mYW1pbHk9IlRpbWVzLHNlcmlmIiBmb250LXNpemU9IjE0LjAwIj5wb3J0YWJsZTwvdGV4dD4KPC9nPgo8IS0tIEF1dHJlcyYjNDU7Jmd0O3BvcnRhYmxlIC0tPgo8ZyBpZD0iZWRnZTYiIGNsYXNzPSJlZGdlIj48dGl0bGU+QXV0cmVzJiM0NTsmZ3Q7cG9ydGFibGU8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMTE2LC03MS42OTY2QzExNiwtNjAuODQ2MyAxMTYsLTQ2LjkxNjcgMTE2LC0zNi4xMDQzIi8+CjwvZz4KPCEtLSBsb3llciAtLT4KPGcgaWQ9Im5vZGU4IiBjbGFzcz0ibm9kZSI+PHRpdGxlPmxveWVyPC90aXRsZT4KPGVsbGlwc2UgZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgY3g9IjIwMiIgY3k9Ii0xOCIgcng9IjI4LjY5NTMiIHJ5PSIxOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB4PSIyMDIiIHk9Ii0xNC4zIiBmb250LWZhbWlseT0iVGltZXMsc2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiPmxveWVyPC90ZXh0Pgo8L2c+CjwhLS0gTWFpc29uJiM0NTsmZ3Q7bG95ZXIgLS0+CjxnIGlkPSJlZGdlNyIgY2xhc3M9ImVkZ2UiPjx0aXRsZT5NYWlzb24mIzQ1OyZndDtsb3llcjwvdGl0bGU+CjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGQ9Ik0yMTUuNTUxLC03MS42OTY2QzIxMi43NiwtNjAuODQ2MyAyMDkuMTc5LC00Ni45MTY3IDIwNi4zOTgsLTM2LjEwNDMiLz4KPC9nPgo8IS0tIGdhcyAtLT4KPGcgaWQ9Im5vZGU5IiBjbGFzcz0ibm9kZSI+PHRpdGxlPmdhczwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIyNzYiIGN5PSItMTgiIHJ4PSIyNyIgcnk9IjE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI3NiIgeT0iLTE0LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+Z2FzPC90ZXh0Pgo8L2c+CjwhLS0gTWFpc29uJiM0NTsmZ3Q7Z2FzIC0tPgo8ZyBpZD0iZWRnZTgiIGNsYXNzPSJlZGdlIj48dGl0bGU+TWFpc29uJiM0NTsmZ3Q7Z2FzPC90aXRsZT4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJibGFjayIgZD0iTTIzMy44NDMsLTcxLjY5NjZDMjQzLjA0MSwtNjAuMTk4NSAyNTUuMDA2LC00NS4yNDI1IDI2My44MzgsLTM0LjIwMjQiLz4KPC9nPgo8IS0tIGNpbmUgLS0+CjxnIGlkPSJub2RlMTAiIGNsYXNzPSJub2RlIj48dGl0bGU+Y2luZTwvdGl0bGU+CjxlbGxpcHNlIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIGN4PSIzNDgiIGN5PSItMTgiIHJ4PSIyNyIgcnk9IjE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjM0OCIgeT0iLTE0LjMiIGZvbnQtZmFtaWx5PSJUaW1lcyxzZXJpZiIgZm9udC1zaXplPSIxNC4wMCI+Y2luZTwvdGV4dD4KPC9nPgo8IS0tIExvaXNpcnMmIzQ1OyZndDtjaW5lIC0tPgo8ZyBpZD0iZWRnZTkiIGNsYXNzPSJlZGdlIj48dGl0bGU+TG9pc2lycyYjNDU7Jmd0O2NpbmU8L3RpdGxlPgo8cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImJsYWNrIiBkPSJNMzM0LjQ0OSwtNzEuNjk2NkMzMzcuMjQsLTYwLjg0NjMgMzQwLjgyMSwtNDYuOTE2NyAzNDMuNjAyLC0zNi4xMDQzIi8+CjwvZz4KPC9nPgo8L3N2Zz4K'></p>
+<h2 id="les-repertoires_1">Les répertoires</h2>
+<p>Le répertoire c’est un fichier spécial qui contient la liste de noms
+de fichiers (les fichiers qui se trouvent dans le répertoire) avec les
+liens vers les fichiers correspondant sur le disque.
+Dans la liste de noms deux noms particuliers :
+<em> <code>.</code> (dot) avec le lien vers le répertoire lui-même,
+</em> <code>..</code> (dot dot) avec le lien vers le répertoire père.</p>
+<h2 id="caracteristiques-de-fichiers">Caractéristiques de fichiers</h2>
+<pre><code class="lineNumbers" >struct stat {
+    dev_t st_dev; /*identificateur de systeme de fichiers */
+    ino_t st_ino; /*matricule du fichier (numero inode) */
+    uid_t st_uid; /*identificateur du proprietaire */
+    gid_t st_gid; /*identificateur du groupe proprietaire */
+    mode_t st_mode; /* typeetmodedufichier */
+    nlink_t st_nlink; /* nombre de liens durs sur le fichier */
+    off_t st_size; /* taille de fichier en octets pour le fichier ordinaire */
+    time_t st_atime; /* temps universel du dernier acces */
+    time_t st_mtime; /* temps universel de la derniere modification de donnees */
+    time_t st_ctime; /* temps universel de la derniere modification de caracteristiques */
+}
+</code></pre>
+
+<pre><code class="lineNumbers" >int stat(const char* chemin, struct stat* st)
+int lstat(const char* chemin, struct stat* st)
+</code></pre>
+
+<p>La différence entre <code>stat()</code> et <code>lstat()</code> concerne le traitement de
+liens symboliques.</p>
+<h2 id="type-de-fichier-programme-c">Type de fichier (programme C)</h2>
+<table>
+<thead>
+<tr>
+<th>macro-fonction</th>
+<th>type de fichier</th>
+<th>type affiché par <code>ls -l</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S_ISREG(tamp.st_mode)</td>
+<td>fichier régulier</td>
+<td>-</td>
+</tr>
+<tr>
+<td>S_ISFIFO(tamp.st_mode)</td>
+<td>fichier spécial FIFO (tube)</td>
+<td>p</td>
+</tr>
+<tr>
+<td>S_ISCHR(tamp.st_mode)</td>
+<td>type spécial caractère</td>
+<td>c</td>
+</tr>
+<tr>
+<td>S_ISBLK(tamp.st_mode)</td>
+<td>type spécial bloc</td>
+<td>b</td>
+</tr>
+<tr>
+<td>S_ISDIR(tamp.st_mode)</td>
+<td>type spécial répertoire</td>
+<td>d</td>
+</tr>
+<tr>
+<td>S_ISLNK(tamp.st_mode)</td>
+<td>lien symbolique</td>
+<td>l</td>
+</tr>
+<tr>
+<td>S_ISSOCK(tamp.st_mode)</td>
+<td>socket</td>
+<td>s</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lineNumbers" >#define _POSIX_C_SOURCE 200112L
+#include &lt;sys/types.h&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;unistd.h&gt;
+struct stat tamp;
+if(lstat(&quot;toto&quot;, &amp;tamp) &lt; 0){
+    /* gerer les erreurs de lstat */
+}
+if(S_ISREG(tamp.stmode)){ /* fichier regulier */
+else if(SISFIFO(tamp.stmode)){ /* FIFO */}
+else if(SISCHR(tamp.stmode)){ /* special type */
+else if(SISBLK(tamp.stmode)){ /* special type */
+else if(SISDIR(tamp.stmode)){ /* repertoire*/
+/*etc*/
+</code></pre>
+
+<h2 id="les-droits-dacces">Les droits d'accès</h2>
+<h3 id="les-fichiers-ordinaires">Les fichiers ordinaires:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>lecture</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>écriture</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>exécution</td>
+</tr>
+</tbody>
+</table>
+<h3 id="les-repertoires_2">les répertoires</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>r</code></td>
+<td>lecture</td>
+</tr>
+<tr>
+<td><code>w</code></td>
+<td>écriture (création ou suppression d’une entrée dans le répertoire)</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>passage</td>
+</tr>
+</tbody>
+</table>
+<p>Pour lire un fichier <code>f</code> (y inclus pour la lecture d’un répertoire <code>f</code> ) il
+faut avoir les droits de passage sur tous les répertoires depuis la
+racine jusqu’au père de <code>f</code> et les droits de lecture sur <code>f</code>.</p>
+<h2 id="les-droits-dacces_1">Les droits d'accès</h2>
+<h3 id="macro-constantes">Macro-constantes:</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S_IRUSR</code></td>
+<td>r propriétaire</td>
+</tr>
+<tr>
+<td><code>S_IWUSR</code></td>
+<td>w propriétaire</td>
+</tr>
+<tr>
+<td><code>S_IXUSR</code></td>
+<td>x propriétaire</td>
+</tr>
+<tr>
+<td><code>S_IRGRP</code></td>
+<td>r groupe</td>
+</tr>
+<tr>
+<td><code>S_IWGRP</code></td>
+<td>w groupe</td>
+</tr>
+<tr>
+<td><code>S_IXGRP</code></td>
+<td>x groupe</td>
+</tr>
+<tr>
+<td><code>S_IROTH</code></td>
+<td>r les autres</td>
+</tr>
+<tr>
+<td><code>S_IWOTH</code></td>
+<td>w les autres</td>
+</tr>
+<tr>
+<td><code>S_IXOTH</code></td>
+<td>x les autres</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lineNumbers" >struct stat tamp;
+if(lstat(&quot;toto&quot;,&amp;tamp) &lt; 0 ){
+    /* gerer les erreurs de lstat */
+}
+if(tamp.stmode &amp; SIRUSR){
+    /* proprietaire posede le droit de lecture sur toto */
+}
+</code></pre>
+
+<h2 id="identite-de-fichier">Identité de fichier</h2>
+<p>L'identifiant de système de fichier <code>st_dev</code> identifie de façon unique
+le système de fichier.
+Le numéro de inode (<code>st_ino</code>) est unique pour chaque fichier dans
+le même système de fichier, par contre les fichiers dans les systèmes
+de fichiers différents peuvent avoir les numéros de inode identique.</p>
+<pre><code class="lineNumbers" >char *chemin1, *chemin2 ;
+struct stat buf1, buf2;
+...
+stat(chemin1, &amp;buf1);
+stat(chemin2, &amp;buf2);
+if(buf1.stdev == buf2.stdev &amp;&amp; buf1.stino == buf2.stino){
+    /*chemin1 et chemin2 menent vers le meme fichier */
+}
+</code></pre>
+
+<h2 id="parcours-de-repertoire">Parcours de répertoire</h2>
+<pre><code class="lineNumbers" >#include &lt;dirent.h&gt;
+DIR *opendir(const char *pathname);
+struct dirent *readdir(DIR *dp);
+void rewinddir(DIR *dp);
+int closedir(DIR *dp);
+</code></pre>
+
+<ol>
+<li>Ouvrir le répertoire avec <code>opendir()</code>,</li>
+<li>lire dans la boucle avec <code>readdir()</code>, chaque lecture donne une nouvelle entrée, y inclus dot et dot dot, à la fin de parcours <code>readdir()</code> retourne <code>NULL</code>,</li>
+<li>après le parcours fermer avec <code>closedir()</code> <code>rewinddir()</code> permet de revenir au début de répertoire.</li>
+</ol>
+<pre><code class="lineNumbers" >struct dirent {
+    ino_t d_ino; /* i-node number */
+    char d_name[NAME_MAX + 1]; /* null-terminated */
+}
+</code></pre>
+
+<p>La valeur de <code>NAME_MAX</code> peut être récupérée avec un appel à
+<code>fpathconf</code>.</p>
+<pre><code class="lineNumbers" >DIR *flot;
+struct dirent *entree;
+/* ouvrir repertoire */
+if((flot=opendir(nomrep)) == NULL){
+    perror(&quot;opendir&quot;);
+    exit(0);
+}
+errno = 0;
+for(;;){
+    entree = readdir(fl_t); /*lire une entree de repertoire */
+    if(entree==NULL){
+        if(errno){
+            /* gerer erreur de parcours */
+        }else{ /* fin de parcours */
+            break;
+        }
+    }
+    if(strcmp(entree-&gt;d_name, &quot;.&quot;)==0 || strcmp(entree-&gt;d_name, &quot;..&quot;) == 0)
+        continue;
+    printf(&quot;%s/%s\n&quot;,nom_rep, entree-&gt;d_name);
+    }
+    closedir ( flot );
+</code></pre>
+
+<h2 id="creation-et-suppression-dun-repertoire">Création et suppression d'un répertoire</h2>
+<pre><code class="lineNumbers" >int mkdir(const char *chemin, mode_t mode);
+</code></pre>
+
+<pre><code class="lineNumbers" >mkdir(&quot;Enseignements/Systemes1&quot;, S IRUSR | S IWUSR | S IXUSR | S IXGRP);
+</code></pre>
+
+<p>Le deuxième paramètre indique les droits demandés (mis pas forcement accordés).</p>
+<pre><code class="lineNumbers" >int rmdir(const char *chemin);
+</code></pre>
+
+<h2 id="liens-durs">Liens durs</h2>
+<p>Liens durs sont créés à la
+création d'un fichier <code>open()</code>, <code>creat()</code> ou d'un répertoire <code>mkdir()</code>.</p>
+<h2 id="creation-de-liens-durs-avec-link">Création de liens durs avec link</h2>
+<p>Mais on peut créer des liens durs additionnels vers les fichiers
+existants avec :
+la commande UNIX :</p>
+<pre><code class="lineNumbers" >ln source dest
+</code></pre>
+
+<p>ou la fonction POSIX :</p>
+<pre><code class="lineNumbers" >int link(const char *source, const *dest)
+</code></pre>
+
+<p>qui crée un lien dur <code>dest</code> qui pointe vers le même fichier que
+source.</p>
+<h2 id="exemple-link">Exemple link</h2>
+<p>Le répertoire curant : Factures</p>
+<pre><code class="lineNumbers" >link(&quot;Autres/portable&quot;, &quot;Loisir/portable_Marc&quot;) ;
+</code></pre>
+
+<h2 id="suppression-de-lien-dur">Suppression de lien dur</h2>
+<pre><code class="lineNumbers" >int un link(const char *chemin)
+</code></pre>
+
+<p>supprime le lien dur. Le fichier lui même sera supprimé par le
+système d'exploitation si <mark>le compteur de liens dur pour ce fichier
+passe à 0</mark> et si <mark>le fichier n'est pas ouvert par un processus
+quelconque</mark>.
+<strong>Il n'y a pas de fonction de suppression de fichier mais uniquement
+la fonction de suppression de liens durs.</strong></p>
+<pre><code class="lineNumbers" >unlink(&quot;/home/marion/Systemes/cours3.tex&quot; )
+</code></pre>
+
+<p>réussit si le processus possède le droit de passages sur: <code>/, /home,
+/home/marion, /home/marion/Systemes</code> et le droit d'écriture
+sur <code>/home/marion/Systemes</code>.
+<mark>Aucun droit sur cours3.tex n'est exigé.</mark></p>
+<h3 id="renommage-de-lien-dur">Renommage de lien dur</h3>
+<pre><code class="lineNumbers" >int rename(const char *ancien, constchar *nouveau)
+</code></pre>
+
+<p><code>rename("Maison/loyer", "Autre/loyeraregler")</code>
+supprime le lien dans Maison et crée un lien dans Autres. Quels droits faut-il avoir pour effectuer cette manipulation?</p>
+<h2 id="gestion-derreurs-en-c">Gestion d'erreurs en C</h2>
+<p>Les appels système signalent une erreur en retournant soit une
+valeur inférieure à <code>0</code> soit <code>NULL</code>.
+Le numéro d'erreur est mis dans la variable globale <code>errno</code> déclarée
+dans le fichier <code>errno.h</code> qu'il convient d'inclure avec la directive
+<code>include</code>.</p>
+<p><mark>errno n'est pas automatiquement remise à 0 après une erreur.</mark></p>
+<pre><code class="lineNumbers" >void perror(constchar *str)
+</code></pre>
+
+<p>La fonction <code>perror()</code> affiche sur la sortie d'erreurs standard le
+message d'erreur qui correspond à la valeur courante de errno
+précédé par la chaîne de caractères str passée en argument.</p>
+<pre><code class="lineNumbers" >char *strerror(int num)
+</code></pre>
+
+<p>retourne le message d'erreur qui correspond au numéro d'erreur
+<code>num</code>.</p>
+<p>Dans mes programmes j'utiliserai la macro-fonction suivante pour
+gérer les message d'erreur. <code>__FILE__</code> est une macro dont la valeur
+est le nom de fichier source, <code>__LINE__</code> est une macro dont la
+valeur est le numéro de la ligne dans le fichier source.</p>
+<pre><code class="lineNumbers" >/* **************** panic.h ******************* */
+#ifndef PANIC_H
+#define PANIC_H
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;errno.h&gt;
+#define PANIC(fin)
+    do{
+        fprintf(stderr, &quot;\n error in file %s in line %d: %s\n&quot;, __FILE__,__LINE__,strerror(errno));
+        if(fin &gt; 0) exit(fin);
+        errno=0;\
+    }while(0)
+#endif
+</code></pre></body>
