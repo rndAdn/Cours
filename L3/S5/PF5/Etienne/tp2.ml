@@ -11,10 +11,10 @@ let rec append u v = match u with | [] -> v | x::w -> x::(append w v);;
 append [1;2;3] [4;5;6];;
 let rec inverse u = match u with | [] -> u | x::w -> append(inverse w) [x];;
 inverse [1;2;3;4];;
-let inverse u = let rec aux l p = match l with [] -> p | x::q -> aux q (x::p) in aux u [];; 
+let inverse u = let rec aux l p = match l with [] -> p | x::q -> aux q (x::p) in aux u [];;
 let rec flatten u = match u with |[] -> [] | x::q -> append x (flatten q);;
 flatten [[2];[];[3;4;5]];;
-let rotation_d u = match u with | []->[] | x::[]->u | x::q -> match (inverse q) with y :: p -> y::q@[x];;
+let rotation_d u = match u with | []->[] | x::[]->u | x::q -> match (inverse q) with |[]->[]| y :: p -> y::(inverse p)@[x];;
 rotation_d [1;2;3;4;5];;
 let moyenne t = let rec aux l n= match l with [] -> failwith "erreur, liste vide !" | x::[] -> x/n | x::y::q -> aux ((x+y)::q) (n+1) in aux t 1;;
 moyenne [1;2;3;4;5];;
@@ -30,14 +30,3 @@ let union_sorted u v = let rec aux u v w = match u,v with [],v -> (inverse v)@w 
 union_sorted [1;2;5;9] [2;3;7;10;11];;
 let inter_sorted u v = let rec aux u v w = match u,v with [],v -> w | u,[] -> w | x::p,y::q -> if x = y then aux p q (x::w) else if x>y then aux u q w else aux p v w in aux u v [];;
 inter_sorted [1;3;5] [2;5;8];;
-
-
-
-
-
-
-
-
-
-
-
