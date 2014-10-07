@@ -30,14 +30,3 @@ let union_sorted u v = let rec aux u v w = match u,v with [],v -> (inverse v)@w 
 union_sorted [1;2;5;9] [2;3;7;10;11];;
 let inter_sorted u v = let rec aux u v w = match u,v with [],v -> w | u,[] -> w | x::p,y::q -> if x = y then aux p q (x::w) else if x>y then aux u q w else aux p v w in aux u v [];;
 inter_sorted [1;3;5] [2;5;8];;
-
-
-
-
-
-
-
-
-
-
-
