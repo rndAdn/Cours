@@ -27,7 +27,7 @@ void argument(const char* str, int *a, int *r, int *l){
     }
 }
 
-void parc(char* rep, int a, int r, int l, char* tab){
+void parc(const char* rep, int a, int r, int l, char* tab){
     DIR *dir;
     dir = opendir(rep);
     struct dirent *entry;
@@ -35,15 +35,30 @@ void parc(char* rep, int a, int r, int l, char* tab){
         if(a == 0 && entry->d_name[0] == '.'){
             continue;
         }
-        printf("%s%s\n",tab,entry->d_name);
-        if(r == 1){
-            struct stat tmp;
-            lstat(entry->d_name, &tmp);
+        struct stat tmp;
+        char *chemin = malloc(sizeof(char)*(strlen(rep)+strlen(entry->d_name)+2));
+        sprintf(chemin, "%s/%s",rep,entry->d_name);
+        lstat(chemin, &tmp);
+        if(S_ISDIR(tmp.st_mode)){
+            printf("\e[0;34m%s%s\e[0m\n",tab,entry->d_name);// ajouter couleur si dossier/link/exe
+        }
+        else{
+            printf("%s%s\n",tab,entry->d_name);// ajouter couleur si dossier/link/exe
+        }
+
+        if(l == 1){
+            // INFORMATION fic/dir
+            //printf("%s%s",tab,entry->d_name);
+        }
+        if(r == 1){ //corriger dossier . et .. pour la rec
+            if(strcmp(entry->d_name,".") == 0 || strcmp(entry->d_name,"..") == 0){
+
+                continue;
+            }
             if(S_ISDIR(tmp.st_mode)){
-                char *chemin = malloc(sizeof(char)*(strlen(rep)+strlen(entry->d_name)+2));
-                sprintf(chemin, "%s/%s",rep,entry->d_name);
-                char *tab2 = malloc(sizeof(char)*(strlen(tab)+strlen("\t")+2));
-                sprintf(tab2, "%s%s",tab,"\t");
+
+                char *tab2 = malloc(sizeof(char)*(strlen(tab)+strlen(" ")+2));
+                sprintf(tab2, "%s%s",tab," ");
                 parc(chemin,a,r,l,tab2);
             }
         }
