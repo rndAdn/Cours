@@ -17,12 +17,6 @@ flatten [[2];[];[3;4;5]];;
 let rotation_d u = match u with | []->[] | x::[]->u | x::q -> match (inverse q) with |[]->[]| y :: p -> y::(inverse p)@[x];;
 rotation_d [1;2;3;4;5];;
 let moyenne t = let rec aux l n= match l with [] -> failwith "erreur, liste vide !" | x::[] -> x/n | x::y::q -> aux ((x+y)::q) (n+1) in aux t 1;;
-
-let moyenne2 t = let rec aux l n= match l with
-[] -> 0, n
-| t::q -> t + aux q (n+1), (n+1)
-in aux t 1;;
-
 moyenne2 [1;2;3;4;5];;
 let rec insert x l = match l with [] -> [x] | y::q -> if x < y then x::l else if x = y then l else y::(insert x q);;
 insert 5 [1;3;8];;
