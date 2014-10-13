@@ -1,4 +1,7 @@
-let rec list_sigma x = match x with | t::q->t+list_sigma q | []->0;;
+let rec list_sigma x = match x with
+| t::q->t+list_sigma q
+| []->0;;
+
 let rec mem x l = match l with | y::q when y = x  -> true | t::q -> mem x q | [] -> false;;
 mem 6 [1;4;6;8];;
 let rec map2 f l = match l with | [] -> [] | x::q -> f x :: map2 f q ;;
