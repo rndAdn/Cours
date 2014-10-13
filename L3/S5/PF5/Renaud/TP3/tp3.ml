@@ -12,7 +12,7 @@ let rec hauteur arbre = match arbre with
 
 let rec mem arbre x = match arbre with
 |Nil -> false
-|Node(vale,g,d) -> if x = vale || (mem g x) || (mem d x) then true else false;;
+|Node(vale,g,d) -> x = vale || (mem g x) || (mem d x);;
 
 
 
