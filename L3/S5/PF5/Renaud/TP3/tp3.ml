@@ -82,5 +82,5 @@ let arbre= Node(70,Node(60,Node(55,Nil,Nil),Node(65,Nil,Nil)),
  Node(80,Node(75,Nil,Nil),Node(90,Node(1,Nil,Nil),Nil)));;
 
 hauteur arbre;;
-mem arbre 90;;
+is_abr arbre 90;;
 print_tree arbre;;
