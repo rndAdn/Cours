@@ -36,6 +36,21 @@ let is_abr t =
 let rec is_sorted l = match l with | [] -> true | p :: [] -> true | x :: q :: t -> if x < q then is_sorted (q::t) else false
 in is_sorted (elements t);;
 
+
+let rec split l1 l2 i j = if i = j then (l1,l2)
+else match l2 with
+| [] -> (l1,l2)
+| x::q -> split (x::l1) q (i+1) j;;
+
+let rec make_abr l =
+let rec aux (l1,l2) a =
+match l1,l2 with
+|[],[] -> a
+|x::q,[] -> aux(split [] q 0 ((List.length q)/2)) (add_abr x a )
+|_,y::p -> aux(split [] l1 0 ((List.length l1)/2)) (aux(split [] p 0 ((List.length p)/2)) (add_abr y a ))
+in aux (split [] l 0 ((List.length l)/2)) Nil;;
+
+
 let rec forall_labels p a = match a with
 | Nil -> true
 | Node(x,g,d) -> (p x) && (forall_labels p g) && (forall_labels p d);;
@@ -112,7 +127,7 @@ let print_tree tree =
 let arbre= Node(70,Node(60,Node(55,Nil,Nil),Node(65,Nil,Nil)),
  Node(80,Node(75,Nil,Nil),Node(90,Nil,Nil)));;
 
-hauteur arbre;;
-is_abr arbre;;
-let abr = add_abr 63 arbre;;
+let l = split [] [1;2;3;4;5;6;7] 0 3
+let abr = make_abr [1;2;3;4;5;6;7];;
+
 print_tree abr;;
