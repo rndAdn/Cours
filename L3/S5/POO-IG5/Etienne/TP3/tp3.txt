@@ -1,0 +1,14 @@
+4-1:
+Je fais el choix de considérer qu'une même instance de livre ne peut apparaître
+que dans une Médiathéque.
+Ainsi si plusieurs Médiathéque possèdent un volume de Harry Potter alors elle doivent toutes
+instancier leurs propre livre.
+
+5-1
+On cherche à placer les Livre à la fin de la médiathéque. Cependant un probleme subsistent car
+si on ajoute nos livre en premier il resteront au début de la liste. Car c'est la méthode de l'objet
+que l'on souhaite ajouter qui est utilisé.
+
+5-3
+La fonction boucle parce que pere->fils->pere->fils [...]
+Il ne faut pas faire parce que les méthode du pere ne peux dépendre de ses fils.

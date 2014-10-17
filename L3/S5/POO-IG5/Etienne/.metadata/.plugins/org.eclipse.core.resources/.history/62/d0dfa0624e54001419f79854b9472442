@@ -1,0 +1,14 @@
+
+public class EtudiantAbonne extends Abonne {
+	private static final int empruntsMax = 2;
+	
+	private static int getEmpruntsMax(){
+		return empruntsMax;
+	}
+	
+	public EtudiantAbonne(String nom, String prenom) {
+		super(nom, prenom);
+		// TODO Auto-generated constructor stub
+	}
+
+}

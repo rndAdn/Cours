@@ -1,0 +1,12 @@
+
+public class Livre extends Media{
+	private String auteur;
+	private int nbrePages;
+
+	public Livre(String titre,String auteur,int nbrePages) {
+		super(titre);
+		this.auteur=auteur;
+		// TODO Auto-generated constructor stub
+	}
+
+}

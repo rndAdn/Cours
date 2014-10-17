@@ -1,0 +1,9 @@
+
+public class Manga extends BandeDessinee{
+	
+	public Manga(String titre, String auteur, int nbrePages) {
+		super(titre, auteur, nbrePages);
+		// TODO Auto-generated constructor stub
+	}
+
+}

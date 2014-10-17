@@ -1,0 +1,4 @@
+
+public class EtudiantAbonne extends Abonne {
+
+}

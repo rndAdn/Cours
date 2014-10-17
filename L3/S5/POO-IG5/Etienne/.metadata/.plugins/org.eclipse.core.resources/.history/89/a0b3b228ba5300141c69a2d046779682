@@ -1,0 +1,9 @@
+
+public class EtudiantAbonne extends Abonne {
+
+	public EtudiantAbonne(String nom, String prenom) {
+		super(nom, prenom);
+		// TODO Auto-generated constructor stub
+	}
+
+}
