@@ -1,0 +1,9 @@
+
+public class Livre extends Media{
+
+	public Livre(String titre) {
+		super(titre);
+		// TODO Auto-generated constructor stub
+	}
+
+}

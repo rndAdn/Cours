@@ -1,0 +1,46 @@
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*Livre hp = new Livre("Harry Potter","J. K. Rowling",240);
+		Livre tdf = new Livre("Le Trône de ferr","George R.R. Martin",789);
+		Manga nar = new Manga("Naruto", "Nintendo", "Sony", 12);
+		Manga nar2 = new Manga("Naruto2", "Nintendo", "Sony", 12);
+		Manga nar3 = new Manga("Naruto3", "Nintendo", "Sony", 12);
+		Dictionnaire dic = new Dictionnaire("Larouse", "Francais", 145);
+		Mediatheque med = new Mediatheque();
+		med.ajouter(hp);
+		med.ajouter(nar);
+		med.ajouter(nar3);
+		med.ajouter(dic);
+		med.ajouter(nar2);
+		med.ajouter(tdf);
+		System.out.print(med);
+		*/
+		
+		Mediatheque m = new Mediatheque();
+        m.ajouter(new Livre("Harry Potter", "J. K. Rowling", 240));
+        m.ajouter(new Dictionnaire("Larousse", "Allemand", 3));
+        m.ajouter(new DictionnaireBilingue("Laroche", "Javanais",  "Irlandais",200));
+        m.ajouter(new Manga("Tokocha", "Yanichou", 12, "Kasoumo"));
+        m.ajouter(new BandeDessinee("Petit Jean", "Robert", 100, "Patrick"));
+        m.ajouter(new Livre("Le Trône de fer", "George R.R. Martin", 789));
+        EtudiantAbonne un = new EtudiantAbonne("Petit", "Pablo");
+        Abonne deux = new Abonne("Nikolay", "Adequin");
+        un.emprunter(m, "Le Trône de fer");
+        un.emprunter(m, "Tokocha");
+        deux.emprunter(m, "Le Trône de fer");
+        deux.emprunter(m, "Petit Jean");
+        deux.emprunter(m, "Larousse");
+        un.rendre(m, "Chapeau chapeau");
+        un.rendre(m, "Tokocha");
+        deux.rendre(m, "Larousse");
+        un.emprunter(m, "Harry Potter");
+        deux.rendre(m, "Petit Jean");
+        un.rendre(m, "Harry Potter");
+		
+		
+	}
+
+}

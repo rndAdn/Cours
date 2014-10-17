@@ -1,0 +1,10 @@
+
+public class DictionnaireBilingue extends Dictionnaire {
+	private final String langue2;
+
+	public DictionnaireBilingue(String titre, String langue, int nbrePages) {
+		super(titre, langue, nbrePages);
+		// TODO Auto-generated constructor stub
+	}
+
+}
