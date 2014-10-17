@@ -32,7 +32,9 @@ in aux t [];;
 
 let rec mem_abr x abr = match abr with
 | Nil -> false
-| Node(vale,g,d) -> if x = vale then true else if x < vale then mem_abr x g else mem_abr x d;;
+| Node(vale,g,d) -> if x = vale then true
+                    else if x < vale then mem_abr x g
+                    else mem_abr x d;;
 
 
 let rec add_abr x abr = match abr with
@@ -85,7 +87,7 @@ let map_tree f a = let aux x y z = Node(f x,y,z) in fold_tree aux Nil a;;
 
 
 
-
+let rec make_abr liste
 
 
 
