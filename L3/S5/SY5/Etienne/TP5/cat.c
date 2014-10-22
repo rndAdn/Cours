@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#define TAILLE 1024
+#define TAILLE (1024*1024)
 
 int main(int argc, char *argv[]){
         int lastLigne=0;
@@ -16,9 +16,9 @@ int main(int argc, char *argv[]){
         int i = 0;
         char *tamp;
         char *tampLigne;
-        int j = 1;
+        int j = 0;
 
-        if(argc == 1 || (argc > 1 && argv[1][0] == '-' && (argv[1][1] != 'n' || argv[1][2] != 0))) {
+        if(argc > 1 && argv[1][0] == '-' && (argv[1][1] != 'n' || argv[1][2] != 0)) {
                 fprintf(stderr,"usage:\n %s (-n) fichier_in",
                         argv[0]);
                 exit(1);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
                 n=1;
                 j=2;
         }
-        else if(argc > 2 ) {
+        else if(argc >= 2 ) {
                 //nbFichier = argc
                 j=1;
         }
@@ -47,14 +47,15 @@ int main(int argc, char *argv[]){
                         sprintf(tampLigne,"\n%d ",++nbLignes);
                         wc=write(1,tampLigne,15);
                       }
-                if(j == 1)
-                        rc = read(0,tamp,t);
-                else{
+                if(j!=0){
                         if ( ( fd1 = open(argv[j],O_RDONLY) ) < 0 )
                                 exit(1);
                     }
                 for(;; ) {
-                        rc = read(fd1,tamp,t);
+                        if(j == 0)
+                          rc = read(0,tamp,t),j=argc;
+                        else
+                          rc = read(fd1,tamp,t);
                                 //printf("HI");
                         if( rc < 0 ) {
                                 exit(3);
