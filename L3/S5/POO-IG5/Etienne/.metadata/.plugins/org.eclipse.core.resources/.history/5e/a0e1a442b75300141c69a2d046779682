@@ -1,9 +1,0 @@
-
-public class Manga extends Livre{
-
-	public Manga(String titre, String auteur, int nbrePages) {
-		super(titre, auteur, nbrePages);
-		// TODO Auto-generated constructor stub
-	}
-
-}
