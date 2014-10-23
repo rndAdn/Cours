@@ -48,8 +48,10 @@ int main(int argc, char *argv[]){
                         wc=write(1,tampLigne,15);
                       }
                 if(j!=0){
-                        if ( ( fd1 = open(argv[j],O_RDONLY) ) < 0 )
-                                exit(1);
+                        if ( ( fd1 = open(argv[j],O_RDONLY) ) < 0 ){
+                                fprintf(stderr,"fuck U %s\n ",argv[j]);
+                                j++;
+                                continue;}
                     }
                 for(;; ) {
                         if(j == 0)
