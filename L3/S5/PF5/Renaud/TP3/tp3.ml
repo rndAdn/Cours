@@ -87,16 +87,6 @@ let map_tree f a = let aux x y z = Node(f x,y,z) in fold_tree aux Nil a;;
 
 
 
-let rec make_abr liste
-
-
-
-
-
-
-
-
-
 let rec space k =
   if k <= 0 then ""
   else " "^(space (k - 1))
