@@ -81,7 +81,7 @@ si v pas dans A
 
 * Hérédité
 Soit A un arbre et |A| = n+1
-supposons l'énoncé vrai sur les arbres de taille <= 1
+supposons l'énoncé vrai sur les arbres de taille <= n+1
 
 * Cas 1 v == A.val
 donc v dans A
