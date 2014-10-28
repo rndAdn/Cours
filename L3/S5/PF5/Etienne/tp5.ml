@@ -51,10 +51,30 @@ let move (i,c) (l1,l2,l3) j =
       |3->(l1,l2,aux c l3 p)
       |_->raise MoveForbidden;;
 
-let g = move (2,'a') g Rond;;
+let g = move (3,'a') g Rond;;
 afficherGrille g;;
 
 let aVide ((p11,p21,p31),(p12,p22,p32),(p13,p23,p33)) =
     p11 = Vide || p21 = Vide|| p31 = Vide||
     p12 = Vide || p22 = Vide|| p32 = Vide||
     p13 = Vide || p23 = Vide|| p33 = Vide;;
+
+let gagne ((p11,p21,p31),(p12,p22,p32),(p13,p23,p33)) =
+  match ((p11,p21,p31),(p12,p22,p32),(p13,p23,p33)) with
+  |((Joueur(Rond),Joueur(Rond),Joueur(Rond)),_,_) -> Joueur(Rond)
+  |(_,(Joueur(Rond),Joueur(Rond),Joueur(Rond)),_) -> Joueur(Rond)
+  |(_,_,(Joueur(Rond),Joueur(Rond),Joueur(Rond))) -> Joueur(Rond)
+  |((Joueur(Croix),Joueur(Croix),Joueur(Croix)),_,_) -> Joueur(Croix)
+  |(_,(Joueur(Croix),Joueur(Croix),Joueur(Croix)),_) -> Joueur(Croix)
+  |(_,_,(Joueur(Croix),Joueur(Croix),Joueur(Croix))) -> Joueur(Croix)
+  |((Joueur(Rond),_,_),(Joueur(Rond),_,_),(Joueur(Rond),_,_))->Joueur(Rond)
+  |((_,Joueur(Rond),_),(_,Joueur(Rond),_),(_,Joueur(Rond),_))->Joueur(Rond)
+  |((_,_,Joueur(Rond)),(_,_,Joueur(Rond)),(_,_,Joueur(Rond)))->Joueur(Rond)
+  |((Joueur(Croix),_,_),(Joueur(Croix),_,_),(Joueur(Croix),_,_))->Joueur(Croix)
+  |((_,Joueur(Croix),_),(_,Joueur(Croix),_),(_,Joueur(Croix),_))->Joueur(Croix)
+  |((_,_,Joueur(Croix)),(_,_,Joueur(Croix)),(_,_,Joueur(Croix)))->Joueur(Croix)
+  |((Joueur(Rond),_,_),(_,Joueur(Rond),_),(_,_,Joueur(Rond)))->Joueur(Rond)
+  |((_,_,Joueur(Rond)),(_,Joueur(Rond),_),(Joueur(Rond),_,_))->Joueur(Rond)
+  |((Joueur(Croix),_,_),(_,Joueur(Croix),_),(_,_,Joueur(Croix)))->Joueur(Croix)
+  |((_,_,Joueur(Croix)),(_,Joueur(Croix),_),(Joueur(Croix),_,_))->Joueur(Croix)
+  |_->if aVide ((p11,p21,p31),(p12,p22,p32),(p13,p23,p33)) then Vide else raise NoMoreMove;;
