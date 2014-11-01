@@ -22,3 +22,4 @@ let rec tas = function
 | Noeud(e,g,d) -> if e >= (valeur g) + (valeur d) then (tas g && tas d) else false
 | NoeudG(e,g) -> if e >= (valeur g) then tas g else false
 | NoeudD(e,d) -> false ;;
+let c x = x*x;;
