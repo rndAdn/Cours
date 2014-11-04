@@ -78,3 +78,7 @@ let gagne ((p11,p21,p31),(p12,p22,p32),(p13,p23,p33)) =
   |((Joueur(Croix),_,_),(_,Joueur(Croix),_),(_,_,Joueur(Croix)))->Joueur(Croix)
   |((_,_,Joueur(Croix)),(_,Joueur(Croix),_),(Joueur(Croix),_,_))->Joueur(Croix)
   |_->if aVide ((p11,p21,p31),(p12,p22,p32),(p13,p23,p33)) then Vide else raise NoMoreMove;;
+
+let tour grille joueur =
+  let _ = afficherGrille grille in
+  let _ = print_endline "Que voulez vous jouer ?" in
