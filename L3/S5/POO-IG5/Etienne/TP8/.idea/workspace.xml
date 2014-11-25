@@ -43,7 +43,7 @@
       <file leaf-file-name="Carre.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Carre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.476684" vertical-offset="0" max-vertical-offset="1050">
+            <state vertical-scroll-proportion="0.42746115" vertical-offset="405" max-vertical-offset="1050">
               <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -459,12 +459,12 @@
       <workItem from="1416390580572" duration="4000" />
       <workItem from="1416390616592" duration="3665000" />
       <workItem from="1416395617293" duration="20000" />
-      <workItem from="1416395648119" duration="227000" />
+      <workItem from="1416395648119" duration="322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3916000" />
+    <option name="totallyTimeSpent" value="4011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -481,7 +481,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39027983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39027983" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -615,7 +615,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Carre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.476684" vertical-offset="0" max-vertical-offset="1050">
+        <state vertical-scroll-proportion="0.42746115" vertical-offset="405" max-vertical-offset="1050">
           <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
