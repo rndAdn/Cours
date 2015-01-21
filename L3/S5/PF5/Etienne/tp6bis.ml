@@ -23,4 +23,4 @@ let rec taille' arbre arbreList n = match arbre,arbreList with
 |Nil,x::l -> taille' x l n
 |Node(_,g,d),_ -> taille' Nil (g::d::arbreList) (n+1);;
 
-let taille arbre = taille' arbre [] 0;;
+let taille arbre = taille' arbre [] 0
