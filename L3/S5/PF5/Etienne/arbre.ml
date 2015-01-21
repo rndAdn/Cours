@@ -1,8 +1,8 @@
-type arbre =
-| Feuille of int
-| Noeud of (int * arbre * arbre)
-| NoeudG of (int * arbre)
-| NoeudD of (int * arbre);;
+type 'a arbre =
+| Feuille of 'a
+| Noeud of ('a * 'a arbre * 'a arbre)
+| NoeudG of ('a * 'a arbre)
+| NoeudD of ('a * 'a arbre);;
 
 let rec taille = function
 | Feuille(_) -> 1
