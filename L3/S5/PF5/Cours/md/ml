@@ -1,0 +1,32 @@
+liste trié:
+Union de deux listes
+let rec union_sorted (l1, l2) = match (l1, l2) with
+    | ([], [] ) 	-> 	[]
+    | (a::b, [] ) 	-> 	insert (union_sorted (b, l2) ) a
+    | ([], a::b)	-> 	insert (union_sorted (l1, b) ) a
+    | (a::b, c::d) 	-> 	if a = c then insert ( union_sorted (b, d) ) a
+                else if a > c then  insert ( insert ( union_sorted (b, d) ) a  ) c
+                else insert ( insert ( union_sorted (b, d) ) c ) a
+;;
+
+Insert
+let rec insert l x = match l with
+    | [] -> [x]
+    | a::b -> 	if a > x then [x]@([a]@b)
+            else if a != x then [a]@(insert b x )
+            else a::b   // a==b
+;;
+
+
+#let x = 2;;
+val x : int = 2
+
+# let x = 3 in let y = x + 1 in x + y;;
+- : int = 7
+
+# let x = 3 and y = x + 1 in  x + y;;
+- : int = 6
+
+
+List.fold_left (fun b v -> b + 10 + v) 777 [1; 2]
+- : int = 800

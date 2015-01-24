@@ -1,0 +1,93 @@
+List :
+val length : 'a list -> int
+val hd : 'a list -> 'a
+val tl : 'a list -> 'a list
+    Liste sans le 1er element
+val nth : 'a list -> int -> 'a
+    Renvoi l'element n de la liste
+val rev : 'a list -> 'a list
+    Inverse la liste
+val append : 'a list -> 'a list -> 'a list
+    Concat deux listes comme @
+val rev_append : 'a list -> 'a list -> 'a list
+    List.rev_append l1 l2 reverses l1 and concatenates it to l2. This is equivalent to List.rev l1 @ l2, but rev_append is tail-recursive and more efficient.
+val concat : 'a list list -> 'a list
+    Concat une liste de liste en une lis
+val flatten : 'a list list -> 'a list
+
+val map : ('a -> 'b) -> 'a list -> 'b list
+    List.map f [a1; ...; an] applies function f to a1, ..., an, and builds the list [f a1; ...; f an] with the results returned by f. Not tail-recursive.
+val mapi : (int -> 'a -> 'b) -> 'a list -> 'b list
+    Same as List.map, but the function is applied to the index of the element as first argument (counting from 0), and the element itself as second argument. Not tail-recursive.
+val rev_map : ('a -> 'b) -> 'a list -> 'b list
+    List.rev_map f l gives the same result as List.rev (List.map f l), but is tail-recursive and more efficient.
+val fold_left : ('a -> 'b -> 'a) -> 'a -> 'b list -> 'a
+    List.fold_left f a [b1; ...; bn] is f (... (f (f a b1) b2) ...) bn.
+val fold_right : ('a -> 'b -> 'b) -> 'a list -> 'b -> 'b
+    List.fold_right f [a1; ...; an] b is f a1 (f a2 (... (f an b) ...)). Not tail-recursive.
+
+val iter2 : ('a -> 'b -> unit) -> 'a list -> 'b list -> unit
+    List.iter2 f [a1; ...; an] [b1; ...; bn] calls in turn f a1 b1; ...; f an bn. Raise Invalid_argument if the two lists have different lengths.
+val map2 : ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list
+    List.map2 f [a1; ...; an] [b1; ...; bn] is [f a1 b1; ...; f an bn]. Raise Invalid_argument if the two lists have different lengths. Not tail-recursive.
+val rev_map2 : ('a -> 'b -> 'c) -> 'a list -> 'b list -> 'c list
+    List.rev_map2 f l1 l2 gives the same result as List.rev (List.map2 f l1 l2), but is tail-recursive and more efficient.
+val fold_left2 : ('a -> 'b -> 'c -> 'a) -> 'a -> 'b list -> 'c list -> 'a
+    List.fold_left2 f a [b1; ...; bn] [c1; ...; cn] is f (... (f (f a b1 c1) b2 c2) ...) bn cn. Raise Invalid_argument if the two lists have different lengths.
+val fold_right2 : ('a -> 'b -> 'c -> 'c) -> 'a list -> 'b list -> 'c -> 'c
+    List.fold_right2 f [a1; ...; an] [b1; ...; bn] c is f a1 b1 (f a2 b2 (... (f an bn c) ...)). Raise Invalid_argument if the two lists have different lengths. Not tail-recursive.
+
+val mem : 'a -> 'a list -> bool
+    mem a l is true if and only if a is equal to an element of l.
+
+val split : ('a * 'b) list -> 'a list * 'b list
+    Transform a list of pairs into a pair of lists: split [(a1,b1); ...; (an,bn)] is ([a1; ...; an], [b1; ...; bn]). Not tail-recursive.
+
+val sort : ('a -> 'a -> int) -> 'a list -> 'a list
+
+
+ARRAY :
+
+val length : 'a array -> int
+val get : 'a array -> int -> 'a
+    Array.get a n returns the element number n of array a. a.(n) = Array.get a n.
+    Raise Invalid_argument "index out of bounds"
+val set : 'a array -> int -> 'a -> unit
+    Array.set a n x modifies array a in place, replacing element number n with x. a.(n) <- x = Array.set a n x.
+    Raise Invalid_argument "index out of bounds"
+val make : int -> 'a -> 'a array
+    Array.make n x returns a fresh array of length n, initialized with x. All the elements of this new array are initially physically equal to x (in the sense of the == predicate). Consequently, if x is mutable, it is shared among all elements of the array, and modifying x through one of the array entries will modify all other entries at the same time.
+    Raise Invalid_argument if n < 0 or n > Sys.max_array_length. If the value of x is a floating-point number, then the maximum size is only Sys.max_array_length / 2.
+val init : int -> (int -> 'a) -> 'a array
+    Array.init n f returns a fresh array of length n, with element number i initialized to the result of f i. In other terms, Array.init n f tabulates the results of f applied to the integers 0 to n-1.
+    Raise Invalid_argument if n < 0 or n > Sys.max_array_length. If the return type of f is float, then the maximum size is only Sys.max_array_length / 2.
+val make_matrix : int -> int -> 'a -> 'a array array
+    Array.make_matrix dimx dimy e returns a two-dimensional array (an array of arrays) with first dimension dimx and second dimension dimy. All the elements of this new matrix are initially physically equal to e. The element (x,y) of a matrix m is accessed with the notation m.(x).(y).
+    Raise Invalid_argument if dimx or dimy is negative or greater than Sys.max_array_length. If the value of e is a floating-point number, then the maximum size is only Sys.max_array_length / 2.
+val append : 'a array -> 'a array -> 'a array
+    Concat 2 array
+val concat : 'a array list -> 'a array
+    Concat une liste d'array
+val sub : 'a array -> int -> int -> 'a array
+    Array.sub a start len
+    Raise Invalid_argument "Array.sub" if start and len do not designate a valid subarray of a.
+val copy : 'a array -> 'a array
+    Array.copy a returns a copy of a, that is, a fresh array containing the same elements as a.
+val to_list : 'a array -> 'a list
+    Array.to_list a returns the list of all the elements of a.
+val of_list : 'a list -> 'a array
+    Array.of_list l returns a fresh array containing the elements of l.
+val iter : ('a -> unit) -> 'a array -> unit
+    Array.iter f a applies function f in turn to all the elements of a. It is equivalent to f a.(0); f a.(1); ...; f a.(Array.length a - 1); ().
+val map : ('a -> 'b) -> 'a array -> 'b array
+    Array.map f a applies function f to all the elements of a, and builds an array with the results returned by f: [| f a.(0); f a.(1); ...; f a.(Array.length a - 1) |].
+val iteri : (int -> 'a -> unit) -> 'a array -> unit
+    Same as Array.iter, but the function is applied to the index of the element as first argument, and the element itself as second argument.
+val mapi : (int -> 'a -> 'b) -> 'a array -> 'b array
+    Same as Array.map, but the function is applied to the index of the element as first argument, and the element itself as second argument.
+val fold_left : ('a -> 'b -> 'a) -> 'a -> 'b array -> 'a
+    Array.fold_left f x a computes f (... (f (f x a.(0)) a.(1)) ...) a.(n-1), where n is the length of the array a.
+val fold_right : ('b -> 'a -> 'a) -> 'b array -> 'a -> 'a
+    Array.fold_right f a x computes f a.(0) (f a.(1) ( ... (f a.(n-1) x) ...)), where n is the length of the array a.
+val make_float : int -> float array
+    Array.make_float n returns a fresh float array of length n, with uninitialized data.

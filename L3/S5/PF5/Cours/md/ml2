@@ -1,0 +1,44 @@
+PF5
+
+Conversion :
+float_of_int;;
+- : int -> float = <fun>
+(float);;
+- : int -> float = <fun>
+int_of_float;;
+- : float -> int = <fun>
+
+Char :
+Char.code : char -> int
+Char.chr : int -> char
+Char.lowercase : char -> char
+Char.uppercase : char -> char
+
+String :
+String.length : string -> int Donne la taille de la chaîne
+String.get : string -> int -> char donne le char la à la i-ème position
+String.make : int -> char -> string donne un string conenant n char c
+String.sub : string -> int -> int -> string
+
+
+[1] @ [2;3];
+- : int list = [1; 2; 3]
+
+Liste :
+val length : 'a list -> int
+val hd : 'a list -> 'a
+1er élément de la liste
+val tl : 'a list -> 'a list
+Retourne list lans le 1er élément . Raise Failure "tl" if the list is empty.
+val nth : 'a list -> int -> 'a
+Return le nieme élément de la liste . Raise Failure "nth" if the list is too short. Raise Invalid_argument "List.nth" if n is negative.
+val rev : 'a list -> 'a list
+List reversal.
+val append : 'a list -> 'a list -> 'a list
+Concatene deux liste = @
+val rev_append : 'a list -> 'a list -> 'a list
+List.rev_append l1 l2 reverses l1 and concatenates it to l2. This is equivalent to List.rev l1 @ l2, but rev_append is tail-recursive and more efficient.
+val concat : 'a list list -> 'a list
+Concatenate a list of lists. The elements of the argument are all concatenated together (in the same order) to give the result. Not tail-recursive (length of the argument + length of the longest sub-list).
+val flatten : 'a list list -> 'a list
+Same as concat. Not tail-recursive (length of the argument + length of the longest sub-list).

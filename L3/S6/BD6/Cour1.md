@@ -1,8 +1,9 @@
+[TOC]
 # Initiation à SQL
 ## Requête :
 interroge la base de données et retourne une table
 
-#### Retourner le contenu d'une table
+### Retourner le contenu d'une table
 
 ```
 SELECT * FROM nom_table
@@ -13,7 +14,7 @@ Les lignes sont données dans un ordre quelconque
 
 ``` designe toutes les colonnes;```
 
-####N'obtenir que certaines colonne
+###N'obtenir que certaines colonne
 
 ```
 SELECT nom_col1,nom_col2 FROM nom_table;
@@ -21,7 +22,7 @@ SELECT nom_col1,nom_col2 FROM nom_table;
 
 ex : ```SELECT desc_produit FROM produit;```
 
-#### Selectionner certaines lignes
+### Selectionner certaines lignes
 
 ```
 SELECT nom_col1,nom_col2 FROM nom_table WHERE 'condition';
@@ -29,25 +30,31 @@ SELECT nom_col1,nom_col2 FROM nom_table WHERE 'condition';
 ne retourne que les ligne respectant la condition
 ex :```SELECT desc_produit,prix FROM produit WHERE prix <= 50; ```
 
-###RQ : Les conditions peuvent porter sur des colonnes qu'on ne veut pas.
+###Remarque
+Les conditions peuvent porter sur des colonnes qu'on ne veut pas.
 
 ex : ```SELECT id_magasin,nom_magasin FROM magasin WHERE adresse='Lyon'```;
 
-## Opération de comparaison : ```<,<=,..., =, <> <=> !=, BETWEEN```
+## Opération de comparaison :
+```<,<=,..., =, <> <=> !=, BETWEEN```
 
-Comparaison chaîne de caractères
+###Comparaison chaîne de caractères
+####Égalité :
+
 égalité : ```=, LIKE```
 ```<, >, <=``` (Ordre lexicographique)
-Recherche inéxacte :
-```%``` remplace 0, 1 ou plusieurs caractère
-```-```remplace 1 et un seul caractère
+
+####Recherche inéxacte :
+
++ ```%``` remplace 0, 1 ou plusieurs caractère
++ ```-``` remplace 1 et un seul caractère
+
 ex :```SELECT * FROM produit WHERE desc_produit LIKE 'tab%' ```
 
 3 lignes 'tab'ouret,'tab'ouret,'tab'le
 
-
-###Recherche dans un ensemble fini de valeur : ```IN```
-
+###Recherche dans un ensemble fini de valeur :
+```IN```
 ```
 SELECT desc_produit,prix FROM produit WHERE desc_produit IN ('chaise', 'tabouret', 'fauteuil');
 ```
@@ -85,7 +92,7 @@ SELECT AVG(prix) FROM produit WHERE desc_produit = 'tabouret'
 
 ####Avec DISTINCT
 On considère la table ```A```
-````
+```
 SELECT SUM(x), SUM(DISTINCT x) FROM A;
 ```
 
@@ -103,11 +110,11 @@ ex : Simuler une Augmentation de 10% des prix
 ```
 SELECT id_produit, desc_produit, prix * 1,1 AS nouveau_prix FROM produit;
 ```
-####RQ:
+###Remarque
 - Ne modifie pas la table.
 - On ne peut pas utiliser le nom de colonne 'nouveau_prix' dans le WHERE de la requête.
 
-Par-contre:
+Par-contre on peut utiliser:
 ```
 SELECT id_produit, desc_produit, prix * 1,1 AS nouveau_prix FROM produit WHERE prix * 1.1 > 100;
 ```
