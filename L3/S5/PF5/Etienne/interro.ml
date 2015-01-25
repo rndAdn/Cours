@@ -30,10 +30,11 @@ let rec knapsack n liste =
 
 match liste with
 |[]->true
-|x::q -> match q with
+|x::q -> begin match q with
           |[]->true
           |a::b -> false
-      |_->true
+          end
+|_->true
 
 
 
