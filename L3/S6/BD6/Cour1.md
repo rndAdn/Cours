@@ -8,11 +8,11 @@ interroge la base de données et retourne une table
 ```
 SELECT * FROM nom_table
 ```
-ex: ```SELECT * FROM produit;```
+**ex** : ```SELECT * FROM produit;```
 
 Les lignes sont données dans un ordre quelconque
 
-``` designe toutes les colonnes;```
+```'*' : designe toutes les colonnes;```
 
 ###N'obtenir que certaines colonne
 
@@ -20,7 +20,7 @@ Les lignes sont données dans un ordre quelconque
 SELECT nom_col1,nom_col2 FROM nom_table;
 ```
 
-ex : ```SELECT desc_produit FROM produit;```
+**ex** : ```SELECT desc_produit FROM produit;```
 
 ### Selectionner certaines lignes
 
@@ -28,12 +28,15 @@ ex : ```SELECT desc_produit FROM produit;```
 SELECT nom_col1,nom_col2 FROM nom_table WHERE 'condition';
 ```
 ne retourne que les ligne respectant la condition
-ex :```SELECT desc_produit,prix FROM produit WHERE prix <= 50; ```
+**ex** :```SELECT desc_produit,prix FROM produit WHERE prix <= 50; ```
 
 ###Remarque
 Les conditions peuvent porter sur des colonnes qu'on ne veut pas.
 
-ex : ```SELECT id_magasin,nom_magasin FROM magasin WHERE adresse='Lyon'```;
+**ex** :
+```
+SELECT id_magasin,nom_magasin FROM magasin WHERE adresse='Lyon';
+```
 
 ## Opération de comparaison :
 ```<,<=,..., =, <> <=> !=, BETWEEN```
@@ -42,14 +45,14 @@ ex : ```SELECT id_magasin,nom_magasin FROM magasin WHERE adresse='Lyon'```;
 ####Égalité :
 
 égalité : ```=, LIKE```
-```<, >, <=``` (Ordre lexicographique)
+```<, >, <=``` **(Ordre lexicographique)**
 
 ####Recherche inéxacte :
 
 + ```%``` remplace 0, 1 ou plusieurs caractère
 + ```-``` remplace 1 et un seul caractère
 
-ex :```SELECT * FROM produit WHERE desc_produit LIKE 'tab%' ```
+**ex** :```SELECT * FROM produit WHERE desc_produit LIKE 'tab%' ```
 
 3 lignes 'tab'ouret,'tab'ouret,'tab'le
 
@@ -62,7 +65,7 @@ SELECT desc_produit,prix FROM produit WHERE desc_produit IN ('chaise', 'tabouret
 ### Connecteur logique
 ```AND, OR, NOT```
 
-ex : Les produits qui sont des tabouret ou des chaises à plus de 35 euros
+**ex** : Les produits qui sont des tabouret ou des chaises à plus de 35 euros
 
 ```
 SELECT * FROM produit WHERE (desc_produit LIKE 'tabouret' OR desc_produit LIKE 'chaise') AND prix > 35
@@ -76,12 +79,12 @@ SELECT DISTINCT desc_produit FROM produit;
 tabouret, chaise, fauteuil.
 
 ### Requête d'agrégation simple
-ex : quantité total en stock
+**ex** : quantité total en stock
 ```
 SELECT SUM(quantite) FROM stock;
 ```
 
-ex : Moyenne des prix  des tabourets
+**ex** : Moyenne des prix  des tabourets
 ```
 SELECT AVG(prix) FROM produit WHERE desc_produit = 'tabouret'
 ```
@@ -106,7 +109,7 @@ SELECT COUNT(*), COUNT(desc_produit),COUNT(DISTINCT desc_produit) FROM produit;
 ##Complements
 Donner des noms aux colonne de la table résultat et faire des opération sur les colonnes.
 
-ex : Simuler une Augmentation de 10% des prix
+**ex** : Simuler une Augmentation de 10% des prix
 ```
 SELECT id_produit, desc_produit, prix * 1,1 AS nouveau_prix FROM produit;
 ```
