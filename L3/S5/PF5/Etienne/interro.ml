@@ -28,14 +28,5 @@ let rec knapsack n liste =
   |a::b -> if aux n liste then true else knapsack n b;;
 
 
-match liste with
-|[]->true
-|x::q -> begin match q with
-          |[]->true
-          |a::b -> false
-          end
-|_->true
-
-
 
 [2;5;3;5;15;7];;
