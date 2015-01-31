@@ -3,7 +3,7 @@
  * This module provides a data structure that denotes an index
  * which are morally 64 bits unsigned integers. Each index vale is related
  * to a descriptor using a hash table. A counter in the descriptor denotes
- * the number of references to it.
+ * the number of refrences to it.
  *
  * For the moment, this descriptor is composed of a boolean which can
  * be used to globally invalidate an index during a computation.
@@ -27,14 +27,14 @@ typedef struct index_implementation_s {
 } index_implementation_t;
 
 unsigned int index_hash (void* key) {
-  DECLARE_AS (index_implementation_t*, idx, key);
+  declare_as (index_implementation_t*, idx, key);
   /* Here, we assume that [sizeof(unsigned int) = 4]. */
   return ((idx->value >> 32) + idx->value);
 }
 
 int index_compare (index_t lhs, index_t rhs) {
-  DECLARE_AS (index_implementation_t*, idx_lhs, lhs);
-  DECLARE_AS (index_implementation_t*, idx_rhs, rhs);
+  declare_as (index_implementation_t*, idx_lhs, lhs);
+  declare_as (index_implementation_t*, idx_rhs, rhs);
   if (idx_lhs->valeur == idx_rhs->value)
     return (0);
   else if (idx_lhs->valeur < idx_rhs->value)
@@ -59,7 +59,7 @@ void init_index_module () {
  */
 index_t index_create (uint64_t value) {
   /* Look for an associated descriptor, if it exists. */
-  DECLARE_AS(index_descriptor_t*, descriptor, NULL);
+  declare_as(index_descriptor_t*, descriptor, NULL);
   index_implementation_t* idx = xmalloc (index_implementation_t);
   idx->value = value;
   descriptor = hashtable_search (descriptors, idx);
@@ -75,13 +75,13 @@ index_t index_create (uint64_t value) {
 }
 
 uint64_t index_value (index_t i) {
-  DECLARE_AS (index_implementation_t*, idx, i);
+  declare_as (index_implementation_t*, idx, i);
   return (idx->value);
 }
 
 void index_release (index_t i) {
-  DECLARE_AS (index_implementation_t*, idx, i);
-  DECLARE_AS (index_descriptor_t*, descriptor,
+  declare_as (index_implementation_t*, idx, i);
+  declare_as (index_descriptor_t*, descriptor,
               hashtable_search (descriptors, idx));
   /* At this point, [descriptor] cannot be NULL. */
   descriptor->ref_count--;
@@ -93,24 +93,24 @@ void index_release (index_t i) {
 }
 
 boolean_t index_valid (index_t i) {
-  DECLARE_AS (index_implementation_t*, idx, i);
-  DECLARE_AS (index_descriptor_t*, descriptor,
+  declare_as (index_implementation_t*, idx, i);
+  declare_as (index_descriptor_t*, descriptor,
               hashtable_search (descriptors, idx));
   /* At this point, [descriptor] cannot be NULL. */
   return (descriptor->valid);
 }
 
 void index_invalidate (index_t i) {
-  DECLARE_AS (index_implementation_t*, idx, i);
-  DECLARE_AS (index_descriptor_t*, descriptor,
+  declare_as (index_implementation_t*, idx, i);
+  declare_as (index_descriptor_t*, descriptor,
               hashtable_search (descriptors, idx));
   /* At this point, [descriptor] cannot be NULL. */
   descriptor->valid = FALSE;
 }
 
 void index_validate (index_t i) {
-  DECLARE_AS (index_implementation_t*, idx, i);
-  DECLARE_AS (index_descriptor_t*, descriptor,
+  declare_as (index_implementation_t*, idx, i);
+  declare_as (index_descriptor_t*, descriptor,
               hashtable_search (descriptors, idx));
   /* At this point, [descriptor] cannot be NULL. */
   descriptor->valid = TRUE
