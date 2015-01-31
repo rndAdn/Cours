@@ -1,7 +1,8 @@
 [TOC]
 
-Même tables que le Cours 1
-Ce que l'on veut
+On utilise les même tables que dans le Cours 1.
+# Recherche dans plusieurs tables
+Ce que l'on veut:
 
 | id_produit | desc_prod | prix | id_mag | quant |
 |-------|-----|----|---|----|
@@ -33,7 +34,7 @@ On obtient le produit cartésien, c'est à dire toutes les combinaisons d'une li
 Le produit cartesien sert **rarement**.
 
 
-On ne regarde que les lignes ou les 2 ```id_produit``` sont identiques
+####On ne regarde que les lignes ou les 2 ```id_produit``` sont identiques
 
 ```
 SELECT * FROM produit, stock WHERE produit.id_produit = stock.id_produit
@@ -60,7 +61,7 @@ WHERE produit.id_produit = stock.id_produit;
 
 ##Application
 
-* Obtenir les produits en stock dant le magasin 1
+* Obtenir les produits en stock dans le magasin 1
 * On les identifiants description et le stock
 
 ```
@@ -69,7 +70,7 @@ FROM produit, stock
 WHERE produit.id_produit = stock.id_produit AND id_magasin = 1
 ```
 
-* Donnez les produits ()id_produit, desc_produit) en trop grande quantité (>= 10) dans des magasin situé à Lyon (quant, nom_magasin)
+* Donnez les produits (id_produit, desc_produit) en trop grande quantité (>= 10) dans des magasin situé à Lyon (quant, nom_magasin)
 
 ```
 SELECT p.id_produit, desc_produit, quant, nom_magasin
@@ -95,9 +96,9 @@ WHERE m1.adresse = m2.adresse AND m1.id_magasin < m2.id_magasin
 ```
 magasin 5, magasin 2
 magasin 2, magasin 5
-```
+``` 
 
-## Opérations ensemblistes
+# Opérations ensemblistes
 * _**EX :**_
 Identifiant, description, prix des chaises et des tabourets
 
@@ -118,7 +119,7 @@ les noms des colonnes résultat sont ceux de la premieres requête.
 Le résultat d'une opération ensembliste est sans doublon
 
 
-###  3 Opérations ensemblistes
+##  3 Opérations ensemblistes
 
 ```
 UNION INTERSECTION EXCEPT (MINUS dans d'autre SQL)
