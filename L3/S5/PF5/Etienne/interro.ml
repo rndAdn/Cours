@@ -18,7 +18,7 @@ in match l with
 
 let rec knapsack n liste =
   let rec aux n liste =
-  begin
+  begino
     match liste with
       |[]-> false
       |x::y -> if is_sum liste n then true else aux (n-x) y

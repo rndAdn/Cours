@@ -1,0 +1,18 @@
+\i /ens/laplante/BD6/TP1.sql
+SELECT * FROM magasin;
+SELECT * FROM provenance;
+SELECT * FROM produit;
+SELECT * FROM usine;
+SELECT ville FROM usine;
+SELECT nom_prod,couleur FROM produit;
+SELECT ref_prod,quantite FROM provenance WHERE ref_mag = 14;
+SELECT * FROM usine WHERE ville = 'Marseille';
+SELECT ref_mag FROM provenance WHERE ref_usine = '109' AND ref_prod = '1';
+SELECT ref_prod,nom_prod FROM produit WHERE couleur = 'rouge';
+SELECT ref_prod,nom_prod FROM produit WHERE nom_prod LIKE 'casse%';
+SELECT ref_mag FROM provenance;
+SELECT DISTINCT(ref_mag) FROM provenance;
+SELECT nom_prod FROM produit WHERE poids BETWEEN 15 AND 45;
+SELECT nom_prod FROM produit WHERE  (couleur = 'bleu' OR couleur = 'jaune') AND poids <20;
+SELECT nom_prod FROM produit WHERE  couleur = 'jaune' OR (couleur = 'bleu' AND poids <20);
+SELECT nom_prod FROM produit WHERE  nom_prod LIKE '%lampe%' OR poids >30;
