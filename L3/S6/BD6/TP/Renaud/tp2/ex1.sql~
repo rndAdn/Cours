@@ -1,0 +1,1 @@
+SELECT * FROM Realisateur WHERE UPPER(nom) = UPPER('woody') AND UPPER(prenom) = UPPER('allen');
