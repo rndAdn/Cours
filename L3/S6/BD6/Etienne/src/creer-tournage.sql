@@ -16,7 +16,7 @@ create table donneesbrutes (
   adresse_complete varchar,
   coordinates VARCHAR
 );
-\copy donneesbrutes from './tournagesdefilmsparis2011.csv' with delimiter ';' csv header ;
+\copy donneesbrutes from '/Users/ByTeK/Documents/Cours/L3/S6/BD6/Etienne/src/tournagesdefilmsparis2011.csv' with delimiter ';' csv header ;
 
 DROP TABLE IF EXISTS Evenement;
 DROP TABLE IF EXISTS Lieu ;
