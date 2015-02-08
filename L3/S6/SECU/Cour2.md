@@ -219,3 +219,58 @@ recu $$m' = m+e$$
 
 à partir de $$m'$$ (avec des info sur $$e$$)<br>
 Trouver $$m$$
+
+
+Exemple Checksum :
+Détecte une erreur
+
+$$x = <u_{1}, ...,u_{l}>$$    $$m = <u_{1}, ...,u_{l}, \sum\limits_{}^{} u_{i}>$$
+
+$$l = 4$$     $$x = 1010 \Rightarrow m = <10100>$$
+
+$$
+\begin{array}{cr}
+    <0,0,0,0,0> & \\
+    <1,0,0,0,0> & \\
+    <0,1,0,0,0> & \\
+    <0,0,1,0,0> & \\
+    <0,0,0,1,0> & \\
+    <0,0,0,0,1> & \\
+  \end{array}$$
+
+Impossible que ce soit le massage d'origine
+
+$$m'$$ reçu tel que $$d(m,m') \leq 1$$
+
+Verification : les seuls messages sans erreur sont $$<u_{1}, ...,u_{l},u_{l+1}>$$ tel que $$ \sum\limits_{i=1}^{l} u_{i} = u_{l+1} $$
+
+$$\sum\limits_{i=1}^{l} u_{i} = u_{l+1} \Leftrightarrow \sum\limits_{i=1}^{l} u_{i}- u_{l+1} = 0 \Leftrightarrow \sum\limits_{i=1}^{l} u_{i} + u_{l+1} = 0 $$
+
+
+Avec au plus une erreur si reçu $$m'$$ $$m' = <m'_{1},...,m'_{l}$$
+* si $$m'$$ (message reçu) est tel que $$\sum\limits_{i=1}^{l+1} m'_{i} = 0$$ Alors c'est que $$m$$ qui a été emis
+
+$$
+\begin{pmatrix}
+  a_{1}^{1} & \cdots & a_{l}^{1} & a_{l+1}^{1} \\
+  a_{1}^{2} & \cdots & a_{l}^{2} & a_{l+1}^{2} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{1}^{k} & \cdots & a_{l}^{k} & a_{l+1}^{k} \\
+  a_{1}^{k+1} & \cdots & a_{l}^{k+1} & a_{l+1}^{k+1} \\
+ \end{pmatrix}
+ $$
+
+$$u^{j}_{l+1} = \sum\limits_{i=1}^{l} u_{i}$$ parité par ligne
+$$u^{k+1}_{j} = \sum\limits_{i=1}^{k} u_{j}$$ parité par colonne
+
+$$
+\begin{array}{cccc|c}
+  0 & 0 & 1 & 1 & 0 \\
+  0 & 1 & 1 & 1 & 1 \\
+  1 & 1 & 1 & 0 & 1 \\
+  \hline
+  1 & 0 & 1 & 0 & 0 \\
+ \end{array}
+$$
+
+$$0011.0111.1110 \longrightarrow 00110.01111.11101.10100$$
