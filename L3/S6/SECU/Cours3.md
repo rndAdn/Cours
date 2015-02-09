@@ -211,3 +211,71 @@ $$ \text{C} ^{\perp} = \{ 0000, 1010, 0101, 1111\}$$
 ### Propriété:
 Si $$ \text{C} $$ est un code linéaire et $$ dim(\text{C}) = k $$ alors $$ |\text{C}| = 2^{k}$$<br>
 Si $$ \text{C} $$ est un code linéaire alors $$ dim(\text{C}) = log(|\text{C}|)$$
+
+
+$$ \text{C} $$ un code linéaire <br>
+$$ u \in \text{C} ^{\perp} \Longleftrightarrow \forall v \in \text{C}$$ $$ u.v = 0  $$
+
+Mais aussi :
+* $$ u \in \text{C} ^{\perp} \Longleftrightarrow  \forall v$$ elément d'une base de $$ \text{C} $$ $$ u.v = 0 $$
+* $$ u \in \text{C} \Longleftrightarrow \forall v \in  \text{C} ^{\perp}$$ $$ u.v = 0 $$
+
+$$ dim(\text{C}) = n $$ et $$ dim(\text{C} ^{\perp}) = n-m$$
+
+### Matrice d'un code
+
+$$ g _{1}, cdots, g _{k} $$ Base
+
+$$
+   \left(
+    \begin{array}{c}
+    g _{1} \\
+       \vdots \\
+       g _{k}\\
+    \end{array}
+   \right)
+$$
+
+$$
+\text{C} =
+ \begin{pmatrix}
+  0 & 1 & 0 & 1 & 0 & 1 \\
+  1 & 1 & 0 & 0 & 1 & 1 \\
+  0 & 0 & 1 & 1 & 1 & 1 \\
+ \end{pmatrix}
+$$
+
+$$ u \in \text{C} \Longleftrightarrow \exists \lambda _{1},\cdots,\lambda _{k}$$ $$ u =  \lambda _{1}.g _{1} + \cdots + \lambda _{k}.g _{k}  $$
+
+$$
+   \left(
+    \begin{array}{ccc|c}
+      1 &  & 0 & \\
+       & \ddots & & B\\
+      0 & & 1 &\\
+    \end{array}
+   \right)
+$$
+
+
+$$
+\mathcal{M}_{\text{C}_{1}} =
+\begin{array}{cccc|ccc}
+c_{1} + c_{2} & 1 & 0 & 0  & 1 & 1 & 0 \\
+c_{1} & 0 & 1 & 0 & 1 & 0 & 1 \\
+c_{3} & 0 & 0 & 1 & 1 & 1 & 1 \\
+\end{array}
+$$
+
+
+$$ (x _{1}, x _{2}, x _{3}) (x _{1}, x _{2}, x _{3},x _{1}+ x _{2}+ x _{3}, x _{1}+ x _{3}, x _{2}+ x _{3}) $$
+
+
+$$ (x _{1}, x _{2}, x _{3})(\text{Id},\text{A}) = (x _{1}, x _{2}, x _{3}, (x _{1}, x _{2}, x _{3})\text{A})$$
+
+
+$$ (x _{1}, x _{2}, x _{3}) $$ à coder
+
+$$ (\mathbb{Z} / 2\mathbb{Z} ) ^{3} \longrightarrow (\mathbb{Z} / 2\mathbb{Z} ) ^{6}$$
+$$ (x _{1}, x _{2}, x _{3}) \longrightarrow (x _{1}, x _{2}, x _{3}).\mathcal{M}$$<br>
+$$ 101 \longrightarrow (101.001)$$
