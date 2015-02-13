@@ -44,17 +44,17 @@ public class Client {
             PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
             Scanner sc = new Scanner(System.in);
 
-            String mess = "";
-            while (!mess.equals(".")){
-                String nb = sc.nextLine();
-                writer.print(nb+"\n");
+            String ret;
+            ret = reader.readLine();
+            while (!ret.equals(".")){
+                System.out.println("ret : "+ret);
+                String mess = sc.nextLine();
+                writer.print(mess+"\n");
                 writer.flush();
-                System.out.println("c1");
+                ret = reader.readLine();
 
-                mess = reader.readLine();
-                System.out.println("c2");
-                System.out.print(mess+"\n");
             }
+            //System.out.println(ret + " fini");
             reader.close();
             writer.close();
             socket.close();

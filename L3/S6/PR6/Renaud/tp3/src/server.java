@@ -55,22 +55,22 @@ public class server {
     public static void server2(){
         try {
             ServerSocket serverSocket = new ServerSocket(7070);
+            //noinspection InfiniteLoopStatement
             while (true){
                 Socket socket = serverSocket.accept();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                 PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
 
-                String s = reader.readLine();
+                writer.println("Hello:");
+                writer.flush();
+                String s = "";
                 while (!s.equals(".")){
-                    System.out.println("s1");
-                    s = s.toUpperCase();
-                    writer.print(s);
-                    writer.flush();
-                    System.out.println("s2");
                     s = reader.readLine();
-                    System.out.println("s3");
+                    String t = s.toUpperCase();
+                    writer.println(t);
+                    writer.flush();
                 }
-                writer.print(".");
+                //writer.print("==\n");
                 writer.flush();
                 writer.close();
                 reader.close();

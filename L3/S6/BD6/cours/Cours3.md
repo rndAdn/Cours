@@ -41,16 +41,15 @@ Trouver quelles tables créer
 > * pour une même valeur de la clef on a au plus une seul ligne correspondante **<=> UNIQUE** <br>
 > * et elle minimal, c-à-d; on ne peut pas enlever d'attribut sans qu'elle ne perde sa propriété (_représentée par des étoiles ou soulignée_)
 
-**_Clef étrangère_** _représenté par #_ :
-> **_sur l'exemple_** : ```id_produit``` est une clef étrangère dans ```stock``` qui dépend de la clef primaire ```id_produit``` de produit<br>
->  **_propriété_** : stock (id_produit) $$\subsetseq$$ produit (id_produit) <br>
->  **_En général_** : les cléfs étrangères se réfèrent à une clef primaire d'une autre table
+**_Clef étrangère_** _représenté par ```#```_ :
+
+* **_sur l'exemple_** : ```id_produit``` est une clef étrangère dans ```stock``` qui dépend de la clef primaire ```id_produit``` de produit<br>
+*  **_propriété_** : stock (id_produit) $$ \subseteq $$ produit (id_produit) <br>
+*  **_En général_** : les cléfs étrangères se réfèrent à une clef primaire d'une autre table
 
 
 ##MCD(modèle conceptuel des données)
 La "vraie modélisation"
-
-AZERTYUIOP
 
 
 * produit et magasin sont des ___entitées___
