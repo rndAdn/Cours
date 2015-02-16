@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Client {
 public static void main(String[] args) {
-								String servAddr = "0.0.0.0",
-															name = "Player";
-								int servPort = 10201;
+								String servAddr = "0.0.0.0";
+								int servPort = 4213;
+								String	name = "";
 								if (args.length > 0)
 																name = args[0];
 								if (args.length == 3) {
@@ -34,6 +34,11 @@ public static void main(String[] args) {
 																																								sock.getOutputStream()));
 																								System.out.println("Communication established.");
 																								System.out.println("Identification underway...");
+																								if(name.equals("")) {
+																									System.out.println("Quel est votre nom ?");
+																									BufferedReader brStd = new BufferedReader(new InputStreamReader(System.in));
+																									name = brStd.readLine();
+																								}
 																								pw.println(name);
 																								pw.flush();
 																								System.out.println("Waiting for the game to start...");
@@ -79,7 +84,7 @@ public static void main(String[] args) {
 																																msg = br.readLine();
 																																String winner = br.readLine();
 																																System.out.println("Game over. The number was " + msg +
-																																																			"and the winner, " + winner + ".");
+																																																			" and the winner, " + winner + ".");
 																								}
 																								else if (msg.equals("="))
 																																System.out.println("Correct! You win.");
@@ -101,6 +106,7 @@ public static void main(String[] args) {
 																								System.exit(0);
 																}
 								} catch (Exception e) {
+																e.printStackTrace();
 																System.out.println("Connection failed. Try again later.");
 								}
 								sc.close();

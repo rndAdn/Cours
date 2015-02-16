@@ -1,3 +1,5 @@
+package com.company;
+
 import java.net.*;
 import java.io.*;
 import java.util.Random;
@@ -9,16 +11,23 @@ public class GameServer{
   HashSet<PlayerThread> set;
   public String winner = "";
 
-  public GameServer(){
+  public GameServer(Socket comSock){
     this.rand = new Random();
     this.number = rand.nextInt(100) + 1;
     this.set = new HashSet<PlayerThread>();
+    this.ajouterPlayer(comSock);
   }
 
   public void ajouterPlayer(Socket comSock){
     PlayerThread pt = new PlayerThread(this.number,comSock,this);
     set.add(pt);
-    pt.start();
+    //pt.start();
+  }
+
+  public void lunch(){
+    for (PlayerThread pt : set){
+      pt.start();
+    }
   }
 
   public void win(String winner){

@@ -7,7 +7,7 @@ public static void main(String[] args) {
 								try {
 																GameServer gs = new GameServer();
 																System.out.println("Stablishing the server socket...");
-																ServerSocket srvSock = new ServerSocket(10201);
+																ServerSocket srvSock = new ServerSocket(4213);
 																System.out.println("Server socket stablished to " +
 																																			srvSock.getInetAddress().getHostName() +
 																																			" at port number " +
