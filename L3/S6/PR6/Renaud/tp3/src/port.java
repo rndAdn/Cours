@@ -6,10 +6,10 @@ import java.net.UnknownHostException;
 
 public class port {
 
-    void ex1(String [] args){
+    static void ex1(String [] args){
 
-        int deb = Integer.parseInt(args[0]);
-        int fin = Integer.parseInt(args[1]);
+        int deb = Integer.parseInt(args[1]);
+        int fin = Integer.parseInt(args[2]);
         String machine = args[0];
         Socket socket;
         for(int i = deb ; i<=fin ; i++){
@@ -36,6 +36,6 @@ public class port {
     }
     public static void main(String[] args){
 
-        ex2(args);
+        ex1(args);
     }
 }
