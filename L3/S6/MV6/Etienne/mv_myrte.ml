@@ -164,7 +164,7 @@ let op = function
 let rec compil = function
   | Const v -> [Consti (repr v)]
   | Binop (Mult,Const(Int 1),e2) -> compil e2
-  | Binop (Mult,Const(Int c),e2) -> compil (Binop(Add,e2,Binop(Mult,Const(Int (c-1)),e2)))
+  | Binop (Mult,Const(Int c),e2) -> let ar = Array.make (c-1) Addi in compil e2 @ [Push] @ (Array.to_list ar) @ [Pop]
   | Binop (o,e1,e2) -> compil e1 @
                        [Push] @
                        compil e2 @
