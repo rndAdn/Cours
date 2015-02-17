@@ -55,3 +55,13 @@ let c = compil e;;
 print_instrs(c);;
 
 get_acc (machine (init (Array.of_list c)));;
+
+let e = Let("x",Const(Int 1),Let(("y"),Var("x"),Let("x",Binop(Add,Var("y"),Const(Int 3)),Binop(Add,Var("y"),Var("x")))));;
+let new_env v = failwith("Not valuable");;
+
+interp (new_env,e);;
+
+let e = Binop(Mult,Const(Int 12),Const(Int 10));;
+let c = compil e;;
+print_instrs(c);;
+get_acc (machine (init (Array.of_list c)));;

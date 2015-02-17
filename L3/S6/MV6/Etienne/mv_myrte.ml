@@ -1,7 +1,7 @@
 
 (** Machine virtuelle *)
 
-type instr = Push | Consti of int | Addi | Eqi | Andi | Pop | Subs | BranchIf of int | Branch of int
+type instr = Push | Consti of int | Addi | Eqi | Andi | Pop | Subs | BranchIf of int | Branch of int |Acc of int
 
 type state = {
   mutable acc: int;
@@ -15,6 +15,7 @@ let machine s =
   while s.pc < Array.length s.code do
     print_int(s.pc);
     begin match s.code.(s.pc) with
+    | Acc n -> s.acc <- s.stack.(n)
     | Consti n ->
        s.acc <- n;print_string(" -- Consti ");print_int(n);print_string("\n")
     | Push ->
@@ -106,31 +107,43 @@ let exemple1 = [| Consti 1; Push; Consti 2; Addi; Pop |]
 
 (** Langage Myrte *)
 
+
+type var   = string
+
 type value =
   | Int of int
   | Bool of bool
 
-type binop = Add | Eq | And
+type envexpr = var -> value
+
+type binop = Add | Eq | And | Mult
 
 type expr =
   | If of expr * expr * expr
   | Const of value
   | Binop of binop * expr * expr
+  | Var of var
+  | Let of var * expr * expr
+
 
 
 (** Interprétation *)
 
-let rec interp : expr -> value = function
-  | Const v           -> v
-  | Binop (b, e1, e2) ->(
-     match b, interp e1, interp e2 with
-     | Add, Int i, Int j -> Int (i + j)
-     | Eq, Int i, Int j -> Bool (i = j)
-     | And, Bool i, Bool j -> Bool (i && j)
-     | _ -> failwith "type error")
-  |If (e1,e2,e3) ->
-    if interp e1 = Bool (true) then interp e2
-      else interp e3
+let rec interp : envexpr * expr -> value = function
+  | env,Const v -> v
+  | env,Binop (b, e1, e2) ->
+     (match b, interp (env,e1), interp (env,e2) with
+       | Add, Int i, Int j -> Int (i + j)
+       | Eq, Int i, Int j -> Bool (i = j)
+       | And, Bool i, Bool j -> Bool (i && j)
+       | _ -> failwith "type error")
+  |env,If (e1,e2,e3) ->
+    if interp (env,e1) = Bool (true) then interp (env,e2)
+      else interp (env,e3)
+  |env,Var (s) -> env s
+  |env,Let (s,e2,e3) -> let r = interp (env, e2) in
+                    let new_env v = if (v = s) then r else env v in
+                    interp (new_env, e3)
 
 
 
@@ -146,9 +159,12 @@ let op = function
   | Add -> Addi
   | Eq  -> Eqi
   | And -> Andi
+  | Mult -> failwith "Bizarre"
 
 let rec compil = function
   | Const v -> [Consti (repr v)]
+  | Binop (Mult,Const(Int 1),e2) -> compil e2
+  | Binop (Mult,Const(Int c),e2) -> compil (Binop(Add,e2,Binop(Mult,Const(Int (c-1)),e2)))
   | Binop (o,e1,e2) -> compil e1 @
                        [Push] @
                        compil e2 @
