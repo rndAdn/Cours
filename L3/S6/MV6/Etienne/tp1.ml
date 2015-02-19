@@ -50,7 +50,7 @@ print_instrs(c);;
 
 get_acc (machine (init (Array.of_list c)));;
 
-let e = If(Binop(Eq,Const(Int 4),Const(Int 5)),Binop(Add,Const(Int 2),Const(Int 3)),Binop(Add,Const(Int 6),Const(Int 7)));;
+let e = If(Binop(Eq,Const(Int 5),Const(Int 5)),Binop(Add,Const(Int 2),Const(Int 3)),Binop(Add,Const(Int 6),Const(Int 7)));;
 let c = compil e;;
 print_instrs(c);;
 
@@ -61,7 +61,15 @@ let new_env v = failwith("Not valuable");;
 
 interp (new_env,e);;
 
-let e = Binop(Mult,Const(Int 12),Const(Int 10));;
+let e = Binop(Sub,Const(Int 12),Const(Int 10));;
+let c = compil e;;
+print_instrs(c);;
+get_acc (machine (init (Array.of_list c)));;
+
+
+let e = Binop(Mult,Binop(Sub,Const(Int 12),Const(Int 5)),Binop(Sub,Const(Int 12),Const(Int 7)));;
+let new_env v = failwith("Not valuable");;
+interp (new_env,e);;
 let c = compil e;;
 print_instrs(c);;
 get_acc (machine (init (Array.of_list c)));;
