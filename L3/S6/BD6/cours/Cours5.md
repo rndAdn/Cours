@@ -1,7 +1,89 @@
 [TOC]
 
+# Héritage
 
 
+IMAGE HERITAGE
+
+
+
+## Rappel
+
+
+IMAGE RAPPEL
+
+Signifie que ```B``` herite de ```A``` et suppose que l'on peut dire ```B``` est un ```A```
+
+#### NE JAMAIS UTILISER L'HÉRITAGE DE POSTGRESql
+
+### Tradution:
+
+```
+Oeuvre(*id_oeuvre, titre)
+Film(*id_oeuvre#, duree)
+Lvre(*id_oeuvre#, nb_page)
+Auteur(*(id_oeuvre#, id_artiste#))  /*id_oeuvre réference a oeuvre*/
+JoueDans(*(id_oeuvre#, id_artiste#)) /*id_oeuvre réference a film*/
+```
+
+# Création de table dans PostgreSql
+
+## Syntaxe general
+
+```
+CREAT_TABLE nom_Table (
+    nom_attr1   type_attr1 [CONSTRAINT attr1]
+    ...
+    nom_attrn   type_attrn [CONSTRAINT attrn]
+
+    CONSTRAINT ligne_1,
+    ..
+    CONSTRAINT ligne_n
+    );
+
+```
+
+### Exemple
+```
+CREAT_TABLE artiste (
+
+    id_artiste int PRIMARY KEY,
+    nom_artiste text NOT NULL,
+    prenom_artiste text,
+    annee_de_naissance date
+    );
+```
+
+| FILM |
+|-------|-----|
+| 1 | 2h30 |
+| ... | ... |
+
+
+| OEUVRE |
+|-------|-----|
+| 1 | Titanic |
+| 2 | La chute |
+| 3 | Guernica |
+| ... | ... |
+
+| LIVRE |
+|-------|-----|
+| 2 | 100 |
+| ... | ... |
+
+
+## Les type principaux
+
+* ```int``` : entier
+* ```bool``` : boolean
+* ```real``` : réel
+* ```numeric (precision, echelle)``` : nombre décimaux
+    * precision: nombre de chiffre au total
+    * echelle : après la virgule
+* ```texte``` : chaine de charactère
+* ```varchar(longueur)```:
+    * chaine de charactère de longueur 'longueur'
 * ```date```: date
 * ```time```: heure
 * ```timestamp```: date et heure
