@@ -15,7 +15,7 @@ let machine s =
   while s.pc < Array.length s.code do
     print_int(s.pc);
     begin match s.code.(s.pc) with
-    | Acc n -> s.acc <- s.stack.(n)
+    | Acc n -> s.acc <- s.stack.(s.sp-n);print_string(" -- Acc ");print_int(n);print_string("\n")
     | Consti n ->
        s.acc <- n;print_string(" -- Consti ");print_int(n);print_string("\n")
     | Push ->
@@ -24,7 +24,9 @@ let machine s =
     | Addi ->
        s.acc <- s.stack.(s.sp) + s.acc;print_string(" -- Addi");print_string("\n")
     | Subs ->
-       s.acc <- s.stack.(s.sp) - s.acc;print_string(" -- Subs");print_string("\n")
+       s.acc <- s.stack.(s.sp) - s.acc ;print_string(" -- Subs");print_string("\n")
+    (*| Multi ->
+       s.acc <- s.stack.(s.sp) * s.acc;print_string(" -- Mult");print_string("\n")*)
     | Andi ->
        s.acc <- s.stack.(s.sp) * s.acc;print_string(" -- Andi");print_string("\n")
     | Eqi ->
@@ -32,9 +34,10 @@ let machine s =
     | Pop ->
        s.sp <- s.sp-1;print_string(" -- Pop");print_string("\n")
     | BranchIf n ->
-       if(s.acc = 0) then ()
-       else s.sp <- s.pc + (n-1)
-    | Branch n -> s.sp <- s.pc + (n-1)
+       print_string(" -- BranchIf ");print_int(n);print_string("\n");
+       if(s.acc = 1) then ()
+       else s.pc <- s.pc + (n)
+    | Branch n -> s.pc <- s.pc + (n-1);print_string(" -- Branch ");print_int(n);print_string("\n");
     end;
     s.pc <- s.pc + 1
   done; print_int(s.acc);s
@@ -116,7 +119,7 @@ type value =
 
 type envexpr = var -> value
 
-type binop = Add | Eq | And | Mult
+type binop = Add | Eq | And | Mult | Sub
 
 type expr =
   | If of expr * expr * expr
@@ -134,6 +137,8 @@ let rec interp : envexpr * expr -> value = function
   | env,Binop (b, e1, e2) ->
      (match b, interp (env,e1), interp (env,e2) with
        | Add, Int i, Int j -> Int (i + j)
+       | Sub, Int i, Int j -> Int (i - j)
+       | Mult, Int i, Int j -> Int (i * j)
        | Eq, Int i, Int j -> Bool (i = j)
        | And, Bool i, Bool j -> Bool (i && j)
        | _ -> failwith "type error")
@@ -159,15 +164,18 @@ let op = function
   | Add -> Addi
   | Eq  -> Eqi
   | And -> Andi
-  | Mult -> failwith "Bizarre"
+  | Sub -> Subs
 
 let rec compil = function
   | Const v -> [Consti (repr v)]
-  | Binop (Mult,Const(Int 1),e2) -> compil e2
-  | Binop (Mult,Const(Int c),e2) -> let ar = Array.make (c-1) Addi in compil e2 @ [Push] @ (Array.to_list ar) @ [Pop]
+  | Binop (Mult,Const(Int c),e2) -> (if c = 0 then [Consti 0]
+                                    else if c > 0 then let ar = Array.make (c-1) Addi in compil e2 @ [Push] @ (Array.to_list ar) @ [Pop]
+                                    else let ar = Array.make (-(c+1)) Addi in [Consti 0 ;Push] @ compil e2 @ [Push] @ (Array.to_list ar) @ [Pop;Subs;Pop])
+  | Binop (Mult,e1,e2) -> [Consti 0 ; Push] @ compil e1 @ [Push] @ compil e2 @ [Push] @
+                          [Consti 0 ; Push; Acc 2 ; Eqi ; Pop; BranchIf 2 ;Acc 2; Branch 13; Acc 2; Addi; Push; Acc 2 ; Push; Consti 1; Subs; Pop; Push;Acc 2; Push; Branch (-19)]
   | Binop (o,e1,e2) -> compil e1 @
                        [Push] @
                        compil e2 @
                        [op o; Pop]
   |If (e1,e2,e3) -> let be2 = compil e2 and be3 = compil e3 in
-                    compil e1 @ [Branch (List.length be2)] @ be2 @ [BranchIf (List.length be3)]  @ be3
+                    compil e1 @ [BranchIf ((List.length be2)+1)] @ be2 @ [Branch (List.length be3)]  @ be3
