@@ -1,7 +1,7 @@
 
 (** Machine virtuelle *)
 
-type instr = Push | Consti of int | Addi | Eqi | Andi | Pop
+type instr = Push | Consti of int | Addi | Subs | Eqi | Andi | Pop
 
 type state = {
   mutable acc: int;
@@ -21,6 +21,8 @@ let machine s =
        s.stack.(s.sp) <- s.acc
     | Addi ->
        s.acc <- s.stack.(s.sp) + s.acc;
+    | Subs ->
+        s.acc <- s.stack.(s.sp) - s.acc;
     | Andi ->
        s.acc <- s.stack.(s.sp) * s.acc;
     | Eqi ->
@@ -50,7 +52,9 @@ let assemble (p : instr array) : string =
     | Eqi ->        s.[3*i] <-  Char.chr 2;
     | Andi ->       s.[3*i] <-  Char.chr 3;
     | Pop ->        s.[3*i] <-  Char.chr 5;
+    | Subs ->       s.[3*i] <-  Char.chr 6;
     | Consti n ->   assert ((abs n) < 255); s.[3*i] <-  Char.chr 4; (if n < 0 then s.[3*i+1] <- Char.chr 1 else s.[3*i+1] <- Char.chr 0); s.[3*i+2] <-  Char.chr (abs n);
+
 
   done; s
 
@@ -66,8 +70,25 @@ let disassemble (s : string) : instr array =
         | 4 -> (if Char.code (s.[3*i+1]) = 1 then Consti (Char.code (s.[3*i+2]) * (-1)) else Consti(Char.code s.[3*i+2]))
         (*| n when (n mod 8 = 4) -> Consti (n lsr 3) *)
         | 5 -> Pop
+        | 6 -> Subs
         | _ -> failwith "invalid byte-code"
   done; p
+
+let string_of_instr instr = match instr with
+    | Consti n  -> print_string("Consti "); print_string((string_of_int n));print_string("\n")
+    | Push      -> print_endline("Push ")
+    | Addi      -> print_endline("Addi ")
+    | Subs      -> print_endline("Subs ")
+    | Andi      -> print_endline("Andi ")
+    | Eqi       -> print_endline("Eqi ")
+    | Pop       -> print_endline("Pop ")
+    | _         -> failwith "invalid byte-code"
+
+let print_instrs inst_list =
+    let rec aux l i = match l with
+    | []    -> ()
+    | a::b  -> print_string((string_of_int i)); print_string(" - "); string_of_instr a ; aux b (i+1)
+in aux (Array.to_list inst_list) 0
 
 
 let exemple1 = [| Consti 1; Push; Consti 2; Addi; Pop |]
