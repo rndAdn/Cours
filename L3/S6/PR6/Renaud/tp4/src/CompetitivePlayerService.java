@@ -5,13 +5,14 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Random;
 
-public class PlayerService implements Runnable {
+public class CompetitivePlayerService implements Runnable {
 
     public static int user = 0;
     public Socket socket;
     static int number;
+    public static final int MAX_PLAYER = 2;
 
-    public PlayerService(Socket s) {
+    public CompetitivePlayerService(Socket s) {
         incUser();
         this.socket = s;
     }
@@ -25,6 +26,7 @@ public class PlayerService implements Runnable {
     public synchronized void decUser(){
         user--;
     }
+
     public void run() {
         try {
             BufferedReader comBR = new BufferedReader(

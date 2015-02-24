@@ -1,8 +1,10 @@
 import java.net.*;
-import java.util.Random;
+import java.util.ArrayList;
 
-public class ThreadedServer{
+public class CompetitiveServer {
     public static void main(String[] args){
+
+        ArrayList<GameServer> listGame = new ArrayList<GameServer>();
         try{
             System.out.println("Stablishing the server socket...");
             ServerSocket srvSock = new ServerSocket(48500);
@@ -19,7 +21,7 @@ public class ThreadedServer{
                         " (port " + socket.getPort() +
                         "), trying to communicate...");
 
-                PlayerService serv=new PlayerService(socket);
+                CompetitivePlayerService serv=new CompetitivePlayerService(socket);
                 Thread t=new Thread(serv);
                 t.start();
             }
