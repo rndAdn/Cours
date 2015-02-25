@@ -1,40 +1,10 @@
-produit :
-ref_prod | nom_prod | couleur | poids | 
-(1, 'tabouret', 'rouge', 5)
-(2, 'evier', 'bleu', 65)
+data_brutes :
+a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z | aa | 
+('1', '01', 'ozan', 'OZAN', 'ozan', 'Ozan', 'O250', 'OSN', '01190', '284', '01284', '2', '26', '6', '618', '469', '500', '93', '6.6', '4.91667', '46.3833', '2866', '51546', '+45456', '462330', '170', '205')
+('2', '01', 'cormoranche-sur-saone', 'CORMORANCHE-SUR-SAONE', 'cormoranche sur saone', 'Cormoranche-sur-Saône', 'C65652625', 'KRMRNXSRSN', '01290', '123', '01123', '2', '27', '6', '1058', '903', '1000', '107', '9.85', '4.83333', '46.2333', '2772', '51379', '+44953', '461427', '168', '211')
 
-usine :
-ref_usine | nom_usine | ville | 
-(109, 'martin', 'Nantes')
-(189, 'leroux', 'Marseille')
-
-magasin :
-ref_mag | nom_mag | ville | 
-(14, 'Stock10', 'Paris')
-(16, 'JaiTout', 'Marseille')
-
-provenance :
-ref_prod | ref_usine | ref_mag | quantite | 
-(1, 109, 14, 80)
-(1, 109, 16, 100)
-
-film :
-numfilm | titre | numrealisateur | 
-(1, "L'HOMME QUI MARCHE", 180)
-(2, 'LA PLANQUE', 323)
-
-realisateur :
-numrealisateur | nom | prenom | 
-(1, 'A. BROWN', 'OWELL')
-(478, 'LOT', 'ALFRED')
-
-lieu :
-numlieu | lieu | adresse | arrondissement | latitude | longitude | 
-(1, 'AVENUE', 'DE LA MOTTE PICQUET', Decimal('75007'), 48.8564, 2.30862)
-(2, 'PONT', 'BIR HAKEIM', Decimal('75016'), 48.8557, 2.28741)
-
-evenement :
-numevenement | numfilm | numlieu | cadre | datedebut | datefin | 
-(1, 401, 2525, 'EXTERIEUR', datetime.date(2002, 9, 24), datetime.date(2002, 9, 24))
-(2, 586, 1813, 'EXTERIEUR', datetime.date(2002, 6, 10), datetime.date(2002, 6, 10))
+ville :
+nom | dep | pop | 
+('Ozan', '01', 618)
+('Cormoranche-sur-Saône', '01', 1058)
 
