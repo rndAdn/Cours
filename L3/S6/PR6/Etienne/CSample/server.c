@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
  struct sockaddr_in address_sock;
 
  address_sock.sin_family=AF_INET;
- address_sock.sin_port=htons(4242);
+ address_sock.sin_port=htons(4202);
  //Adresse quelqu'onque car localHost
  address_sock.sin_addr.s_addr=htonl(INADDR_ANY);
 
@@ -51,5 +51,6 @@ int main(int argc, char const *argv[]) {
    printf("Message recu : %s\n",buff);
    close(descSock);
   }
+ close(sockServer);
  return 0;
 }
