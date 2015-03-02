@@ -26,4 +26,11 @@ let c = print_instrs exemple1;;
 disassemble p;; (* [|Consti 3; Push; Consti (-1); Addi; Pop|] *)
 
 
-let d = get_acc (machine (init exemple1))
+let d = get_acc (machine (init exemple1));;
+
+let exemple1 = [| Consti 2; Push; Consti 3; Addi; Pop |];;
+let d = [| Consti 1; Push; Consti 1; Eqi; Pop; BranchIf 3; Consti 3; Branch 2; Consti 1|];;
+let d = [| Consti 4; Push; Consti 4; Eqi; Pop; BranchIf 7; Consti 6; Push; Consti 7; Addi; Pop; Branch 6; Consti 2; Push; Consti 3; Addi; Pop|];;
+let f = If(Binop(Eq, Const(Int(1)), Const(Int(2))),Const(Int(3)), Const(Int(1)));;
+let e = compil f;;
+print_instrs (Array.of_list e);;

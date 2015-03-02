@@ -14,6 +14,7 @@ public class ServerCons implements Runnable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
 
@@ -28,6 +29,7 @@ public class ServerCons implements Runnable{
                     comPW.println(bc.retirer());
                     comPW.flush();
                 }
+
                 //comPW.close();
                 //clientSock.close();
 
