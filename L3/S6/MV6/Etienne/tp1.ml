@@ -16,7 +16,11 @@ s.[11]<-Char.chr 0;;
 s.[12]<-Char.chr 5;;
 s.[13]<-Char.chr 0;;
 s.[14]<-Char.chr 0;;
+
+
 let desa = disassemble s;;
+
+
 let code = assemble desa;;
 
 let string_of_instr instr =
@@ -57,7 +61,7 @@ print_instrs(c);;
 get_acc (machine (init (Array.of_list c)));;
 
 let e = Let("x",Const(Int 1),Let(("y"),Var("x"),Let("x",Binop(Add,Var("y"),Const(Int 3)),Binop(Add,Var("y"),Var("x")))));;
-let new_env v = failwith("Not valuable");;
+let new_env = [];;
 
 interp (new_env,e);;
 
@@ -68,7 +72,7 @@ get_acc (machine (init (Array.of_list c)));;
 
 
 let e = Binop(Mult,Binop(Sub,Const(Int 12),Const(Int 5)),Binop(Sub,Const(Int 12),Const(Int 7)));;
-let new_env v = failwith("Not valuable");;
+let new_env = [];;
 interp (new_env,e);;
 let c = compil e;;
 print_instrs(c);;

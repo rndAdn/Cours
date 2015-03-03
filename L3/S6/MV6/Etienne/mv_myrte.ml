@@ -117,7 +117,7 @@ type value =
   | Int of int
   | Bool of bool
 
-type envexpr = var -> value
+type envexpr = (var * value) list
 
 type binop = Add | Eq | And | Mult | Sub
 
@@ -145,9 +145,9 @@ let rec interp : envexpr * expr -> value = function
   |env,If (e1,e2,e3) ->
     if interp (env,e1) = Bool (true) then interp (env,e2)
       else interp (env,e3)
-  |env,Var (s) -> env s
+  |env,Var (s) -> List.assoc s env
   |env,Let (s,e2,e3) -> let r = interp (env, e2) in
-                    let new_env v = if (v = s) then r else env v in
+                    let new_env = (s,r)::env in
                     interp (new_env, e3)
 
 
