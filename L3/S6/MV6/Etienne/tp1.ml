@@ -16,7 +16,11 @@ s.[11]<-Char.chr 0;;
 s.[12]<-Char.chr 5;;
 s.[13]<-Char.chr 0;;
 s.[14]<-Char.chr 0;;
+
+
 let desa = disassemble s;;
+
+
 let code = assemble desa;;
 
 let string_of_instr instr =
