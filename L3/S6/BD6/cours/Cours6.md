@@ -102,30 +102,27 @@ les produits à moins de 50 € $$ \sigma _{\text{prix} \leq 50}(\text{Produit})
 $$ \prod (c_{1}, \cdots, c_{n}) \Longleftrightarrow $$ ```SELECT c_1, ..., c_n FROM R```
 
 
+```Les meuble( description, prix) de >= 100```
+
+$$ \prod _{descprod, prix}(\sigma _{prix \geq 100} (Produit)) = \sigma_{prix \geq 100}(\prod _{descprod, prix}(Produit)) \Longleftrightarrow$$
+
+```
+SELECT desc_prod, prix
+FROM produit
+WHERE prix >= 100;
+```
 
 
+Les chaises de prix >= 20 (```id_prod, prix```)
+
+$$ \prod _{idprod, prix}(\sigma _{prix \geq 100 and descprod = 'chaise'} (Produit)) $$
+
+###### ON NE PEUT PLUS INVERSER $$ \prod $$ et $$ \sigma $$
 
 
+## Produit cartésien $$ \times $$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$$ \text{R} \times \text{S} \Longleftrightarrow $$ ``` SELECT * FROM R,S```
 
 ## Jointure naturelle
 $$ \text{R} \bowtie \text{S}  \Longleftrightarrow$$ ```SELECT * FROM R NATURAL JOIN S```
@@ -179,8 +176,13 @@ Les chaises en strock en quantité >= 4 dans un magasin et les magasin correspon
 
 $$ \text{A} = \text{Produit} \bowtie \text{Stock} $$
 
-$$ \prod _{\text{id_prod, prix, id_mag}} (\sigma _{\text{desc_prod} = \text{chaise} \text{AND} \text{quantite} \Longrightarrow 4})(A)$$
+$$ \prod_{id_prod, prix, id_mag} (\sigma _{desc_prod = chaise   AND quantite \Longrightarrow 4)}(A)$$
 
 
 
 Autre solution
+
+$$ \text{B} = \sigma_{descprod = 'chaise'}(Produit) $$
+$$ \text{C} = \sigma_{quantité \geq 4}(Stock) $$
+
+$$ \prod_{idprod, prix, idmag} (\text{B} \bowtie \text{C})$$

@@ -32,5 +32,32 @@ let exemple1 = [| Consti 2; Push; Consti 3; Addi; Pop |];;
 let d = [| Consti 1; Push; Consti 1; Eqi; Pop; BranchIf 3; Consti 3; Branch 2; Consti 1|];;
 let d = [| Consti 4; Push; Consti 4; Eqi; Pop; BranchIf 7; Consti 6; Push; Consti 7; Addi; Pop; Branch 6; Consti 2; Push; Consti 3; Addi; Pop|];;
 let f = If(Binop(Eq, Const(Int(1)), Const(Int(2))),Const(Int(3)), Const(Int(1)));;
+let f =
+Binop(
+    Add,
+    Const(Int(9)),
+    If(
+        Binop(
+            Eq,
+            If(
+                Binop(
+                    Eq,
+                    Const(Int(1)),
+                    Const(Int(2))
+                ),
+                Const(Int(4)),
+                Const(Int(3))
+            ),
+            Const(Int(5))
+        ),
+        Const(Int(6)),
+        Binop(
+            Add,
+            Const(Int(7)),
+            Const(Int(8))
+        )
+    )
+);;
 let e = compil f;;
 print_instrs (Array.of_list e);;
+let d = get_acc (machine (init (Array.of_list e)));;
