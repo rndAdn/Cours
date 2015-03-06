@@ -12,7 +12,7 @@ SELECT ref_prod,nom_prod FROM produit WHERE couleur = 'rouge';
 SELECT ref_prod,nom_prod FROM produit WHERE nom_prod LIKE 'casse%';
 SELECT ref_mag FROM provenance;
 SELECT DISTINCT(ref_mag) FROM provenance;
-SELECT nom_prod FROM produit WHERE poids BETWEEN 15 AND 45;
-SELECT nom_prod FROM produit WHERE  (couleur = 'bleu' OR couleur = 'jaune') AND poids <20;
+SELECT nom_prod FROM produit WHERE poids BETWEEN 15 AND 45 UNION
+SELECT ref_prod FROM produit WHERE  (couleur = 'bleu' OR couleur = 'jaune') AND poids <20;
 SELECT nom_prod FROM produit WHERE  couleur = 'jaune' OR (couleur = 'bleu' AND poids <20);
 SELECT nom_prod FROM produit WHERE  nom_prod LIKE '%lampe%' OR poids >30;
