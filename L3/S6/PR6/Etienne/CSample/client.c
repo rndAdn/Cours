@@ -61,8 +61,8 @@ int main(int argc, char const *argv[]) {
   }
 
   /*
-  USAGE SAMPLE
-  */
+     USAGE SAMPLE
+     */
   char buff[1024];
   int size_rec=recv(desc_sock,buff,1023*sizeof(char),0);
   buff[size_rec]='\0';
@@ -79,15 +79,15 @@ int main(int argc, char const *argv[]) {
 }
 
 /*Historiquement / Obsolete:
-struct hostent * host = gethostbyname("lucien.informatique.univ-paris-diderot.fr");
-if(host==NULL){
+  struct hostent * host = gethostbyname("lucien.informatique.univ-paris-diderot.fr");
+  if(host==NULL){
   printf("Hostname inconnue\n");
   exit(1);
-}
-struct in_addr **addresses=(struct in_addr**)host->h_addr_list;
-if(*addresses!=NULL)addrIPV4 = **addresses;
-else{
+  }
+  struct in_addr **addresses=(struct in_addr**)host->h_addr_list;
+  if(*addresses!=NULL)addrIPV4 = **addresses;
+  else{
   printf("adresse IP non trouvé\n");
   exit(1);
-}
-*/
+  }
+  */
