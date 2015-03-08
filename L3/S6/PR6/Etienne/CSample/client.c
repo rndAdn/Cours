@@ -52,6 +52,7 @@ int main(int argc, char const *argv[]) {
   if(first_info!=NULL){
     adress_sock = *(struct sockaddr_in *)first_info->ai_addr;
   }
+  //fin sans ip
 
   int desc_sock = socket(PF_INET,SOCK_STREAM,0);
   retour = connect(desc_sock,(struct sockaddr *)&adress_sock,sizeof(struct sockaddr_in));
@@ -67,7 +68,11 @@ int main(int argc, char const *argv[]) {
   int size_rec=recv(desc_sock,buff,1023*sizeof(char),0);
   buff[size_rec]='\0';
   char *mess="SALUT!\n";
-  send(desc_sock,mess,strlen(mess),0);
+  retour = send(desc_sock,mess,strlen(mess),0);
+  if(retour == -1){
+    perror(strerror(errno));
+    exit(1);
+  }
 
 
   //Les free
