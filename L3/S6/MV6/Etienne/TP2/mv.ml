@@ -33,7 +33,7 @@ let x = (1,2) in (snd x) + (fst x);;
 
 print_string("--------------------------");;
 
-let x = 1 in let y = 2 in let z = y in x  ;;
+let x = 1 in let y = 2 in let z = x in z  ;;
 
 print_string("--------------------------");;
 
