@@ -13,26 +13,19 @@
 #include <sys/socket.h>
 //struct sockaddr
 #include <netdb.h>
+#include <fcntl.h>
 //getaddrinfo
+//
+//
+
+void breakpoint(){
+}
 
 int main(int argc, char const *argv[]) {
   //Variable pour les retour et erreur
   int retour = 0;
   //Socket IPV4
   struct sockaddr_in adress_sock;
-
-  //Si Ip connu:
-  struct in_addr addrIPV4;
-  retour = inet_aton("173.194.66.106",&addrIPV4);
-  if(retour == 0){
-    printf("Adresse IP non valide\n");
-    exit(1);
-  }
-  adress_sock.sin_family = AF_INET;
-  //BigENDIAN
-  adress_sock.sin_port = htons(4242);
-  adress_sock.sin_addr = addrIPV4;
-
 
   //SI IP INCONNUE
   struct addrinfo *first_info;
@@ -44,7 +37,7 @@ int main(int argc, char const *argv[]) {
   hints.ai_socktype=SOCK_STREAM;
 
   //On oubliera pas le free
-  retour = getaddrinfo("lucien","4242",&hints,&first_info);
+  retour = getaddrinfo("lucien","4202",&hints,&first_info);
   if(retour !=0){
     printf("%s\n",gai_strerror(retour));
     exit(1);
@@ -52,6 +45,7 @@ int main(int argc, char const *argv[]) {
   if(first_info!=NULL){
     adress_sock = *(struct sockaddr_in *)first_info->ai_addr;
   }
+  //fin sans ip
 
   int desc_sock = socket(PF_INET,SOCK_STREAM,0);
   retour = connect(desc_sock,(struct sockaddr *)&adress_sock,sizeof(struct sockaddr_in));
@@ -59,18 +53,45 @@ int main(int argc, char const *argv[]) {
     perror(strerror(errno));
     exit(1);
   }
-
   /*
      USAGE SAMPLE
      */
+  char * mess = malloc(sizeof(char)*1024);
+  strcat(mess,"DEFINE ! ");
+  strcat(mess,argv[1]);
+  strcat(mess,"\n");
+  printf("%s",mess);
+  breakpoint();
+  retour = send(desc_sock,mess,strlen(mess),0);
+  if(retour == -1){
+    perror(strerror(errno));
+    exit(1);
+  }
+
+
   char buff[1024];
-  int size_rec=recv(desc_sock,buff,1023*sizeof(char),0);
+
+  int size_rec =0;
+  
+  //BLOCK to Synchronize
+  size_rec = recv(desc_sock,buff,1023*sizeof(char),0);
   buff[size_rec]='\0';
-  char *mess="SALUT!\n";
-  send(desc_sock,mess,strlen(mess),0);
+  printf("%s",buff);
+  fflush(stdout);
 
+  //NON BLOCK TO READ
+  if(fcntl(desc_sock,F_SETFL,O_NONBLOCK) == -1){
+    perror(strerror(errno));
+    exit(1);
+  }
 
+  while((size_rec = recv(desc_sock,buff,1023*sizeof(char),0)) != -1){
+    buff[size_rec]='\0';
+    printf("%s",buff);
+    fflush(stdout);
+  }
   //Les free
+  free(mess);
   close(desc_sock);
   freeaddrinfo(first_info);
 
@@ -91,3 +112,4 @@ int main(int argc, char const *argv[]) {
   exit(1);
   }
   */
+
