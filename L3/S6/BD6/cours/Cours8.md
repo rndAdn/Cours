@@ -1,11 +1,30 @@
 [TOC]
+# SQL
+## LOGIQUE TRIVALUÉ
 
+On a 3 valeurs logique possible
+```TRUE, FALSE, NULL```
+
+```NULL```  correspond a une valeur <u>**non connu**</u>
+
+Opératons : ```AND, OR, NOT```
+
+###AND
+| AND | TRUE | NULL | FALSE |
+|-------|-----|----|---|
+| **TRUE** | TRUE | NULL | FALSE |
+| **NULL** | NULL | NULL | FALSE |
+| **FALSE** | FALSE | FALSE | FALSE |
+
+###OR
 | OR | TRUE | NULL | FALSE |
 |-------|-----|----|---|
 | **TRUE** | TRUE | TRUE | TRUE |
 | **NULL** | TRUE | NULL | NULL |
 | **FALSE** | TRUE | NULL | FALSE |
 
+
+###NOT
 | NOT | - |
 |-------|-----|
 | **TRUE** | FALSE |
@@ -49,11 +68,13 @@ SELECT NULL IS DISTINCT FROM NULL; => FALSE
 ```
 
 
-```ligne_commande (*no_fact#, *id_produit#, quant, satisfaction)
+```
+ligne_commande (*no_fact#, *id_produit#, quant, satisfaction)
 
 ```
-```satisfaction``` peut être ```NULL```
 
+
+```satisfaction``` peut être ```NULL```
 
 ```
 SELECT *
@@ -131,7 +152,11 @@ FROM ligne_commande
 | 102 | 3 | 5 |
 | 102 | 4 | 2 |
 
-SELECT id_prod, SUM(quantite) FROM ___ GROUP BY id_prod;
+```
+SELECT id_prod, SUM(quantite)
+FROM ___ GROUP
+BY id_prod;
+```
 
 | id_prod | SUM |
 |-------|-----|
@@ -141,36 +166,25 @@ SELECT id_prod, SUM(quantite) FROM ___ GROUP BY id_prod;
 
 
 
-Synatax générale
+##Syntax générale
+```
 SELECT ____ FROM ___
 [WHERE cond du where]
 [GROUP BY attributs
  HAVING cond du having]
+```
 
- Dans le select, on ne peut mettre que des attributs qui sont dans le group by et/ou des fonctipn d'agrégations
+Dans le select, on ne peut mettre que des attributs qui sont dans le group by et/ou des fonctipn d'agrégations
 
- Autre Exemple :
- Pour chause produit, (id+description) la moyenne des satisfaction:
-
-
- SELECT id_produit, desc_produit,AVG(satisfaction) GROM ligne_comm_ NATURAL JOIN produit AS p GROUP BY (p.)id_produit,desc_produit;
+###Autre Exemple :
+Pour chause produit, (id+description) la moyenne des satisfaction:
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+SELECT id_produit, desc_produit,AVG(satisfaction)
+GROM ligne_comm_ NATURAL JOIN produit AS p
+GROUP BY (p.)id_produit,desc_produit;
+```
 
 
 marchera car ```id_produit```  est clef primaire de la table produit dans laquelle est ```desc_prduit```
