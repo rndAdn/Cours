@@ -73,6 +73,7 @@ void deleteLcId(int id){
     }
     prev = tmp;
     tmp = tmp->next;
+    nbElement --;
   }
 }
 
