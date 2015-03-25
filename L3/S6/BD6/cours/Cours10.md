@@ -105,3 +105,7 @@ Les sous requête ne doivent dépendre que des attribut du ```GROUP BY```
 
 ### EXEMPLE
 Les produits dont le stock est 5 fois superieur à la vente
+
+```
+
+```
