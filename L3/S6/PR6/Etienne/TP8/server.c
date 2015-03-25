@@ -69,11 +69,11 @@ void deleteLcId(int id){
       else 
         prev->next = tmp->next;
       free(tmp);
-      nbElement --;
       break;
     }
     prev = tmp;
     tmp = tmp->next;
+    nbElement --;
   }
 }
 
