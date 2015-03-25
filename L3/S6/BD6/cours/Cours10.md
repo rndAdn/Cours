@@ -107,5 +107,28 @@ Les sous requête ne doivent dépendre que des attribut du ```GROUP BY```
 Les produits dont le stock est 5 fois superieur à la vente
 
 ```
+SELECT id_produit
+FROM Stock AS s
+GROUP BY id_produit
+HAVING SUM(quantite) >= 5 * (
+  Select SUM(quant)
+  FROM ligne_commande
+  WHERE id_produit = s.id_produit
+                            );
+ [OR (......) IS NULL]
+```
 
+Si un produit n'est jamais commandé, la sous requete retourne NULL et donc le
+produit n'est pas le résultat final, ce qui n'est pas logique.
+
+### EXEMPLE
+Les magasins ayant en stock toutes les références
+
+```
+SELECT id_magasin
+FROM Stock
+GROUP BY id_magasin
+HAVING COUNT(id_produit) = (
+  Select count(*)
+  FROM Produit
 ```
