@@ -4,24 +4,17 @@
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <string.h>
-#include <unistd.h>
 
 int main(){
   //socket envoi UDP
   int sock=socket(PF_INET,SOCK_DGRAM,0);
-  //BroadCast 
-  int ok =1;
-  int r = setsockopt(sock,SOL_SOCKET,SO_BROADCAST,&ok,sizeof(ok));
-  if(r!=0){
-    exit(1);
-  }
   //Get adress server
   struct addrinfo *first_info;
   struct addrinfo hints;
   memset(&hints, 0, sizeof(struct addrinfo));
   hints.ai_family = AF_INET;
   hints.ai_socktype=SOCK_DGRAM;
-  r=getaddrinfo("localhost","4242",NULL,&first_info);
+  int r=getaddrinfo("localhost","4242",NULL,&first_info);
   if(r==0){
     if(first_info!=NULL){
       //Adresse du receveur
