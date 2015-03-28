@@ -47,6 +47,7 @@ l'alias ```st```  du nom de colonne est utilisable uniquement à l'exterieur de 
 (sauf order by)
 
 Autre syntaxe:
+
 ```
 WITH s AS
 ( SELECT id_magasin,
@@ -55,14 +56,19 @@ WITH s AS
   SELECT MAX(st)
   FROM s
 ```
+
 ### Syntaxe du WITH:
+
+
+```
   WITH R1 AS (requete\_1),
        R2 AS (requete\_2),
        ...
        Rn AS (requete\_n)
   SELECT (________); (requete principle)
+```
 
-  dans requete\_i, on peut utiliser R1,___, Ri-1, et bien sur dans la requete principale on peut utiliser R1,___,Rn
+dans requete\_i, on peut utiliser R1,..., Ri-1, et bien sur dans la requete principale on peut utiliser R1,...,Rn
 
 ### Autre exemple:
 Produit qui ne sont pas dans tout les magasins, ie: les produits ayant la propriete : le produit n'est pas en stock dans au moins un magasin.
@@ -79,10 +85,11 @@ SELECT DISTINCT id_produit, desc_produit, prix
 FROM produit
 NATURAL JOIN s
 ```
+
 ### Sous-requete dans le WHERE
 ##1) avec =, <=, >=, ...
-  IS DISTINCT FROM
-  IS NOT DISTINCT FROM
+  ```IS DISTINCT FROM```
+  ```IS NOT DISTINCT FROM```
 
 
 ### Syntaxe:
@@ -100,7 +107,8 @@ WHERE prix = (
   SELECT MAX (prix)
   FROM produit
   )
-    ```
+```
+
 ### Exemple 2:
 les produits (id, description, prix) qui ont reçu au moins une satisfaction superieure à la moyenne des satisfactions
 
@@ -113,8 +121,9 @@ WHERE satisfaction >= (
     AVG(satifaction
       FROM ligne_commande)
   )
-  ```
-### Sous-requete corélée
+```
+
+## Sous-requete corélée
 ### exemple
 Les lignes de commandes ( nom_client, no°facture, id_produit) telles que la note de satisfaction est la plus mauvaise pour le produit
 
@@ -129,11 +138,16 @@ WHERE satisfaction = (
     FROM ligne_commande
     WHERE id_produit = l.id_produit)
   )
-  ```
-  On peut imaginer que pour chaque ligne de commande de ligne_commande NJ facture Postgre calcule la valeur de la sous-requere avec la valeur correspondante de id_produit $= sorte de boucle sur le calcule de la sous-requete
 
-##2) ALL, ANY
+```
+
+
+
+On peut imaginer que pour chaque ligne de commande de ligne_commande NJ facture Postgre calcule la valeur de la sous-requere avec la valeur correspondante de id_produit $= sorte de boucle sur le calcule de la sous-requete
+
+## ALL, ANY
 ### Syntaxe
+
 Condition
 valeur op_comparaison ALL ( SELECT ...)
 valeur op_comparaison ANY ( SELECT ...)
@@ -142,7 +156,7 @@ op_comparaison : =, <, >, ...
   is DISTINCT FROM, ...
 Les sous-requete peut donner plusieurs valeurs
 
-ALL: retourne true si à la comparaison de valeur avec chaque ligne du select retourne true
+```ALL```: retourne true si à la comparaison de valeur avec chaque ligne du select retourne true
 Si 0 lignes dans le select => retourne true
 ANY: true si au moins une ligne comparée avec valeur donne true
 Si 0 ligne dans le select => retourne false
@@ -159,6 +173,7 @@ WHERE satisfaction >=
     FROM ligne_commande
     WHERE satisfaction IS NOT NULL)
 ```
+
 ###Remarque
 Si je ne mets pas la condition IS NOT NULL, des qu'une satisfaction est NULL, où aura 0 lignes de resultat pour la requete globale
 
@@ -174,8 +189,8 @@ WHERE satisfaction >
 ```
 ca rendra toutes les lignes où la satisfaction est au dessus de la plus mauvaise
 
-##3) IN  et NOT IN
-Syntaxe
+##IN  et NOT IN
+###Syntaxe
 valeur IN (SELECT ...)
 valeur NOT IN (SELECT ...)
 IN est equivalent à ANY
