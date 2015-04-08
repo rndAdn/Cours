@@ -1,0 +1,52 @@
+        -:    0:Source:fact.c
+        -:    0:Graph:fact.gcno
+        -:    0:Data:fact.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/**
+        -:    2: * Library for computing factorials.
+        -:    3: */
+        -:    4:
+        -:    5:
+        -:    6:#include <stdio.h>
+        -:    7:#include <stdlib.h>
+        -:    8:#include "fact.h"
+        -:    9:
+        -:   10:/**
+        -:   11: * @brief Computes factorial of @p n recursively.
+        -:   12: *
+        -:   13: * Warning: does not check integer overflow.
+        -:   14: *
+        -:   15: * @param n the argument of factorial
+        -:   16: * @return  0 if @p n <= 0 and @p n! otherwise
+        -:   17: */
+        -:   18:long
+      113:   19:fact_rec(long n)
+        -:   20:{
+      113:   21:	if (n < 0)
+        1:   22:		return 0;
+      112:   23:	if (n == 1 || n == 0)
+        4:   24:		return 1;
+      108:   25:	long            f = fact_rec(n - 1);
+      108:   26:	return n * f;
+        -:   27:}
+        -:   28:
+        -:   29:/**
+        -:   30: * @brief Computes factorial of @p n iteratively.
+        -:   31: *
+        -:   32: * Warning: does not check integer overflow.
+        -:   33: *
+        -:   34: * @param n the argument of factorial
+        -:   35: * @return  0 if @p n <= 0 and @p n! otherwise
+        -:   36: */
+        -:   37:long
+    #####:   38:fact_it(long n)
+        -:   39:{
+    #####:   40:	if (n < 0)
+    #####:   41:		return 0;
+    #####:   42:	long            f = 1;
+    #####:   43:	long            i = 0;
+    #####:   44:	for (i = 2; i <= n; i++)
+    #####:   45:		f = f * i;
+    #####:   46:	return f;
+        -:   47:}
