@@ -54,4 +54,47 @@ WHERE numeroetape = 3
 GROUP BY codeequipe;
 
 -- 11 --
-SELECT 
+--SELECT --
+
+-- 12 --
+SELECT numerocoureur, AVG(nbKm / EXTRACT (epoch FROM tempsrealise)) AS vitessemoyenne
+FROM temps NATURAL JOIN  etapes
+WHERE nbKm < 60
+GROUP BY numerocoureur;
+
+
+-- 13 --
+SELECT numerocoureur , 3600 * (SUM(nbKm) / SUM(EXTRACT (epoch FROM tempsrealise)))
+FROM temps, etapes
+WHERE temps.numeroetape = etape.numeroetape
+GROUP BY numerocoureur
+HAVING COUNT(temps.numeroetape) <= 3;
+
+-- 14 --
+SELECT E.numeroetape, E.nbKm
+FROM etapes E
+WHERE E.nbKm IN (
+    SELECT MAX(nbKm)
+    FROM etapes
+);
+
+
+-- 15 --
+SELECT numerocoureur, tempsrealise
+FROM temps
+WHERE numeroetape = 4 AND tempsrealise IN (
+    SELECT MIN(tempsrealise)
+    FROM temps
+    WHERE numeroetape = 4
+);
+
+-- 16 --
+SELECT numerocoureur
+FROM temps
+GROUP BY numerocoureur
+HAVING COUNT(numeroetape) = (
+    SELECT COUNT(*)
+    FROM etapes
+);
+
+-- 17  --
