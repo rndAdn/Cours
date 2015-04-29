@@ -1,4 +1,4 @@
-#use "/Users/ByTeK/Documents/Cours/L3/S6/MV6/Etienne/TP2/mv_myrte_v2.ml";;
+#use "/Users/etouss/Documents/Cours/L3/S6/MV6/Etienne/TP2/mv_myrte_v2.ml";;
 
 let ex = Let("x",Const(Int(1)),Binop(Add,Const(Int(2)),Var("x")));;
 let cmp = compil (empty_envcomp,ex);;
