@@ -28,11 +28,11 @@ type state = {
 let print_state s =
   print_string ("Stack:\n");
   (if (s.sp < 0) 
-   then print_string "<empty>\n"
+  then print_string "<empty>\n"
    else for i = 0 to s.sp do
-          print_string ("#" ^ (string_of_int (s.sp - i)) ^ " -> " 
+     print_string ("#" ^ (string_of_int (s.sp - i)) ^ " -> " 
                         ^ (string_of_int (s.stack.(i))) ^ "\n")
-        done);
+   done);
   print_string ("Acc = " ^ (string_of_int s.acc) ^ "\n");
   print_string ("PC = " ^ (string_of_int s.pc) ^ "\n\n")
 
@@ -46,31 +46,31 @@ let machine s =
       print_string ("With PC = " ^ (string_of_int s.pc) ^ " (" ^ (string_of_instr (s.code.(s.pc))) ^ ")\n");
       begin match s.code.(s.pc) with
             | Consti n ->
-               s.acc <- n
+                s.acc <- n
             | Push ->
-               s.sp <- s.sp + 1;
+                s.sp <- s.sp + 1;
                s.stack.(s.sp) <- s.acc
             | Addi ->
-               s.acc <- s.stack.(s.sp) + s.acc
+                s.acc <- s.stack.(s.sp) + s.acc
             | Andi ->
-               s.acc <- s.stack.(s.sp) * s.acc
+                s.acc <- s.stack.(s.sp) * s.acc
             | Eqi ->
-               s.acc <- if s.stack.(s.sp) = s.acc then 1 else 0
+                s.acc <- if s.stack.(s.sp) = s.acc then 1 else 0
             | Pop -> 
-               s.sp <- s.sp-1
+                s.sp <- s.sp-1
             | Branch n ->
-               s.pc <- s.pc + n - 1
+                s.pc <- s.pc + n - 1
             | BranchIf n -> 
-               s.pc <- s.pc + (if (s.acc = 0) then n - 1 else 0);
+                s.pc <- s.pc + (if (s.acc = 0) then n - 1 else 0);
             | Acc n ->
-               s.acc <- s.stack.(s.sp-n)
+                s.acc <- s.stack.(s.sp-n)
       end;
       s.pc <- s.pc + 1;
       print_string ("New state is\n");
       print_state s;
-    done;
+   done;
     print_string ("\n" ^ (string_of_int !idx) ^ " steps in total\n\n")
-  end; s
+      end; s
 
 let init c =
   { code = c; 
@@ -83,18 +83,45 @@ let init c =
 let get_acc s = s.acc
 
 
-let assemble (p : instr array) : string =
-  let s = String.make (Array.length p) 'z' in
-  for i = 0 to Array.length p - 1 do
-    s.[i] <- match p.(i) with
-    | Push -> Char.chr 0
-    | Addi -> Char.chr 1
-    | Eqi -> Char.chr 2
-    | Andi -> Char.chr 3
-    | Consti n -> assert (n < 32); Char.chr (4 + n lsl 3);
-    | Pop -> Char.chr 5
-    | _ -> failwith "aaa"
-  done; s
+let out_i8  (buf : out_channel) (i : int) : unit = output_char buf (char_of_int i)
+let out_i32 (buf : out_channel) (i : int) : unit = output_binary_int buf i
+
+let in_i8   (buf : in_channel) : int = int_of_char (input_char buf)
+let in_i32  (buf : in_channel) : int = input_binary_int buf
+
+let rec assemble_str buf s l acc =
+  if(acc = l) then ()
+  else out_i8 buf (int_of_char s.[acc]); assemble_str buf s l (acc+1)
+
+
+  (* Fonction d'assemblage d'instruction *)
+let assemble_instr (buf : out_channel) : instr -> unit = function
+  |Push             -> out_i8 buf 0
+  |Addi            -> out_i8 buf 1
+  |Eqi            -> out_i8 buf 2
+  |Andi            -> out_i8 buf 3
+  |Consti n          ->  assert (n < 32); out_i8 buf (4 + n lsl 3)
+  |Pop -> out_i8 buf 5
+  | BranchIf n ->  assert (n < 32); out_i8 buf (6 + n lsl 3)
+  | Branch n  ->  assert (n < 32); out_i8 buf (7 + n lsl 3)
+  | Acc n  ->  assert (n < 32); out_i8 buf (3 + n lsl 3)
+
+  |_->failwith "ApplyTerm"
+
+  (* Fonction d'assemblage d'une liste d'instructions *)
+let rec assemble (buf : out_channel) : instr list -> unit = function
+  |i::li -> assemble_instr buf i;assemble buf li
+  |[] -> ()
+
+
+  (* Ecrite pour vous: une fonction d'assemblage qui ecrit dans un fichier *)
+let assemble_filename (name : string) (is : instr list) : unit =
+  let buf = open_out_bin name in
+  begin
+    assemble buf is;
+    close_out buf
+  end
+
 
 
 let disassemble (s : string) : instr array =
@@ -123,7 +150,7 @@ type value =
   | Bool of bool
 
 type binop = Add | Eq | And
-                            
+
 type expr =
   | Var of var
   | Const of value
@@ -132,7 +159,7 @@ type expr =
   | Let of var * expr * expr
 
 
-(** Environnement *)
+  (** Environnement *)
 
 type envexpr = (var * value) list
 
@@ -143,24 +170,24 @@ let empty_envexpr = []
 let rec interp : envexpr * expr -> value = function
   | env, Const v           -> v
   | env, Binop (b, e1, e2) ->
-     (match b, interp (env, e1), interp (env, e2) with
+      (match b, interp (env, e1), interp (env, e2) with
      | Add, Int i, Int j   -> Int (i + j)
      | Eq, Int i, Int j    -> Bool (i = j)
      | And, Bool i, Bool j -> Bool (i && j)
      | _ -> failwith "type error")
-  | env, If (e1, e2, e3) ->
-     (match interp (env, e1) with
+      | env, If (e1, e2, e3) ->
+          (match interp (env, e1) with
       | Bool true  -> interp (env, e2)
       | Bool false -> interp (env, e3)
       | _ -> failwith "type error")
-  | env, Var s   -> List.assoc s env
+          | env, Var s   -> List.assoc s env
   | env, Let (s, e2, e3) ->
-     let r = interp (env, e2) in
-     let new_env = (s, r) :: env in
-     interp (new_env, e3)
+      let r = interp (env, e2) in
+      let new_env = (s, r) :: env in
+      interp (new_env, e3)
 
 
-(** Compilation *)
+      (** Compilation *)
 
 let repr = function
   | Int i      -> i
@@ -180,8 +207,8 @@ let succ (v,i) = (v,i+1)
 let rec compil : envcomp * expr -> instr list = function
   | env, Var s   -> [Acc (List.assoc s env)]
   | env, Let (s,e1,e2) ->
-             let new_env = (s, 0) :: (List.map succ env) in
-             compil (env, e1) @
+      let new_env = (s, 0) :: (List.map succ env) in
+      compil (env, e1) @
              [Push] @
              compil (new_env, e2) @
              [Pop]
@@ -191,25 +218,25 @@ let rec compil : envcomp * expr -> instr list = function
                        compil ((List.map succ env),e2) @
                        [op o; Pop]
   | env,If (e1, e2, e3) -> let i2 = compil (env,e2) in
-                       let i3 = compil (env,e3) in
-                       compil (env,e1) @
+  let i3 = compil (env,e3) in
+  compil (env,e1) @
                        [BranchIf (2 + List.length i3)] @
                        i3 @
                        [Branch (1 + List.length i2)] @
                        i2
 
 
-(* Pretty-print the given list of instructions *)
+                       (* Pretty-print the given list of instructions *)
 let print_instrs l = 
   let rec aux i = function
     | [] -> ()
     | h :: t -> 
-       begin
-         print_int i;
+        begin
+          print_int i;
          print_string " - ";
          print_string (string_of_instr h);
          print_newline ();
          aux (i+1) t
-       end
+  end
   in aux 0 l 
 
